@@ -1,0 +1,123 @@
+:root {
+    --bg: #F4F7F6;
+    --text: #1D1D1F;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    font-family: 'Montserrat Alternates', 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: var(--bg);
+    font-size: 18px;
+}
+
+body {
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 54px;
+    line-height: 112.5%;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 125%;
+}
+
+.d-t {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    border: 3px solid var(--btn-border);
+    color: var(--text);
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+    color: var(--bg);
+}
+
+.el {
+    opacity: 0;
+}
+
+.el-show {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.menu-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 72px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-fixed .burger {
+    width: 30px;
+    cursor: pointer;
+}
+
+.menu-fixed .burger div {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text);
+    margin-top: 7px;
+}
+
+.menu-fixed .burger div:first-of-type {
+    margin-top: 0;
+}
+
+.menu-fixed .social .img {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 18px;
+    display: block;
+}
+
+.menu-fixed .social .img:first-of-type {
+    margin-top: 0;
+}
+
+.menu-fixed .social .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
