@@ -2,6 +2,7 @@
     --bg: #F4F7F6;
     --text: #1D1D1F;
     --text-w: #F4F7F6;
+    --gold: #FBA816;
 }
 
 html,
@@ -53,6 +54,10 @@ h2 {
 
 .container {
     width: 1280px;
+    margin: 0 auto;
+}
+.container-b {
+    width: 1114px;
     margin: 0 auto;
 }
 
@@ -161,4 +166,33 @@ header .header .info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+header .header .info .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .header .info .logo .img {
+    margin-right: 18px;
+    width: 89px;
+    height: 75px;
+}
+
+header .header .info .logo .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+header .header .info .logo .logo-text {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+header .header .info .logo .logo-text span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--gold);
 }
