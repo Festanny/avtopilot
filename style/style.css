@@ -279,17 +279,37 @@ section.WhyWe h1 {
     z-index: 1;
 }
 
-.WhyWe .info-block .block .block-min img {
+.WhyWe .info-block .block .block-min::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: .3;
+    background-color: var(--text);
+    opacity: .7;
+}
+
+.WhyWe .info-block .block:nth-of-type(1) .block-min,
+.WhyWe .info-block .block:nth-of-type(2) .block-min,
+.WhyWe .info-block .block:nth-of-type(3) .block-min,
+.WhyWe .info-block .block:nth-of-type(4) .block-min {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.WhyWe .info-block .block:nth-of-type(1) .block-min {
+    background-image: url('../image/WhyWe/quality-training.png');
+}
+.WhyWe .info-block .block:nth-of-type(2) .block-min {
+    background-image: url('../image/WhyWe/vip.jpg');
+}
+.WhyWe .info-block .block:nth-of-type(3) .block-min {
+    background-image: url('../image/WhyWe/excellent-base.png');
+}
+.WhyWe .info-block .block:nth-of-type(4) .block-min {
+    background-image: url('../image/WhyWe/training-format.jpg');
 }
 
 .process .info-block {
@@ -357,4 +377,111 @@ section.WhyWe h1 {
 .process .info-block .block:nth-of-type(2n) .img .num {
     right: auto;
     left: -60px;
+}
+
+.price .info-block .block {
+    position: relative;
+    background: var(--text);
+    color: var(--text-w);
+    padding: 39px 34px;
+    border-radius: 10px;
+    z-index: 1;
+    min-height: 481px;
+    display: flex!important;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.price .info-block .block .text {
+    position: relative;
+    border-top: 1px solid var(--text-w);
+    border-bottom: 1px solid var(--text-w);
+    padding: 5px 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.price .info-block .block .text h2 {
+    text-align: center;
+}
+
+.price .info-block .block .text .info {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .7s;
+}
+
+.price .info-block .block:hover .text .info {
+    margin: 36px 0;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.price .info-block .block .text .info .money {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+.price .info-block .block .text .info .money span {
+    font-weight: 600;
+}
+
+.price .info-block .block .text .info .desc {
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 38px;
+}
+
+.price .info-block .block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text);
+    opacity: .7;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.price .info-block .block1,
+.price .info-block .block2,
+.price .info-block .block3,
+.price .info-block .block4 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.price .info-block .block1 {
+    background-image: url('../image/price/img1.jpg');
+}
+.price .info-block .block2 {
+    background-image: url('../image/price/img2.jpg');
+}
+.price .info-block .block3 {
+    background-image: url('../image/price/img3.jpg');
+}
+.price .info-block .block4 {
+    background-image: url('../image/price/img2.jpg');
+}
+
+.price .info-block .block .text .info .desc::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('../image/bullet-point.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
