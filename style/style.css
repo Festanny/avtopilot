@@ -308,8 +308,10 @@ section.WhyWe h1 {
 
 .process .info-block .block .img {
     position: relative;
-    width: 490px;
-    height: 328px;
+    /* width: 490px;
+    height: 328px; */
+    width: 546px;
+    height: 365px;
     margin-right: 134px;
 }
 
