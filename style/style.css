@@ -291,3 +291,68 @@ section.WhyWe h1 {
     z-index: 0;
     opacity: .3;
 }
+
+.process .info-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.process .info-block .block {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 134px;
+}
+
+.process .info-block .block .img {
+    position: relative;
+    width: 490px;
+    height: 328px;
+    margin-right: 134px;
+}
+
+.process .info-block .block .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.process .info-block .block .info {
+    flex: 1;
+}
+
+.process .info-block .block .info .text {
+    margin-top: 36px;
+}
+
+.process .info-block .block .info .text p:first-of-type {
+    margin-top: 0;
+}
+
+.process .info-block .block .info .text p:last-of-type {
+    margin-bottom: 0;
+}
+
+.process .info-block .block .img .num {
+    position: absolute;
+    font-size: 96px;
+    font-weight: 800;
+    color: var(--gold);
+    right: -60px;
+    bottom: -60px;
+    line-height: 125%;
+}
+
+.process .info-block .block:nth-of-type(2n) .img {
+    order: 2;
+    margin-left: 134px;
+    margin-right: 0;
+}
+
+.process .info-block .block:nth-of-type(2n) .img .num {
+    right: auto;
+    left: -60px;
+}
