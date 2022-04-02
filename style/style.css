@@ -4,6 +4,7 @@
     --text-w: #F4F7F6;
     --gold: #FBA816;
     --btn-gold: #CE8404;
+    --text-input: #111111;
 }
 
 html,
@@ -233,6 +234,18 @@ section {
     padding: 60px 0;
 }
 
+section#price {
+    padding: 60px 0 36px;
+}
+
+section#application {
+    padding: 0 0 60px 0;
+}
+
+section#price {
+    padding: 60px 0 36px;
+}
+
 section h1 {
     width: 700px;
     margin-bottom: 54px;
@@ -416,7 +429,7 @@ section.WhyWe h1 {
 
 .price .info-block .block:hover .text .info {
     margin: 36px 0;
-    max-height: 1000px;
+    max-height: 450px;
     opacity: 1;
 }
 
@@ -485,3 +498,74 @@ section.WhyWe h1 {
     left: 0;
     transform: translateY(-50%);
 }
+
+.application .block {
+    margin: 0 54px;
+    padding: 18px 72px;
+    background-color: var(--gold);
+    border-radius: 10px;
+}
+
+.application .block h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.application .block span {
+    text-align: center;
+    display: block;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(29, 29, 31, 0.1);
+}
+
+
+.application .block form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.application .block form input {
+    padding: 8px 14px;
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid rgba(29, 29, 31, 0.3);
+    background: transparent;
+    color: rgba(17, 17, 17, 0.5);
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.application .block form input:last-of-type {
+    margin-right: 0;
+}
+
+.application .block form input[type='submit'] {
+    color: var(--text);
+    cursor: pointer;
+    width: auto;
+    flex: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.application .block .agreement {
+    color: rgba(29, 29, 31, 0.3);
+    margin-top: 18px;
+    width: 478px;
+}
+
+.application .block .agreement a {
+    color: rgba(29, 29, 31, 0.3);
+    text-decoration: underline;
+}
+
+.application .block form input:nth-of-type(1),
+.application .block form input:nth-of-type(2) {
+    flex: 3;
+}
+
