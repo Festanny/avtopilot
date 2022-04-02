@@ -64,7 +64,7 @@ h2 {
     cursor: pointer;
     transition: .3s;
 }
- 
+
 .btn:hover {
     background-color: var(--btn-gold);
     color: var(--text-w);
@@ -315,12 +315,15 @@ section.WhyWe h1 {
 .WhyWe .info-block .block:nth-of-type(1) .block-min {
     background-image: url('../image/WhyWe/quality-training.png');
 }
+
 .WhyWe .info-block .block:nth-of-type(2) .block-min {
     background-image: url('../image/WhyWe/vip.jpg');
 }
+
 .WhyWe .info-block .block:nth-of-type(3) .block-min {
     background-image: url('../image/WhyWe/excellent-base.png');
 }
+
 .WhyWe .info-block .block:nth-of-type(4) .block-min {
     background-image: url('../image/WhyWe/training-format.jpg');
 }
@@ -475,12 +478,15 @@ section.WhyWe h1 {
 .price .info-block .block1 {
     background-image: url('../image/price/img1.jpg');
 }
+
 .price .info-block .block2 {
     background-image: url('../image/price/img2.jpg');
 }
+
 .price .info-block .block3 {
     background-image: url('../image/price/img3.jpg');
 }
+
 .price .info-block .block4 {
     background-image: url('../image/price/img2.jpg');
 }
@@ -500,7 +506,7 @@ section.WhyWe h1 {
 }
 
 .application .block {
-    margin: 0 54px;
+    margin: 0 64px;
     padding: 18px 72px;
     background-color: var(--gold);
     border-radius: 10px;
@@ -520,7 +526,6 @@ section.WhyWe h1 {
     margin-bottom: 18px;
     border-bottom: 1px solid rgba(29, 29, 31, 0.1);
 }
-
 
 .application .block form {
     display: flex;
@@ -568,4 +573,3 @@ input::-webkit-input-placeholder {
 .application .block form input:nth-of-type(2) {
     flex: 3;
 }
-
