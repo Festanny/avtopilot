@@ -224,7 +224,7 @@
             <div class="price container">
                 <h1>Отзывы об автошколе</h1>
                 <div class="info-block">
-
+                    <div id="comments"></div>
                 </div>
             </div>
         </section>
@@ -232,6 +232,10 @@
 
     <footer></footer>
 
+    <!-- ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b -->
+    
+
+    <!-- <script src="https://api.vk.com/method/board.getComments?access_token=1026a836af8148441dda6f1e28de28c2280c779865581b04e240d6be4452f2d3d90a6a4511ad26523f1cb&v=5.131&group_id=204890593&topic_id=48176419&need_likes=false&count=99&extended=true"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -239,6 +243,25 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+	    
+	    $.ajax({
+	        url: 'https://api.vk.com/method/board.getComments?access_token=ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b&v=5.81&group_id=167692801&topic_id=48993182&need_likes=false&count=99&extended=true',
+	        method: "GET",
+	        dataType: "JSONP",
+	        success: function(data) {
+	            console.log(data.response.items[0]);
+	            var html = "";
+	            for (var i=0; i<data.response.items.length; i++) {
+	                html += data.response.items[i].text;
+	            }
+	            $("#comments").html(html);
+	            console.log(data);
+	        }
+	    });
+        
+	</script>
 </body>
 
 </html>
