@@ -220,12 +220,11 @@
                 </div>
             </div>
         </section>
-        <section id="price">
-            <div class="price container">
+        <section>
+            <div class="reviews container">
                 <h1>Отзывы об автошколе</h1>
-                <div class="info-block">
-                    <div id="comments"></div>
-                </div>
+                <div class="info-block"></div>
+                <div class="info-reviews">Посмотреть все отзывы и оставить собственный вы можете перейдя в нашу <a href="https://vk.com/avtopilot_tlt" target="_blank"><b>оффициальную группу ВКонтакте</b></a></div>
             </div>
         </section>
     </main>
@@ -247,17 +246,47 @@
     <script type="text/javascript">
 	    
 	    $.ajax({
-	        url: 'https://api.vk.com/method/board.getComments?access_token=ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b&v=5.81&group_id=167692801&topic_id=48993182&need_likes=false&count=99&extended=true',
+	        url: 'https://api.vk.com/method/board.getComments?access_token=ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b&v=5.81&group_id=167692801&topic_id=48993182&need_likes=false&start_comment_id&extended=true&sort=desc',
 	        method: "GET",
 	        dataType: "JSONP",
 	        success: function(data) {
-	            console.log(data.response.items[0]);
+	            
 	            var html = "";
-	            for (var i=0; i<data.response.items.length; i++) {
-	                html += data.response.items[i].text;
+	            for (var i=0; i<5; i++) {
+                    for (var g=0; g<data.response.groups.length; g++) {
+                        // if (data.response.items[i].from_id == data.response.groups[g].id * (-1)) {
+                        //     // html += "<img src='" + data.response.groups[g].photo_100 + "'>" + data.response.items[i].text;
+                        //     html += "<div class='block'>"
+                        //         + "<div class='img'>"
+                        //             + "<img src='" + data.response.groups[g].photo_100 + "'>" +
+                        //             "</div>" +
+                        //         "<div class='line'></div>" +
+                        //         "<div class='comments-text'>" +
+                        //             "<h3>" + data.response.groups[g].name + "</h3>" +
+                        //             "<div class='text'>" + data.response.items[i].text + "</div>" +
+                        //         "</div>" + "</div>";
+                        // }
+                            for (var j=0; j<data.response.profiles.length; j++) {
+                                if (data.response.items[i].from_id == data.response.profiles[j].id) {
+                                    // html += "<img src='" + data.response.profiles[j].photo_100 + "'>" + data.response.items[i].text;
+                                    // html += "<div class='block'><div class='img'><img src='" + data.response.profiles[j].photo_100 + "'></div><div class='line'></div><div class='comments-text'><h3>" + data.response.profiles[j].first_name + data.response.profiles[j].last_name + "</h3><div class='text'>" + data.response.items[i].text + "</div></div>";
+                                    
+                                    html += "<div class='block'>"
+                                    + "<div class='img'>"
+                                        + "<img src='" + data.response.profiles[j].photo_100 + "'>" +
+                                        "</div>" +
+                                    "<div class='line'></div>" +
+                                    "<div class='comments-text'>" +
+                                        "<h3>" + data.response.profiles[j].first_name + "</h3>" +
+                                        "<div class='text'>" + data.response.items[i].text + "</div>" +
+                                    "</div>" + "</div>";
+
+                                }
+                            }
+                    }
 	            }
-	            $("#comments").html(html);
-	            console.log(data);
+	            $(".reviews .info-block").html(html);
+	            // console.log(data);
 	        }
 	    });
         
