@@ -227,14 +227,19 @@
                 <div class="info-reviews">Посмотреть все отзывы и оставить собственный вы можете перейдя в нашу <a href="https://vk.com/avtopilot_tlt" target="_blank"><b>оффициальную группу ВКонтакте</b></a></div>
             </div>
         </section>
+        <section>
+            <div class="address">
+                <div class="container">
+                    <h1>Как нас найти?</h1>
+                </div>
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A41afcbb160d4cdadba52f38588b4fb539fae3b6f08d80b1e4feb66fbe8fafec6&amp;width=1100&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </section>
     </main>
 
     <footer></footer>
 
-    <!-- ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b -->
-    
 
-    <!-- <script src="https://api.vk.com/method/board.getComments?access_token=1026a836af8148441dda6f1e28de28c2280c779865581b04e240d6be4452f2d3d90a6a4511ad26523f1cb&v=5.131&group_id=204890593&topic_id=48176419&need_likes=false&count=99&extended=true"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -242,55 +247,6 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/script.js"></script>
-
-    <script type="text/javascript">
-	    
-	    $.ajax({
-	        url: 'https://api.vk.com/method/board.getComments?access_token=ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b&v=5.81&group_id=167692801&topic_id=48993182&need_likes=false&start_comment_id&extended=true&sort=desc',
-	        method: "GET",
-	        dataType: "JSONP",
-	        success: function(data) {
-	            
-	            var html = "";
-	            for (var i=0; i<5; i++) {
-                    for (var g=0; g<data.response.groups.length; g++) {
-                        // if (data.response.items[i].from_id == data.response.groups[g].id * (-1)) {
-                        //     // html += "<img src='" + data.response.groups[g].photo_100 + "'>" + data.response.items[i].text;
-                        //     html += "<div class='block'>"
-                        //         + "<div class='img'>"
-                        //             + "<img src='" + data.response.groups[g].photo_100 + "'>" +
-                        //             "</div>" +
-                        //         "<div class='line'></div>" +
-                        //         "<div class='comments-text'>" +
-                        //             "<h3>" + data.response.groups[g].name + "</h3>" +
-                        //             "<div class='text'>" + data.response.items[i].text + "</div>" +
-                        //         "</div>" + "</div>";
-                        // }
-                            for (var j=0; j<data.response.profiles.length; j++) {
-                                if (data.response.items[i].from_id == data.response.profiles[j].id) {
-                                    // html += "<img src='" + data.response.profiles[j].photo_100 + "'>" + data.response.items[i].text;
-                                    // html += "<div class='block'><div class='img'><img src='" + data.response.profiles[j].photo_100 + "'></div><div class='line'></div><div class='comments-text'><h3>" + data.response.profiles[j].first_name + data.response.profiles[j].last_name + "</h3><div class='text'>" + data.response.items[i].text + "</div></div>";
-                                    
-                                    html += "<div class='block'>"
-                                    + "<div class='img'>"
-                                        + "<img src='" + data.response.profiles[j].photo_100 + "'>" +
-                                        "</div>" +
-                                    "<div class='line'></div>" +
-                                    "<div class='comments-text'>" +
-                                        "<h3>" + data.response.profiles[j].first_name + "</h3>" +
-                                        "<div class='text'>" + data.response.items[i].text + "</div>" +
-                                    "</div>" + "</div>";
-
-                                }
-                            }
-                    }
-	            }
-	            $(".reviews .info-block").html(html);
-	            // console.log(data);
-	        }
-	    });
-        
-	</script>
 </body>
 
 </html>
