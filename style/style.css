@@ -592,6 +592,10 @@ input::-webkit-input-placeholder {
     align-items: center;
     width: 100%;
     margin-bottom: 36px;
+    /* margin-bottom: 20px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px; */
 }
 
 .reviews .info-block .block:last-of-type {
@@ -642,4 +646,9 @@ input::-webkit-input-placeholder {
 
 .reviews .info-reviews {
     margin-top: 54px;
+}
+
+.address .map {
+    width: 80%;
+    height: 500px;
 }
