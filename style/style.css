@@ -6,6 +6,7 @@
     --btn-gold: #CE8404;
     --text-input: #111111;
     --line: rgba(29, 29, 31, 0.4);
+    --footer-text: #8F9996;
 }
 
 html,
@@ -709,4 +710,109 @@ input::-webkit-input-placeholder {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+}
+
+footer {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+footer .footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer .logo .img svg path {
+    fill: var(--text);
+}
+
+footer .footer .logo {
+    flex: 1;
+    margin-right: 32px;
+}
+
+footer .footer .logo .block-main {
+    height: 100%;
+    display: inline-block;
+}
+
+footer .footer .logo .block-main .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+footer .footer .info {
+    flex: 3;
+}
+
+footer .footer .logo span {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer .footer .logo .img {
+    height: 105px;
+    width: 125px;
+}
+
+footer .footer .logo .img svg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+footer .footer .info ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer .info ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 18px;
+    margin-top: 18px;
+}
+
+footer .footer .info ul li:last-of-type {
+    border: 0;
+}
+
+footer .footer .info ul li:first-of-type {
+    margin-top: 0;
+}
+
+footer .footer .info ul li .info-text {
+    font-size: 20px;
+    color: var(--footer-text);
+}
+
+footer .footer .info ul li:nth-of-type(1) .info-text {
+    color: var(--text);
+}
+
+footer .footer .info ul li .data-text {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+footer .footer .info .additionally {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+footer .footer .info .additionally .img {
+    height: 36px;
+    width: auto;
+}
+
+footer .footer .info .additionally .img img {
+    height: 100%;
 }
