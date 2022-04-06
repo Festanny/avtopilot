@@ -907,19 +907,6 @@ position: relative;
     border-radius: 0!important;
 }
 
-.burger-open div {
-    transform: rotate(45deg);
-}
-
-.burger-open div:nth-of-type(2) {
-    opacity: 0;
-}
-
-.burger-open div:nth-of-type(3) {
-    transform: rotate(-50deg);
-    margin-top: 0;
-}
-
 .menu-fixed .menu .container {
     position: absolute;
     left: 50%;
