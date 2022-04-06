@@ -37,7 +37,13 @@ $.ajax({
 });
 
 // Burger
-$('.menu-fixed label input').click( function () {
+let menuAll = document.querySelector('.menu-fixed .menu');
+let burger = document.querySelector('.menu-fixed .burger');
+
+$('.menu-fixed .burger').click( function () {
+	menuAll.classList.toggle('open');
+	burger.classList.toggle('burger-open');
+
 	setTimeout(scrollNone, 250);
 
 	function scrollNone() {
