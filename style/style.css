@@ -591,11 +591,11 @@ input::-webkit-input-placeholder {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 36px;
-    /* margin-bottom: 20px;
+    /* margin-bottom: 36px; */
+    margin-bottom: 20px;
     padding: 25px;
     background-color: #ffffff;
-    border-radius: 10px; */
+    border-radius: 10px;
 }
 
 .reviews .info-block .block:last-of-type {
@@ -648,7 +648,65 @@ input::-webkit-input-placeholder {
     margin-top: 54px;
 }
 
+.address .info-block {
+    display: flex;
+    justify-content: space-between;
+}
+
 .address .map {
-    width: 80%;
-    height: 500px;
+    width: 75%;
+    margin-left: 70px;
+}
+
+.address .info-block .address-info {
+    width: 25%;
+    background-color: var(--gold);
+    padding: 30px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+.address .info-block .address-info .classes {
+    margin-top: 18px;
+}
+
+.address .info-block .address-info .classes .classes-name .name {
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+.address .info-block .address-info h3 {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.address .info-block .address-info ul {
+    margin: 18px 0 0 0;
+    padding: 0;
+}
+
+.address .info-block .address-info ul li {
+    list-style: none;
+    margin-bottom: 18px;
+    position: relative;
+    padding: 0 0 0 38px;
+}
+
+.address .info-block .address-info ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+.address .info-block .address-info ul li::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('../image/bullet-point-black.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
