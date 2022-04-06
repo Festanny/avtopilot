@@ -35,3 +35,12 @@ $.ajax({
 		$(".reviews .info-block").html(html);
 	}
 });
+
+// Burger
+$('.menu-fixed label input').click( function () {
+	setTimeout(scrollNone, 250);
+
+	function scrollNone() {
+		document.body.classList.toggle('scroll-none');
+	}
+});
