@@ -556,12 +556,14 @@ section.WhyWe h1 {
     border-bottom: 1px solid rgba(29, 29, 31, 0.1);
 }
 
-.application .block form {
+.application .block form,
+.modal .modal-body form {
     display: flex;
     justify-content: space-between;
 }
 
-.application .block form input {
+.application .block form input,
+.modal .modal-body form input {
     padding: 8px 14px;
     border-radius: 10px;
     outline: 0;
@@ -572,11 +574,13 @@ section.WhyWe h1 {
     font-size: 18px;
 }
 
-.application .block form input:last-of-type {
+.application .block form input:last-of-type,
+.modal .modal-body form input:last-of-type{
     margin-right: 0;
 }
 
-.application .block form input[type='submit'] {
+.application .block form input[type='submit'],
+.modal .modal-body form input[type='submit'] {
     color: var(--text);
     cursor: pointer;
     width: auto;
@@ -587,19 +591,24 @@ input::-webkit-input-placeholder {
     color: rgba(17, 17, 17, 0.5);
 }
 
-.application .block .agreement {
+.application .block .agreement,
+.modal .modal-body .agreement {
     color: rgba(29, 29, 31, 0.3);
     margin-top: 18px;
     width: 478px;
+    font-size: 16px;
 }
 
-.application .block .agreement a {
+.application .block .agreement a,
+.modal .modal-body .agreement a {
     color: rgba(29, 29, 31, 0.3);
     text-decoration: underline;
 }
 
 .application .block form input:nth-of-type(1),
-.application .block form input:nth-of-type(2) {
+.application .block form input:nth-of-type(2),
+.modal .modal-body form input:nth-of-type(1),
+.modal .modal-body form input:nth-of-type(2) {
     flex: 3;
 }
 
@@ -907,7 +916,11 @@ position: relative;
     border-radius: 0!important;
 }
 
-.menu-fixed .menu .container {
+.menu-fixed .menu .menu-open {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
     position: absolute;
     left: 50%;
     padding: 72px 0;
@@ -932,4 +945,70 @@ position: relative;
 
 .menu-fixed .menu .menu-a ul li:last-of-type {
     margin-bottom: 0;
+}
+
+.menu-fixed .menu .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.menu-fixed .menu .info .social-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-fixed .menu .info .social-menu .img {
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+}
+
+.menu-fixed .menu .info .social-menu .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menu-fixed .menu .info .social-menu .img:last-of-type {
+    margin-right: 0;
+}
+
+.menu-fixed .menu .info .email {
+    text-align: right;
+}
+
+.menu-fixed .menu .info .phone,
+.menu-fixed .menu .info .social-menu,
+.menu-fixed .menu .info .email {
+    flex: 1;
+}
+
+.menu-fixed .menu .menu-open .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.menu-fixed .menu .menu-open marquee {
+    width: 100vw;
+    font-size: 96px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 125%;
+    margin-top: 18px;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+    position: relative;
+}
+
+.modal .modal-dialog .modal-content .modal-body button {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
 }

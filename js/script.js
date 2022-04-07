@@ -50,3 +50,7 @@ $('.menu-fixed .burger').click( function () {
 		document.body.classList.toggle('scroll-none');
 	}
 });
+
+$(window).on('load',function(){
+	$('#stock').modal('show');
+});
