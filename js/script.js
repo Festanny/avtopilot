@@ -25,7 +25,7 @@ $.ajax({
 							"</div>" +
 						"<div class='line'></div>" +
 						"<div class='comments-text'>" +
-							"<h3>" + data.response.profiles[j].first_name + "</h3>" +
+							"<h3>" + data.response.profiles[j].first_name + " " + data.response.profiles[j].last_name + "</h3>" +
 							"<div class='text'>" + data.response.items[i].text + "</div>" +
 						"</div>" + "</div>";
 					}
