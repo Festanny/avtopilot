@@ -1036,7 +1036,7 @@ position: relative;
     top: -30px;
     right: 0;
     transform: translateY(-50%);
-    animation: rotate 9s linear infinite;
+    animation: rotate 10s linear infinite;
 }
 
 .modal .modal-dialog .modal-content .modal-body .form {
