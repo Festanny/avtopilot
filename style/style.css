@@ -895,6 +895,7 @@ position: relative;
 
 .scroll-none {
     overflow: hidden;
+    padding-right: 17px;
 }
 
 .menu-fixed .menu {

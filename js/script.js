@@ -43,12 +43,7 @@ let burger = document.querySelector('.menu-fixed .burger');
 $('.menu-fixed .burger').click( function () {
 	menuAll.classList.toggle('open');
 	burger.classList.toggle('burger-open');
-
-	setTimeout(scrollNone, 250);
-
-	function scrollNone() {
-		document.body.classList.toggle('scroll-none');
-	}
+	document.body.classList.toggle('scroll-none');
 });
 
 $(window).on('load',function(){
