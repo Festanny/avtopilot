@@ -946,6 +946,10 @@ position: relative;
     margin-bottom: 18px;
 }
 
+.menu-fixed .menu .menu-a ul li.active {
+    font-weight: 600;
+}
+
 .menu-fixed .menu .menu-a ul li:last-of-type {
     margin-bottom: 0;
 }
