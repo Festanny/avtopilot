@@ -283,7 +283,8 @@ section h1 {
     margin-bottom: 54px;
 }
 
-section.WhyWe h1 {
+section .WhyWe h1,
+section .documents h1 {
     margin-bottom: 24px;
 }
 
@@ -1090,6 +1091,10 @@ position: relative;
     padding: 18px;
     border-radius: 10px;
     background-color: var(--gray-bl);
+}
+
+.documents .info-block .block:nth-of-type(2n-1) {
+    margin-right: 30px;
 }
 
 .documents .info-block .block h3 {
