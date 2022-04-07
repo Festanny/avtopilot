@@ -88,7 +88,7 @@
             <h1>Есть мечта сесть за руль?<br>«Автопилот» поможет её исполнить</h1>
             <span>Самый короткий путь к безопасному вождению</span>
             <div class="btn-block">
-                <span class="btn">Записаться в автошколу</span>
+                <span class="btn" data-bs-toggle="modal" data-bs-target="#application-modal">Записаться в автошколу</span>
             </div>
             <span class="address">Город Тольятти,<br>ул. Индустриальная, 12, оф. 315<br>445035</span>
         </div>
@@ -386,7 +386,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Stock -->
     <div class="modal fade" id="stock" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -401,6 +401,31 @@
                         <div class="img">
                             <img src="image/stock.svg" alt="">
                         </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <form method="POST">
+                        <input type="text" name='name' placeholder="Ф.И.О">
+                        <input type="text" name='phone' placeholder="Номер телефона">
+                        <input type='submit' value="Отправить">
+                    </form>
+                    <div class="agreement">Нажимая кнопку «Отправить», Вы принимаете условия <a href="#" target="_blank">Пользовательского соглашения</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stock -->
+    <div class="modal fade" id="application-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="stock">
+                    <div class="block">
+                        <h2>Заказать звонок</h2>
+                        <span>Оставьте заявку на сайте и мы свяжемся с вами в ближайшее время</span>
                     </div>
                 </div>
                 <div class="form">

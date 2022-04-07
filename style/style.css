@@ -1027,6 +1027,10 @@ position: relative;
     width: 70%;
 }
 
+#application-modal .modal-dialog .modal-content .modal-body .stock .block {
+    width: 100%;
+}
+
 .modal .modal-dialog .modal-content .modal-body .stock .block h2 {
     margin-bottom: 18px;
 }
