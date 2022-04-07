@@ -1038,7 +1038,7 @@ position: relative;
 
 .modal .modal-dialog .modal-content .modal-body .stock .stock-animation {
     position: absolute;
-    top: -30px;
+    top: -35px;
     right: 0;
     transform: translateY(-50%);
     animation: rotate 10s linear infinite;
