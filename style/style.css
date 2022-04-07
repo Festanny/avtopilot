@@ -587,6 +587,12 @@ section.WhyWe h1 {
     cursor: pointer;
     width: auto;
     flex: 1;
+    transition: all .3s;
+}
+
+.application .block form input[type='submit']:hover,
+.modal .modal-body form input[type='submit']:hover {
+    background-color: var(--btn-gold);
 }
 
 input::-webkit-input-placeholder {
