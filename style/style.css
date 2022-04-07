@@ -802,7 +802,7 @@ footer .footer .info ul li {
 }
 
 footer .footer .info ul li:last-of-type {
-    border: 0;
+    border-bottom: 4px solid var(--text);
 }
 
 footer .footer .info ul li:first-of-type {
