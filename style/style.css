@@ -9,6 +9,7 @@
     --line: rgba(29, 29, 31, 0.4);
     --line2: rgba(29, 29, 31, 0.1);
     --footer-text: #8F9996;
+    --gray-bl: #E7E9EB;
 }
 
 html,
@@ -1075,4 +1076,32 @@ position: relative;
     100% {
         transform: rotate(-360deg);
     }
+}
+
+.documents .info-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.documents .info-block .block {
+    width: 45%;
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: var(--gray-bl);
+}
+
+.documents .info-block .block h3 {
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 10px;
+}
+
+.documents .info-block .block .btn {
+    color: var(--text-w);
+}
+
+section.page {
+    padding: 72px 0 90px;
 }
