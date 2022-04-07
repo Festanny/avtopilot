@@ -69,7 +69,7 @@ h3 {
 .btn {
     display: inline-block;
     background-color: var(--gold);
-    color: var(--text-w);
+    color: var(--text);
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
