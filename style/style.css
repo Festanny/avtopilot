@@ -701,12 +701,12 @@ input::-webkit-input-placeholder {
 }
 
 .address .map {
-    width: 75%;
+    width: 73%;
     margin-left: 70px;
 }
 
 .address .info-block .address-info {
-    width: 25%;
+    width: 27%;
     background-color: var(--gold);
     padding: 30px;
     border-radius: 10px 0 0 10px;
