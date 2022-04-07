@@ -6,6 +6,7 @@
     --btn-gold: #CE8404;
     --text-input: #111111;
     --line: rgba(29, 29, 31, 0.4);
+    --line2: rgba(29, 29, 31, 0.1);
     --footer-text: #8F9996;
 }
 
@@ -1011,4 +1012,51 @@ position: relative;
     top: 25px;
     right: 25px;
     cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .stock {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line2);
+}
+
+.modal .modal-dialog .modal-content .modal-body .stock .block {
+    width: 70%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .stock .block h2 {
+    margin-bottom: 18px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .stock .stock-animation {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    transform: translateY(-50%);
+    animation: rotate 9s linear infinite;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form {
+    margin-top: 18px;
+}
+
+.modal .modal-body form input[type='submit'] {
+    background-color: var(--gold);
+    color: var(--text-w);
+    border: 0;
+    font-weight: normal;
+    position: relative;
+    z-index: 30;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
