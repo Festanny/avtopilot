@@ -456,6 +456,9 @@ section .documents h1 {
     text-align: center;
     min-height: 90px;
     transition: all .6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .price .info-block .block .text .info {
