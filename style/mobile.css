@@ -93,4 +93,11 @@
     .price .info-block .block {
         min-height: 460px;
     }
+    .process .info-block .block .img {
+        width: 490px;
+        height: 328px;
+    }
+    .WhyWe .info-block .block .block-min {
+        padding: 32px;
+    }
 }

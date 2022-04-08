@@ -65,6 +65,7 @@ h3 {
 .container {
     width: 1366px;
     margin: 0 auto;
+    transform: translate3d(35px,0,0);
 }
 
 .btn {
@@ -946,7 +947,7 @@ position: relative;
 .open {
     width: 100vw!important;
     height: 100vh!important;
-    background: var(--gold)!important;
+    /* background: var(--gold)!important; */
     z-index: 0;
     border-radius: 0!important;
 }
