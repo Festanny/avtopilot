@@ -21,7 +21,7 @@
         margin: 0 14px!important;
     }
     h1 {
-        font-size: 54px;
+        font-size: 52px;
     }
     h2 {
         font-size: 30px;
@@ -38,6 +38,9 @@
     .price .info-block .block {
         padding: 35px 30px;
     }
+    .application .block {
+        margin: 0 44px;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -49,5 +52,20 @@
     }
     .WhyWe .info-block .block {
         width: 49%;
+    }
+    .price .info-block .block .text h2 {
+        min-height: 110px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 29px;
     }
 }

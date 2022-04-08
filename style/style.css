@@ -389,14 +389,13 @@ section .documents h1 {
 }
 
 .process .info-block .block .img img {
-    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.process .info-block .block .img img::before {
+.process .info-block .block .img::before {
     content: '';
     position: absolute;
     top: 0;
@@ -406,8 +405,8 @@ section .documents h1 {
     width: 100%;
     height: 100%;
     background-color: var(--text);
+    border-radius: 10px;
     opacity: .3;
-    z-index: 5;
 }
 
 .process .info-block .block .info {
