@@ -71,4 +71,26 @@
     .slick-slide {
         margin: 0 8px!important;
     }
+    .address .map {
+        width: 62%;
+    }
+    .address .info-block .address-info {
+        width: 38%;
+    }
+    footer .footer .logo span,
+    footer .footer .info ul li .data-text {
+        font-size: 30px;
+    }
+    footer .footer .info ul li .info-text {
+        font-size: 18px;
+    }
+    .application .block {
+        margin: 0 44px;
+    }
+    header .header .info .logo .logo-text {
+        font-size: 34px;
+    }
+    .price .info-block .block {
+        min-height: 460px;
+    }
 }

@@ -3,7 +3,15 @@ $(document).ready(function(){
 	$('.carousel-price').slick({
 		dots: false,
 		slidesToShow: 3,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		responsive: [
+			{
+			  breakpoint: 1201,
+			  settings: {
+				slidesToShow: 2
+			  }
+			}
+		]
 	});
 });
 
