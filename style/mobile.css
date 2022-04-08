@@ -1,0 +1,53 @@
+@media screen and (max-width: 1600px) {
+    .container {
+        width: 80%;
+    }
+    .address .info-block .address-info {
+        width: 33%;
+    }
+    .address .map {
+        width: 67%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .WhyWe .info-block .block {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .slick-slide {
+        margin: 0 14px!important;
+    }
+    h1 {
+        font-size: 54px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .price .info-block .block .text .info .desc {
+        font-size: 16px;
+    }
+    .price .info-block .block {
+        min-height: 500px;
+    }
+    .price .info-block .block .text .info .money {
+        font-size: 34px;
+    }
+    .price .info-block .block {
+        padding: 35px 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .process .info-block .block:nth-of-type(2n) .img {
+        margin-left: 100px;
+    }
+    .process .info-block .block .img {
+        margin-right: 100px;
+    }
+    .WhyWe .info-block .block {
+        width: 49%;
+    }
+}
