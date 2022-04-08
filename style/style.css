@@ -1041,6 +1041,7 @@ position: relative;
     text-transform: uppercase;
     line-height: 125%;
     margin-top: 18px;
+    color: var(--gold);
 }
 
 .modal .modal-dialog .modal-content .modal-body {
