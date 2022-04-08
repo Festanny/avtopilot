@@ -6,7 +6,7 @@
     --gold-old: #FBA816;
     --btn-gold: #CE8404;
     --text-input: #111111;
-    --line: rgba(29, 29, 31, 0.4);
+    --line: rgba(29, 29, 31, 0.3);
     --line2: rgba(29, 29, 31, 0.1);
     --footer-text: #8F9996;
     --gray-bl: #E7E9EB;
@@ -102,6 +102,7 @@ h3 {
     justify-content: space-between;
     z-index: 999;
     background-color: var(--bg);
+    border-right: 1px solid var(--line);
 }
 
 .menu-fixed .burger {
