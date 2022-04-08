@@ -564,7 +564,7 @@ section .documents h1 {
 .application .block {
     margin: 0 64px;
     padding: 18px 72px;
-    background-color: var(--gold2);
+    background-color:  var(--gray-bl);
     border-radius: 10px;
 }
 
@@ -723,7 +723,7 @@ input::-webkit-input-placeholder {
 
 .address .info-block .address-info {
     width: 27%;
-    background-color: var(--gold2);
+    background-color: var(--gray-bl);
     padding: 30px;
     border-radius: 10px 0 0 10px;
     box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);

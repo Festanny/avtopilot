@@ -68,4 +68,7 @@
     h2 {
         font-size: 29px;
     }
+    .slick-slide {
+        margin: 0 8px!important;
+    }
 }
