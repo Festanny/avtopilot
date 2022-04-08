@@ -17,14 +17,13 @@ $(document).ready(function(){
 
 // VK comments
 $.ajax({
-	url: 'https://api.vk.com/method/board.getComments?access_token=ce3f078a0b7ad547d719cb1268708bd0a1aa6b022d9dbf00e6d3317f5dfed1a416357110c4104c376132b&v=5.81&group_id=167692801&topic_id=48993182&need_likes=false&start_comment_id&extended=true&sort=desc',
+	url: 'https://api.vk.com/method/board.getComments?access_token=017f1699997551a017b312b361d1a85d8f142c702fdb71879763194a4b59e3d733cc1077958e069218038&v=5.81&group_id=29110438&topic_id=34909285&need_likes=false&extended=true&sort=desc',
 	method: "GET",
 	dataType: "JSONP",
 	success: function(data) {
 		
 		var html = "";
 		for (var i=0; i<5; i++) {
-			for (var g=0; g<data.response.groups.length; g++) {
 				for (var j=0; j<data.response.profiles.length; j++) {
 					if (data.response.items[i].from_id == data.response.profiles[j].id) {
 						html += "<div class='block'>"
@@ -38,7 +37,6 @@ $.ajax({
 						"</div>" + "</div>";
 					}
 				}
-			}
 		}
 		$(".reviews .info-block").html(html);
 	}
