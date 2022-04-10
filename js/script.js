@@ -26,6 +26,35 @@ $.ajax({
 		for (var i=0; i<5; i++) {
 				for (var j=0; j<data.response.profiles.length; j++) {
 					if (data.response.items[i].from_id == data.response.profiles[j].id) {
+
+						var textTest = data.response.items[i].text;
+						var endS = textTest.lastIndexOf("], ");
+
+						var regex = /(\|)([?!,.а-яА-ЯёЁ0-9a-zA-Z\s]+)(\])/gm;
+						var str = textTest.substr(0, endS+2);
+						let m;
+						var strNames = "";
+
+						if (textTest.indexOf("], ") != '-1') {
+							while ((m = regex.exec(str)) !== null) {
+								if (m.index === regex.lastIndex) {
+									regex.lastIndex++;
+								}
+								m.forEach((match, groupIndex) => {
+									//console.log(`${match}`)
+									if (`${groupIndex}` == 2) {
+										strNames = strNames + ', ' + `${match}`;
+									}
+								});
+							}
+							var str_1 = strNames.substr(2);
+							var str_2 = data.response.items[i].text.substr(endS+2);
+							var str_all = str_1 + ',' +str_2;
+						}
+						else {
+							str_all = data.response.items[i].text;
+						}
+
 						html += "<div class='block'>"
 						+ "<div class='img'>"
 							+ "<img src='" + data.response.profiles[j].photo_100 + "'>" +
@@ -33,7 +62,7 @@ $.ajax({
 						"<div class='line'></div>" +
 						"<div class='comments-text'>" +
 							"<h3>" + data.response.profiles[j].first_name + " " + data.response.profiles[j].last_name + "</h3>" +
-							"<div class='text'>" + data.response.items[i].text + "</div>" +
+							"<div class='text'>" + str_all + "</div>" +
 						"</div>" + "</div>";
 					}
 				}
