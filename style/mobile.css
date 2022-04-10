@@ -94,7 +94,7 @@
         font-size: 34px;
     }
     .price .info-block .block {
-        min-height: 460px;
+        min-height: 480px;
     }
     .process .info-block .block .img {
         width: 490px;
@@ -126,5 +126,80 @@
     }
     h3 {
         font-size: 23px;
+    }
+    footer .footer .logo span {
+        display: none;
+    }
+    footer .footer .logo {
+        flex: none;
+    }
+    footer .footer .logo span, footer .footer .info ul li .data-text {
+        font-size: 28px;
+    }
+    .address .info-block {
+        flex-wrap: wrap;
+    }
+    .address .map,
+    .address .info-block .address-info {
+        width: 100%;
+    }
+    .address .info-block .address-info {
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 36px;
+        transform: translate3d(35px,0,0);
+        order: 1;
+    }
+    .address .map {
+        height: 450px;
+        order: 2;
+    }
+    .application .block form, .modal .modal-body form {
+        flex-wrap: wrap;
+    }
+    .application .block form input:nth-of-type(1), .application .block form input:nth-of-type(2), .modal .modal-body form input:nth-of-type(1), .modal .modal-body form input:nth-of-type(2) {
+        width: 49%;
+        margin-right: 0;
+        flex: none;
+    }
+    .application .block form input[type='submit'], .modal .modal-body form input[type='submit'] {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .process .info-block .block .img {
+        width: 430px;
+        height: 300px;
+    }
+    .WhyWe .info-block .block .block-min {
+        padding: 20px;
+    }
+    section h1 {
+        width: 100%;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 27px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .application .block form input, .modal .modal-body form input {
+        font-size: 16px;
+    }
+    .reviews .info-block .block {
+        padding: 20px;
+    }
+    .reviews .info-block .block .img {
+        width: 90px;
+        height: 90px;
+    }
+    .reviews .info-reviews {
+        margin-top: 36px;
     }
 }
