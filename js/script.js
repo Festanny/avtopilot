@@ -27,21 +27,22 @@ $.ajax({
 				for (var j=0; j<data.response.profiles.length; j++) {
 					if (data.response.items[i].from_id == data.response.profiles[j].id) {
 
-						var textTest = data.response.items[i].text;
-						var endS = textTest.lastIndexOf("], ");
+						var textReviews = data.response.items[i].text;
+						
+						textReviews = textReviews.replace('\n', "<br />");
+						var endS = textReviews.lastIndexOf("], ");
 
 						var regex = /(\|)([?!,.а-яА-ЯёЁ0-9a-zA-Z\s]+)(\])/gm;
-						var str = textTest.substr(0, endS+2);
+						var str = textReviews.substr(0, endS+2);
 						let m;
 						var strNames = "";
 
-						if (textTest.indexOf("], ") != '-1') {
+						if (textReviews.indexOf("], ") != '-1') {
 							while ((m = regex.exec(str)) !== null) {
 								if (m.index === regex.lastIndex) {
 									regex.lastIndex++;
 								}
 								m.forEach((match, groupIndex) => {
-									//console.log(`${match}`)
 									if (`${groupIndex}` == 2) {
 										strNames = strNames + ', ' + `${match}`;
 									}
@@ -52,7 +53,7 @@ $.ajax({
 							var str_all = str_1 + ',' +str_2;
 						}
 						else {
-							str_all = data.response.items[i].text;
+							str_all = textReviews;
 						}
 
 						html += "<div class='block'>"
