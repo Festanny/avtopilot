@@ -452,6 +452,19 @@
     .process .info-block .block .info .text {
         margin-top: 20px;
     }
+    body {
+        padding-right: 0!important;
+    }
+    .modal {
+        padding: 0!important;
+    }
+    .container,
+    .address .info-block .address-info {
+        transform: translate3d(30px,0,0);
+    }
+    .application .block .agreement, .modal .modal-body .agreement {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -470,5 +483,53 @@
     }
     header .header .info .phone {
         margin-top: 16px;
+    }
+    .menu-fixed .menu .menu-a ul li {
+        font-size: 30px;
+    }
+    .menu-fixed .menu .menu-open marquee {
+        font-size: 80px;
+    }
+    .menu-fixed .menu .info {
+        flex-wrap: wrap;
+    }
+    .menu-fixed .menu .info .phone, .menu-fixed .menu .info .social-menu, .menu-fixed .menu .info .email {
+        width: 100%;
+        flex: none;
+        text-align: center;
+        justify-content: center;
+        margin-top: 16px;
+    }
+    .reviews .info-block .block {
+        margin-bottom: 10px;
+    }
+    section h1 {
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .btn {
+        font-size: 15px;
+    }
+    .WhyWe .info-block .block .block-min {
+        padding: 20px;
+    }
+    .WhyWe .info-block .block .block-min .text,
+    .WhyWe .info-block .block .block-min span {
+        font-size: 15px;
+    }
+    .WhyWe .info-block .block {
+        margin-top: 10px;
+    }
+    .WhyWe .info-block .block {
+        padding: 0;
+        border: 0;
+    }
+    .WhyWe .info-block .block .block-min span {
+        margin-bottom: 10px;
+    }
+    h1 {
+        line-height: 130%;
     }
 }

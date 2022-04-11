@@ -979,6 +979,8 @@ position: relative;
 
 .menu-fixed .menu .menu-a {
     margin-top: -13px;
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 .menu-fixed .menu .menu-a ul {
