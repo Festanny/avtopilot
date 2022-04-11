@@ -402,4 +402,73 @@
     .price .info-block .block {
         min-height: 440px;
     }
+    .process .info-block .block {
+        margin-bottom: 80px;
+    }
+    .application .block {
+        margin: 0 34px;
+    }
+    .reviews .info-block .block .img {
+        width: 80px;
+        height: 80px;
+    }
+    .reviews .info-reviews {
+        font-size: 15px;
+    }
+    .reviews .info-block .block .comments-text .text {
+        font-size: 15px;
+    }
+    footer .footer .info ul li {
+        flex-wrap: wrap;
+    }
+    footer .footer .info ul li .info-text,
+    footer .footer .info ul li .data-text {
+        width: 100%;
+        text-align: left;
+    }
+    footer .footer .info ul li .data-text {
+        margin-top: 8px;
+    }
+    footer .footer .info {
+        flex: 4;
+    }
+    footer .footer .logo {
+        flex: 1;
+    }
+    footer .footer .logo .block-main {
+        display: block;
+        width: 100%;
+    }
+    footer .footer .logo .block-main .block {
+        width: 100%;
+    }
+    footer .footer .logo .img {
+        width: 100%;
+        height: auto;
+    }
+    footer .footer .info .additionally .img {
+        height: 32px;
+    }
+    .process .info-block .block .info .text {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 36px;
+    }
+    .price .info-block .block {
+        min-height: 380px;
+    }
+    .application .block {
+        margin: 0;
+    }
+    header .header .info .logo,
+    header .header .info .phone {
+        width: 100%;
+    }
+    header .header .info .phone {
+        margin-top: 16px;
+    }
 }

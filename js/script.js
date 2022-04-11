@@ -6,10 +6,16 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		responsive: [
 			{
-			  breakpoint: 1201,
-			  settings: {
+				breakpoint: 1201,
+				settings: {
 				slidesToShow: 2
-			  }
+				}
+			},
+			{
+				breakpoint: 701,
+				settings: {
+					slidesToShow: 1
+				}
 			}
 		]
 	});
