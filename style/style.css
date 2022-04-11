@@ -872,6 +872,7 @@ footer .footer .info ul li:nth-of-type(1) .info-text {
 footer .footer .info ul li .data-text {
     font-size: 32px;
     font-weight: 600;
+    text-align: right;
 }
 
 footer .footer .info .additionally {

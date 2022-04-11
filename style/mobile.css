@@ -292,4 +292,36 @@
     .process .info-block .block:nth-of-type(2n) .img .num {
         left: -35px;
     }
+    .process .info-block .block .info .text {
+        margin-top: 32px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    footer .footer .info ul li .info-text {
+        font-size: 16px;
+        width: 50%;
+    }
+    footer .footer .info ul li .data-text {
+        font-size: 22px;
+    }
+    footer .footer .logo .img {
+        width: 105px;
+        height: 95px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .price .info-block .block {
+        min-height: 480px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    header .header .info .logo .logo-text {
+        font-size: 26px;
+    }
 }
