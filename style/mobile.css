@@ -324,4 +324,18 @@
     header .header .info .logo .logo-text {
         font-size: 26px;
     }
+    .application .block {
+        padding: 18px 36px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .header .info .logo .img,
+    footer .footer .logo .img {
+        width: 75px;
+        height: 65px;
+    }
+    header {
+        padding: 36px 0;
+    }
 }
