@@ -262,6 +262,10 @@ header .info-block .btn-block {
     margin-bottom: 54px;
 }
 
+header .info-block .btn-block span {
+    margin-bottom: 0;
+}
+
 section:first-of-type {
     padding: 120px 0 60px;
 }
@@ -378,6 +382,10 @@ section .documents h1 {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 134px;
+}
+
+.process .info-block .block:last-of-type {
+    margin-bottom: 25px;
 }
 
 .process .info-block .block .img {
