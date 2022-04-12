@@ -96,13 +96,18 @@ h3 {
     top: 0;
     padding: 72px 20px;
     height: 100vh;
+    
+    z-index: 999;
+    background-color: var(--bg);
+    border-right: 1px solid var(--line);
+}
+
+.menu-fixed .container-m {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    z-index: 999;
-    background-color: var(--bg);
-    border-right: 1px solid var(--line);
+    height: 100%;
 }
 
 .menu-fixed .burger {
@@ -1155,4 +1160,24 @@ section.page {
 .phone-mob {
     margin-right: 20px;
     display: none;
+    align-items: center;
+}
+
+.phone-mob a {
+    position: relative;
+    padding-left: 25px;
+}
+
+.phone-mob a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: url('../image/phone.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
 }
