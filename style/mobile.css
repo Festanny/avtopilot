@@ -827,6 +827,24 @@
     }
 }
 
+@media screen and (max-width: 443px) {
+    .price .info-block .block {
+        min-height: 390px;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .price .info-block .block {
+        min-height: 400px;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .price .info-block .block {
+        min-height: 420px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .reviews .info-block .block .img {
         width: 50px;
@@ -867,6 +885,18 @@
     }
     .modal-body {
         padding: 60px 20px;
+    }
+}
+
+@media screen and (max-width: 328px) {
+    .price .info-block .block {
+        min-height: 430px;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    .price .info-block .block {
+        min-height: 440px;
     }
 }
 
