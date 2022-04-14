@@ -8,6 +8,9 @@
     .address .map {
         width: 67%;
     }
+    .price .info-block .block {
+        min-height: 505px;
+    }
 }
 
 @media screen and (max-width: 1450px) {
