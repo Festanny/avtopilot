@@ -136,7 +136,8 @@
     footer .footer .logo {
         flex: none;
     }
-    footer .footer .logo span, footer .footer .info ul li .data-text {
+    footer .footer .logo span,
+    footer .footer .info ul li .data-text {
         font-size: 28px;
     }
     .address .info-block {
@@ -152,23 +153,28 @@
         width: 80%;
         margin: 0 auto;
         margin-bottom: 36px;
-        transform: translate3d(35px,0,0);
+        transform: translate3d(35px, 0, 0);
         order: 1;
     }
     .address .map {
         height: 450px;
         order: 2;
     }
-    .application .block form, .modal .modal-body form {
+    .application .block form,
+    .modal .modal-body form {
         flex-wrap: wrap;
     }
-    .application .block form input:nth-of-type(1), .application .block form input:nth-of-type(2), .modal .modal-body form input:nth-of-type(1), .modal .modal-body form input:nth-of-type(2) {
+    .application .block form input:nth-of-type(1),
+    .application .block form input:nth-of-type(2),
+    .modal .modal-body form input:nth-of-type(1),
+    .modal .modal-body form input:nth-of-type(2) {
         width: 49%;
         margin-right: 0;
         flex: none;
         position: relative;
     }
-    .application .block form input[type='submit'], .modal .modal-body form input[type='submit'] {
+    .application .block form input[type='submit'],
+    .modal .modal-body form input[type='submit'] {
         margin-top: 10px;
     }
 }
@@ -193,7 +199,8 @@
     h3 {
         font-size: 20px;
     }
-    .application .block form input, .modal .modal-body form input {
+    .application .block form input,
+    .modal .modal-body form input {
         font-size: 16px;
     }
     .reviews .info-block .block {
@@ -263,7 +270,8 @@
     footer .footer .info .additionally .img {
         height: 33px;
     }
-    footer .footer .logo span, footer .footer .info ul li .data-text {
+    footer .footer .logo span,
+    footer .footer .info ul li .data-text {
         font-size: 27px;
     }
     footer .footer .logo .img {
@@ -273,13 +281,15 @@
 }
 
 @media screen and (max-width: 900px) {
-    .WhyWe .info-block .block, .documents .info-block .block {
+    .WhyWe .info-block .block,
+    .documents .info-block .block {
         width: 100%;
     }
     .WhyWe .info-block .block .block-min {
         padding: 32px;
     }
-    .WhyWe .info-block .block:first-of-type, .documents .info-block .block:first-of-type {
+    .WhyWe .info-block .block:first-of-type,
+    .documents .info-block .block:first-of-type {
         margin-top: 0;
     }
     .WhyWe .info-block .block {
@@ -322,7 +332,8 @@
         width: 105px;
         height: 95px;
     }
-    section .WhyWe h1, section .documents h1 {
+    section .WhyWe h1,
+    section .documents h1 {
         margin-bottom: 54px;
     }
 }
@@ -479,9 +490,10 @@
     }
     .container,
     .address .info-block .address-info {
-        transform: translate3d(30px,0,0);
+        transform: translate3d(30px, 0, 0);
     }
-    .application .block .agreement, .modal .modal-body .agreement {
+    .application .block .agreement,
+    .modal .modal-body .agreement {
         width: 100%;
     }
     .address .info-block .address-info {
@@ -524,7 +536,9 @@
     .menu-fixed .menu .info {
         flex-wrap: wrap;
     }
-    .menu-fixed .menu .info .phone, .menu-fixed .menu .info .social-menu, .menu-fixed .menu .info .email {
+    .menu-fixed .menu .info .phone,
+    .menu-fixed .menu .info .social-menu,
+    .menu-fixed .menu .info .email {
         width: 100%;
         flex: none;
         text-align: center;
@@ -535,8 +549,12 @@
         margin-bottom: 10px;
     }
     section h1,
-    section .WhyWe h1, section .documents h1 {
+    section .WhyWe h1,
+    section .documents h1 {
         margin-bottom: 45px;
+    }
+    .menu-fixed .menu .menu-open {
+        padding: 72px 0 20px;
     }
 }
 
@@ -656,7 +674,8 @@
     .menu-fixed .social .img {
         margin-top: 0;
     }
-    .container, .address .info-block .address-info {
+    .container,
+    .address .info-block .address-info {
         transform: none;
         width: 95%;
     }
@@ -693,7 +712,8 @@
         transform: none;
         width: 80%;
     }
-    header .info-block .address, header .info-block span:nth-of-type(1) {
+    header .info-block .address,
+    header .info-block span:nth-of-type(1) {
         font-size: 14px;
     }
     .phone-mob {
@@ -708,7 +728,7 @@
     .process .info-block .block .img .num {
         right: 10px;
         bottom: -5px;
-        filter: drop-shadow(0 0 20px rgb(0,0,0, .7));
+        filter: drop-shadow(0 0 20px rgb(0, 0, 0, .7));
     }
     .process .info-block .block:nth-of-type(2n) .img .num {
         left: 10px;
@@ -725,10 +745,14 @@
     .process .info-block .block {
         margin-bottom: 60px;
     }
-    .application .block form input:nth-of-type(1), .application .block form input:nth-of-type(2), .modal .modal-body form input:nth-of-type(1), .modal .modal-body form input:nth-of-type(2) {
+    .application .block form input:nth-of-type(1),
+    .application .block form input:nth-of-type(2),
+    .modal .modal-body form input:nth-of-type(1),
+    .modal .modal-body form input:nth-of-type(2) {
         width: 100%;
     }
-    .application .block form input:nth-of-type(2), .modal .modal-body form input:nth-of-type(2) {
+    .application .block form input:nth-of-type(2),
+    .modal .modal-body form input:nth-of-type(2) {
         margin-top: 5px;
     }
     .reviews .info-block .block {
@@ -758,7 +782,8 @@
     .reviews .info-block .block:first-of-type {
         padding-top: 0;
     }
-    .WhyWe .info-block .block .block-min .text, .WhyWe .info-block .block .block-min span,
+    .WhyWe .info-block .block .block-min .text,
+    .WhyWe .info-block .block .block-min span,
     .process .info-block .block,
     .application .block span {
         font-size: 14px;
@@ -781,7 +806,8 @@
     .slick-prev {
         z-index: 10;
     }
-    .slick-prev:before, .slick-next:before {
+    .slick-prev:before,
+    .slick-next:before {
         opacity: 1!important;
         background-color: var(--bg);
         padding: 5px;
@@ -790,7 +816,7 @@
     }
     .slick-prev:before,
     .slick-next:before {
-        border-radius: 0 10px 10px 0 ;
+        border-radius: 0 10px 10px 0;
     }
     .price .info-block .block {
         min-height: 380px;
@@ -824,6 +850,9 @@
     }
     .modal-body {
         padding: 70px 40px;
+    }
+    .process .info-block .block .img {
+        overflow: hidden;
     }
 }
 
@@ -920,7 +949,10 @@
     .phone-mob {
         margin-right: 16px;
     }
-    .application .block form input:nth-of-type(1), .application .block form input:nth-of-type(2), .modal .modal-body form input:nth-of-type(1), .modal .modal-body form input:nth-of-type(2) {
+    .application .block form input:nth-of-type(1),
+    .application .block form input:nth-of-type(2),
+    .modal .modal-body form input:nth-of-type(1),
+    .modal .modal-body form input:nth-of-type(2) {
         font-size: 15px;
     }
     footer .footer .info .additionally .img {
