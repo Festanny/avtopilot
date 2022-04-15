@@ -1,5 +1,5 @@
 // carousel-reviews
-$(document).ready(function(){
+$(document).ready(function () {
 	$('.carousel-price').slick({
 		dots: false,
 		slidesToShow: 3,
@@ -8,7 +8,7 @@ $(document).ready(function(){
 			{
 				breakpoint: 1201,
 				settings: {
-				slidesToShow: 2
+					slidesToShow: 2
 				}
 			},
 			{
@@ -26,53 +26,53 @@ $.ajax({
 	url: 'https://api.vk.com/method/board.getComments?access_token=017f1699997551a017b312b361d1a85d8f142c702fdb71879763194a4b59e3d733cc1077958e069218038&v=5.81&group_id=29110438&topic_id=34909285&need_likes=false&extended=true&sort=desc',
 	method: "GET",
 	dataType: "JSONP",
-	success: function(data) {
-		
+	success: function (data) {
+
 		var html = "";
-		for (var i=0; i<5; i++) {
-				for (var j=0; j<data.response.profiles.length; j++) {
-					if (data.response.items[i].from_id == data.response.profiles[j].id) {
+		for (var i = 0; i < 5; i++) {
+			for (var j = 0; j < data.response.profiles.length; j++) {
+				if (data.response.items[i].from_id == data.response.profiles[j].id) {
 
-						var textReviews = data.response.items[i].text;
-						
-						textReviews = textReviews.replace('\n', "<br />");
-						var endS = textReviews.lastIndexOf("], ");
+					var textReviews = data.response.items[i].text;
 
-						var regex = /(\|)([?!,.а-яА-ЯёЁ0-9a-zA-Z\s]+)(\])/gm;
-						var str = textReviews.substr(0, endS+2);
-						let m;
-						var strNames = "";
+					textReviews = textReviews.replace('\n', "<br />");
+					var endS = textReviews.lastIndexOf("], ");
 
-						if (textReviews.indexOf("], ") != '-1') {
-							while ((m = regex.exec(str)) !== null) {
-								if (m.index === regex.lastIndex) {
-									regex.lastIndex++;
-								}
-								m.forEach((match, groupIndex) => {
-									if (`${groupIndex}` == 2) {
-										strNames = strNames + ', ' + `${match}`;
-									}
-								});
+					var regex = /(\|)([?!,.а-яА-ЯёЁ0-9a-zA-Z\s]+)(\])/gm;
+					var str = textReviews.substr(0, endS + 2);
+					let m;
+					var strNames = "";
+
+					if (textReviews.indexOf("], ") != '-1') {
+						while ((m = regex.exec(str)) !== null) {
+							if (m.index === regex.lastIndex) {
+								regex.lastIndex++;
 							}
-							var str_1 = strNames.substr(2);
-							var str_2 = data.response.items[i].text.substr(endS+2);
-							var str_all = str_1 + ',' +str_2;
+							m.forEach((match, groupIndex) => {
+								if (`${groupIndex}` == 2) {
+									strNames = strNames + ', ' + `${match}`;
+								}
+							});
 						}
-						else {
-							str_all = textReviews;
-						}
+						var str_1 = strNames.substr(2);
+						var str_2 = data.response.items[i].text.substr(endS + 2);
+						var str_all = str_1 + ',' + str_2;
+					}
+					else {
+						str_all = textReviews;
+					}
 
-						html += "<div class='block'>"
+					html += "<div class='block'>"
 						+ "<div class='img'>"
-							+ "<img src='" + data.response.profiles[j].photo_100 + "'>" +
-							"</div>" +
+						+ "<img src='" + data.response.profiles[j].photo_100 + "'>" +
+						"</div>" +
 						"<div class='line'></div>" +
 						"<div class='comments-text'>" +
-							"<h3>" + data.response.profiles[j].first_name + " " + data.response.profiles[j].last_name + "</h3>" +
-							"<div class='text'>" + str_all + "</div>" +
+						"<h3>" + data.response.profiles[j].first_name + " " + data.response.profiles[j].last_name + "</h3>" +
+						"<div class='text'>" + str_all + "</div>" +
 						"</div>" + "</div>";
-					}
 				}
+			}
 		}
 		$(".reviews .info-block").html(html);
 	}
@@ -82,12 +82,24 @@ $.ajax({
 let menuAll = document.querySelector('.menu-fixed .menu');
 let burger = document.querySelector('.menu-fixed .burger');
 
-$('.menu-fixed .burger').click( function () {
+$('.menu-fixed .burger').click(function () {
 	menuAll.classList.toggle('open');
 	burger.classList.toggle('burger-open');
 	document.body.classList.toggle('scroll-none');
 });
 
-$(window).on('load',function(){
+$(window).on('load', function () {
 	$('#stock').modal('show');
+});
+
+// Tab
+$('.admin .info-block .panel .function ul li').click(function () {
+	var id = $(this).attr('data-tab'),
+		content = $('.admin .info-block .info .block[data-tab="' + id + '"]');
+
+	$('.admin .info-block .panel .function ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info .block.active').removeClass('active');
+	content.addClass('active');
 });

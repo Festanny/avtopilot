@@ -806,7 +806,8 @@ input::-webkit-input-placeholder {
 
 .address .info-block .address-info ul li::before,
 .requisites .info-block ul li::before,
-.information .info-block ul li:before {
+.information .info-block ul li:before,
+.admin .info-block .panel .function ul li::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -1347,4 +1348,64 @@ section.page {
 
 .auth form input:not(input[type="button"]):last-of-type {
     margin-bottom: 36px;
+}
+
+.admin .info-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin .info-block .panel,
+.admin .info-block .info {
+    width: 50%;
+}
+
+.admin .info-block .panel {
+    padding-right: 50px;
+    border-right: 1px solid var(--line);
+}
+
+.admin .info-block .info {
+    padding-left: 50px;
+}
+
+.admin .info-block .panel .function ul {
+    margin: 36px 0 0 0;
+    padding: 0;
+}
+
+.admin .info-block .panel .function ul li {
+    list-style: none;
+    margin-bottom: 18px;
+    position: relative;
+    padding: 0 0 0 38px;
+    cursor: pointer;
+}
+
+.admin .info-block .panel .function ul li:nth-of-type(1):before {
+    background-image: url('../image/admin/img1.svg');
+}
+.admin .info-block .panel .function ul li:nth-of-type(2):before {
+    background-image: url('../image/admin/img2.svg');
+}
+.admin .info-block .panel .function ul li:nth-of-type(3):before {
+    background-image: url('../image/admin/img3.svg');
+}
+.admin .info-block .panel .function ul li:nth-of-type(4):before {
+    background-image: url('../image/admin/img4.svg');
+}
+.admin .info-block .panel .function ul li:nth-of-type(5):before {
+    background-image: url('../image/admin/img5.svg');
+}
+
+.admin .info-block .info .block {
+    display: none;
+}
+
+.admin .info-block .info .block.active {
+    display: block;
+}
+
+.admin .info-block .panel .function ul li.active {
+    font-weight: 600;
 }
