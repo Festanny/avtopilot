@@ -600,6 +600,7 @@ section .documents h1 {
     margin: 0 64px;
     padding: 18px 72px;
     background-color: var(--gold2);
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
