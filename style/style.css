@@ -1547,3 +1547,25 @@ section.page {
 .admin #stocks-block-admin .onOffStocksBlock .info-text label {
     padding-right: 10px;
 }
+
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]) {
+    margin-bottom: 0!important;
+}
+
+
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]):last-of-type {
+    margin-bottom: 0!important;
+}
+
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc {
+    margin-bottom: 18px;
+}
+
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc span {
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc:nth-of-type(4) {
+    margin-bottom: 36px;
+}
