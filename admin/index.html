@@ -80,17 +80,18 @@
                             <h1>Панель администратора</h1>
                             <div class="function">
                                 <ul>
-                                    <li data-tab='1' class="active">Управление данными учеников</li>
+                                    <li data-tab='1'>Управление данными учеников</li>
                                     <li data-tab='2'>Управление дистанционным обучением</li>
                                     <li data-tab='3'>Управление акциями</li>
                                     <li data-tab='4'>Настройка филиалов</li>
                                     <li data-tab='5'>Настройка категорий обучения</li>
                                     <li data-tab='6'>Управление документами</li>
+                                    <li data-tab='7'>Управление услугами</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info">
-                            <div class="block active" data-tab='1' id="training-system-id">
+                            <div class="block" data-tab='1' id="training-system-id">
                                 <h2>Управление данными учеников</h2>
                                 <a href="#" class="training-system">Перейти в систему обучения</a>
                                 <div class="student-functions">
@@ -112,29 +113,180 @@
                                         </div>
                                         <div class="form2-student form-edit" data-tab-profile='2'>
                                             <ul>
-                                                <li><a href="#">Пример 1</a></li>
-                                                <li><a href="#">Пример 2</a></li>
-                                                <li><a href="#">Пример 3</a></li>
-                                                <li><a href="#">Пример 4</a></li>
-                                                <li><a href="#">Пример 5</a></li>
+                                                <li><a href="#">Пользователь 1</a></li>
+                                                <li><a href="#">Пользователь 2</a></li>
+                                                <li><a href="#">Пользователь 3</a></li>
+                                                <li><a href="#">Пользователь 4</a></li>
+                                                <li><a href="#">Пользователь 5</a></li>
                                             </ul>
                                         </div>
-                                        <div class="form2-student form-edit" data-tab-profile='3'>
+                                        <div class="form3-student form-edit" data-tab-profile='3'>
                                             <ul>
-                                                <li><a href="#">Пример 1</a></li>
-                                                <li><a href="#">Пример 2</a></li>
-                                                <li><a href="#">Пример 3</a></li>
-                                                <li><a href="#">Пример 4</a></li>
-                                                <li><a href="#">Пример 5</a></li>
+                                                <li><a href="#">Пользователь 1</a></li>
+                                                <li><a href="#">Пользователь 2</a></li>
+                                                <li><a href="#">Пользователь 3</a></li>
+                                                <li><a href="#">Пользователь 4</a></li>
+                                                <li><a href="#">Пользователь 5</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="block" data-tab='2'>2</div>
-                            <div class="block" data-tab='3'>3</div>
-                            <div class="block" data-tab='4'>4</div>
-                            <div class="block" data-tab='5'>5</div>
+                            <div class="block" data-tab='3' id="stocks-block-admin">
+                                <h2>Управление акциями</h2>
+                                <div class="info-functions">
+                                    <div class="form-student">
+                                        <div class="stocks-admin">
+                                            <form action="" method="POST">
+                                                <input type="text" placeholder="Название акции">
+                                                <div>
+                                                    <input type="button" class="btn" value="Обновить акцию">
+                                                </div>
+                                            </form>
+                                            <form action="" method="POST" class="onOffStocksBlock">
+                                                <div class="info-text">
+                                                    <label for="on-off-stocks">Включить акцию?</label>
+                                                    <input type="checkbox" id="on-off-stocks" checked>
+                                                </div>
+                                                <div>
+                                                    <input type="button" class="btn" value="Обновить">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block" data-tab='4' id="training-system-id">
+                                <h2>Настройка филиалов</h2>
+                                <div class="student-functions">
+                                    <ul>
+                                        <li data-tab-profile='1' class="active">Добавить филиал</li>
+                                        <li data-tab-profile='2'>Изменить филиал</li>
+                                        <li data-tab-profile='3'>Удалить филиал</li>
+                                    </ul>
+                                    <div class="form-student">
+                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                            <form action="" method="POST">
+                                                <input type="text" placeholder="Название филиала">
+                                                <div>
+                                                    <input type="button" class="btn" value="Добавить филиал">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                            <ul>
+                                                <li><a href="#">Филиал 1</a></li>
+                                                <li><a href="#">Филиал 2</a></li>
+                                                <li><a href="#">Филиал 3</a></li>
+                                                <li><a href="#">Филиал 4</a></li>
+                                                <li><a href="#">Филиал 5</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form3-student form-edit" data-tab-profile='3'>
+                                            <ul>
+                                                <li><a href="#">Филиал 1</a></li>
+                                                <li><a href="#">Филиал 2</a></li>
+                                                <li><a href="#">Филиал 3</a></li>
+                                                <li><a href="#">Филиал 4</a></li>
+                                                <li><a href="#">Филиал 5</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block" data-tab='5' id="training-system-id">
+                                <h2>Настройка категорий обучения</h2>
+                                <div class="student-functions">
+                                    <ul>
+                                        <li data-tab-profile='1' class="active">Добавить категорию</li>
+                                        <li data-tab-profile='2'>Изменить категорию</li>
+                                        <li data-tab-profile='3'>Удалить категорию</li>
+                                    </ul>
+                                    <div class="form-student">
+                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                            <form action="" method="POST">
+                                                <input type="text" placeholder="Название категории">
+                                                <div>
+                                                    <input type="button" class="btn" value="Добавить филиал">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                            <ul>
+                                                <li><a href="#">Категория 1</a></li>
+                                                <li><a href="#">Категория 2</a></li>
+                                                <li><a href="#">Категория 3</a></li>
+                                                <li><a href="#">Категория 4</a></li>
+                                                <li><a href="#">Категория 5</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form3-student form-edit" data-tab-profile='3'>
+                                            <ul>
+                                                <li><a href="#">Категория 1</a></li>
+                                                <li><a href="#">Категория 2</a></li>
+                                                <li><a href="#">Категория 3</a></li>
+                                                <li><a href="#">Категория 4</a></li>
+                                                <li><a href="#">Категория 5</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block" data-tab='6' id="training-system-id">
+                                <h2>Управление документами</h2>
+                            </div>
+                            <div class="block" data-tab='7' id="training-system-id">
+                                <h2>Управление услугами</h2>
+                                <div class="student-functions">
+                                    <ul>
+                                        <li data-tab-profile='1' class="active">Добавить услугу</li>
+                                        <li data-tab-profile='2'>Изменить услугу</li>
+                                        <li data-tab-profile='3'>Удалить услугу</li>
+                                    </ul>
+                                    <div class="form-student">
+                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                            <form action="" method="POST">
+                                                <div>
+                                                    <input type="text" placeholder="Название услуги">
+                                                    <span>Рекомендуемое количество слов: 3</span>
+                                                </div>
+                                                <div>
+                                                    <input type="text" placeholder="Описание услуги">
+                                                    <span>Рекомендуемое количество: до 3</span>
+                                                </div>
+                                                <input type="text" placeholder="Стоимость услуги">
+                                                <div>
+                                                    <input type="file" value="sdfsdf">
+                                                    <span>Фоновая фотография услуги</span>
+                                                </div>
+                                                
+                                                <div>
+                                                    <input type="button" class="btn" value="Добавить услугу">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                            <ul>
+                                                <li><a href="#">Услуга 1</a></li>
+                                                <li><a href="#">Услуга 2</a></li>
+                                                <li><a href="#">Услуга 3</a></li>
+                                                <li><a href="#">Услуга 4</a></li>
+                                                <li><a href="#">Услуга 5</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form3-student form-edit" data-tab-profile='3'>
+                                            <ul>
+                                                <li><a href="#">Услуга 1</a></li>
+                                                <li><a href="#">Услуга 2</a></li>
+                                                <li><a href="#">Услуга 3</a></li>
+                                                <li><a href="#">Услуга 4</a></li>
+                                                <li><a href="#">Услуга 5</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -65,6 +65,9 @@
     .price .info-block .block .text h2 {
         min-height: 110px;
     }
+    .menu-fixed .menu .menu-a {
+        max-height: 300px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
