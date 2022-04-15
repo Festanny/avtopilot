@@ -33,6 +33,15 @@ a {
     color: var(--text);
 }
 
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
 h1,
 h2,
 h3 {
@@ -1337,16 +1346,19 @@ section.page {
     width: 362px;
 }
 
-.auth form input:not(input[type="button"]) {
+.auth form input:not(input[type="button"]),
+.admin .info-block .info #training-system-id .student-functions .form-edit form input:not(input[type="button"]) {
     border: 1px solid var(--line);
     border-radius: 5px;
     outline: none;
     padding: 14px;
     font-size: 18px;
     margin-bottom: 18px;
+    background-color: var(--bg);
 }
 
-.auth form input:not(input[type="button"]):last-of-type {
+.auth form input:not(input[type="button"]):last-of-type,
+.admin .info-block .info #training-system-id .student-functions .form-edit form input:not(input[type="button"]):last-of-type {
     margin-bottom: 36px;
 }
 
@@ -1395,17 +1407,74 @@ section.page {
     background-image: url('../image/admin/img4.svg');
 }
 .admin .info-block .panel .function ul li:nth-of-type(5):before {
+    background-image: url('../image/admin/img4.svg');
+}
+.admin .info-block .panel .function ul li:nth-of-type(6):before {
     background-image: url('../image/admin/img5.svg');
 }
 
-.admin .info-block .info .block {
+.admin .info-block .info .block,
+.admin .info-block .info .student-functions .form-edit {
     display: none;
 }
 
-.admin .info-block .info .block.active {
+.admin .info-block .info .block.active,
+.admin .info-block .info .student-functions .form-edit.active {
     display: block;
 }
 
 .admin .info-block .panel .function ul li.active {
     font-weight: 600;
+}
+
+.admin .info-block .info .block .training-system {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.admin .info-block .info #training-system-id .student-functions > ul li {
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    margin-right: 18px;
+    padding-top: 10px;
+}
+
+.admin .info-block .info #training-system-id .student-functions ul li.active {
+    border-bottom: 1px solid var(--line);
+    font-weight: 600;
+}
+
+.admin .info-block .info #training-system-id .student-functions ul {
+    display: flex;
+    margin-bottom: 33px;
+}
+
+.admin .info-block .info #training-system-id .student-functions .form-edit form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin .info-block .info #training-system-id .student-functions {
+    margin-top: 26px;
+}
+
+.admin .info-block .info #training-system-id .student-functions .form2-student ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin .info-block .info #training-system-id .student-functions .form2-student ul li > a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--bg);
+    border: 1px solid var(--line);
+    margin-bottom: 5px;
+}
+
+.admin .info-block .info #training-system-id .student-functions .form2-student ul li:last-of-type {
+    margin-bottom: 0;
 }

@@ -83,15 +83,53 @@
                                     <li data-tab='1' class="active">Управление данными учеников</li>
                                     <li data-tab='2'>Управление дистанционным обучением</li>
                                     <li data-tab='3'>Управление акциями</li>
-                                    <li data-tab='4'>Настройка категорий обучения</li>
-                                    <li data-tab='5'>Управление документами</li>
+                                    <li data-tab='4'>Настройка филиалов</li>
+                                    <li data-tab='5'>Настройка категорий обучения</li>
+                                    <li data-tab='6'>Управление документами</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info">
-                            <div class="block active" data-tab='1'>
+                            <div class="block active" data-tab='1' id="training-system-id">
                                 <h2>Управление данными учеников</h2>
-                                <span>Перейти в систему обучения</span>
+                                <a href="#" class="training-system">Перейти в систему обучения</a>
+                                <div class="student-functions">
+                                    <ul>
+                                        <li data-tab-profile='1' class="active">Зарегистрировать пользователя</li>
+                                        <li data-tab-profile='2'>Изменить данные</li>
+                                        <li data-tab-profile='3'>Удалить пользователя</li>
+                                    </ul>
+                                    <div class="form-student">
+                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                            <form action="" method="POST">
+                                                <input type="text" placeholder="Ф.И.О.">
+                                                <input type="phone" placeholder="Номер телефона">
+                                                <input type="text" placeholder="Последние 6 цифр паспорта">
+                                                <div>
+                                                    <input type="button" class="btn" value="Добавить в систему обучения">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                            <ul>
+                                                <li><a href="#">Пример 1</a></li>
+                                                <li><a href="#">Пример 2</a></li>
+                                                <li><a href="#">Пример 3</a></li>
+                                                <li><a href="#">Пример 4</a></li>
+                                                <li><a href="#">Пример 5</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="form2-student form-edit" data-tab-profile='3'>
+                                            <ul>
+                                                <li><a href="#">Пример 1</a></li>
+                                                <li><a href="#">Пример 2</a></li>
+                                                <li><a href="#">Пример 3</a></li>
+                                                <li><a href="#">Пример 4</a></li>
+                                                <li><a href="#">Пример 5</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="block" data-tab='2'>2</div>
                             <div class="block" data-tab='3'>3</div>

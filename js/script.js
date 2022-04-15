@@ -103,3 +103,15 @@ $('.admin .info-block .panel .function ul li').click(function () {
 	$('.admin .info-block .info .block.active').removeClass('active');
 	content.addClass('active');
 });
+
+// Tab-student
+$('.admin .info-block .info #training-system-id .student-functions ul li').click(function () {
+	var id = $(this).attr('data-tab-profile'),
+		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-profile="' + id + '"]');
+
+	$('.admin .info-block .info #training-system-id .student-functions ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});

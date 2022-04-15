@@ -857,6 +857,9 @@
     .process .info-block .block .img {
         overflow: hidden;
     }
+    .menu-fixed .menu .menu-open marquee {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 443px) {
