@@ -6,6 +6,7 @@
     --gold2: #ffb93e;
     --gold-old: #FBA818;
     --btn-gold: #CE8404;
+    --line-gold: rgba(251, 167, 22, 0.4);
     --text-input: #111111;
     --line: rgba(29, 29, 31, 0.3);
     --line2: rgba(29, 29, 31, 0.1);
@@ -61,10 +62,10 @@ h3 {
 }
 
 .container {
-    width: 1366px;
-    margin: 0 auto;
-    transform: translate3d(35px, 0, 0);
-}
+        width: 1366px;
+        margin: 0 auto;
+        transform: translate3d(35px, 0, 0);
+    }
 
 .btn {
     display: inline-block;
@@ -1310,4 +1311,39 @@ section.page {
 
 .dop-page h1 {
     width: 100%;
+}
+
+.page-auth {
+    position: relative;
+    background-image: url('../image/line.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.page-auth .auto {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 70%;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+    width: 362px;
+}
+
+.auth form input:not(input[type="button"]) {
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    outline: none;
+    padding: 14px;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.auth form input:not(input[type="button"]):last-of-type {
+    margin-bottom: 36px;
 }
