@@ -241,3 +241,17 @@ window.addEventListener("DOMContentLoaded", function() {
     input.addEventListener("keydown", mask, false)
   });
 });
+
+
+// Other choice (input radio)
+var otherTextInput = $('.enroll .info-block form .desc:nth-of-type(3) .inputRadio .otherTextInput');
+var inputAll = $('.enroll .info-block form .desc:nth-of-type(3) .inputRadio input');
+
+inputAll.click( ()=> {
+	if ($('.otherTextRadio').is(':checked')) {
+		otherTextInput.addClass('openInput');
+	}
+	else {
+		otherTextInput.removeClass('openInput');
+	}
+});

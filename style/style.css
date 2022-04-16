@@ -1672,13 +1672,14 @@ form.editForm input:not(input[type="button"]):last-of-type {
     padding: 10px;
     margin: 5px;
     border: 1px solid var(--line);
-    display: inline-block;
-    height: 100%;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: var(--bg);
     cursor: pointer;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .enroll .info-block form .desc:nth-of-type(3) .inputRadio div {
@@ -1689,5 +1690,15 @@ form.editForm input:not(input[type="button"]):last-of-type {
 }
 
 .enroll .info-block form .desc:nth-of-type(3) .inputRadio input[type="radio"]:checked + label {
-    background-color: var(--gray-bl);
+    background-color: var(--gold);
+    border-color: var(--line-gold);
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio .otherTextInput {
+    margin-top: 10px;
+    display: none;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio .otherTextInput.openInput {
+    display: block;
 }
