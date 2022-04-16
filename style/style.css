@@ -1472,7 +1472,11 @@ section.page {
     flex-direction: column;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li > a,
+.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel input[type="radio"] {
+    display: none;
+}
+
+.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span,
 .admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a {
     display: block;
     padding: 10px 15px;
@@ -1482,9 +1486,11 @@ section.page {
     margin-bottom: 5px;
     position: relative;
     transition: border .3s;
+    cursor: pointer;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form2-student ul li > a:hover,
+
+.admin .info-block .info #training-system-id .student-functions .form2-student ul li .textLabel > span:hover,
 .admin .info-block .info #training-system-id .student-functions .form3-student ul li > a:hover {
     border: 1px solid var(--line2);
 }
@@ -1494,7 +1500,7 @@ section.page {
     margin-bottom: 0;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li > a::before, 
+.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span::before, 
 .admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a::before {
     content: '';
     position: absolute;
@@ -1510,12 +1516,12 @@ section.page {
     transition: opacity .3s;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li > a:hover::before, 
+.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span:hover::before, 
 .admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a:hover::before {
     opacity: 1;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li > a::before {
+.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span::before {
     background-image: url('../image/edit.svg');
 }
 .admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a::before {
@@ -1552,7 +1558,6 @@ section.page {
     margin-bottom: 0!important;
 }
 
-
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]):last-of-type {
     margin-bottom: 0!important;
 }
@@ -1570,6 +1575,15 @@ section.page {
     margin-bottom: 36px;
 }
 
-.testLabel {
-    pointer-events: auto;
+form.editForm {
+    padding: 0 10px;
+    margin-bottom: 36px;
+}
+
+form.editForm input:not(input[type="button"]) {
+    margin-bottom: 5px!important;
+}
+
+form.editForm input:not(input[type="button"]):last-of-type {
+    margin-bottom: 15px!important;
 }

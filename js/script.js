@@ -157,28 +157,56 @@ function go(el) {
 	console.log(el);
 	console.log(el.checked);
 	console.log(el.id);
+
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span');
 	
-	if (document.querySelectorAll(".testForm").length != 0) {
-		document.querySelector(".testForm").remove();
+	if (document.querySelectorAll(".editForm").length != 0) {
+		document.querySelector(".editForm").remove();
 	}
 	if (el.checked) {
-		if (document.querySelector(".testForm") == null) {
+		if (document.querySelector(".editForm") == null) {
 			if (el.disabled == false) {
-				el.insertAdjacentHTML("afterend", `<form class="testForm">
-				<input type="text" id="1" value="asda">
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+					<input type="text" placeholder="Ф.И.О.">
+					<input type="phone" placeholder="Номер телефона">
+					<input type="text" placeholder="Последние 6 цифр паспорта">
+					<div>
+						<input type="button" class="btn" value="Обновить">
+					</div>
 				</form>`);
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				for(var i=0; i<spanRadio.length; i++) {
+					spanRadio[i].style.background = 'var(--bg)';
+				}
 				var radioInput = document.querySelectorAll("input[type='radio']");
 				for(var i=0; i<radioInput.length; i++) {
 					radioInput[i].disabled = false;
 				}
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
 				el.disabled = true;
 			}
 		}
 	}
 	else {
-		document.querySelector(".testForm").remove();
+		document.querySelector(".editForm").remove();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*$("[href*='?id=']").click((e)=>{
 
