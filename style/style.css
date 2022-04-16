@@ -1569,3 +1569,7 @@ section.page {
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc:nth-of-type(4) {
     margin-bottom: 36px;
 }
+
+.testLabel {
+    pointer-events: auto;
+}

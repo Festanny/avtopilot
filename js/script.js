@@ -154,13 +154,38 @@ $('.admin .info-block .info .services-system .student-functions ul li').click(fu
 
 function go(el)
 {
-	console.log(el.id);
-	el.insertAdjacentHTML("beforeend", `<form>
-	<input type="text" id="1" value="asda">
-	</form>`);
-	el.style.pointerEvents = 'none';
-	return false;
-	//el.appendChild(aaa);
+
+	var inputRadio = document.querySelectorAll(".one");
+	console.log(inputRadio);
+	for (var i=0; i<inputRadio.length; i++) {
+		if (inputRadio[i].checked) {
+			el.insertAdjacentHTML("beforeend", `<form class="testForm">
+			<input type="text" id="1" value="asda">
+			</form>`);
+		} else {
+			console.log(inputRadio[i]);
+			document.querySelector(".testForm").remove();
+			
+		}
+		
+	}
+
+	/*if (radioInput.checked)
+	{
+		el.insertAdjacentHTML("beforeend", `<form class="testForm">
+		<input type="text" id="1" value="asda">
+		</form>`);
+		
+	}
+	else{
+		document.querySelector(".testForm").remove();
+		radioInput.checked = false;
+	}
+	*/
+	
+
+
+	
 }
 
 /*$("[href*='?id=']").click((e)=>{
