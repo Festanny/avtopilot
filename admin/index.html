@@ -113,11 +113,13 @@
                                         </div>
                                         <div class="form2-student form-edit" data-tab-profile='2'>
                                             <ul>
-                                                <li><a href="#">Пользователь 1</a></li>
-                                                <li><a href="#">Пользователь 2</a></li>
-                                                <li><a href="#">Пользователь 3</a></li>
+                                                <li><a onclick="go(this); return false;" id="1">Пользователь 1</a></li>
+                                                <li><a onclick="go(this); return false;" id="2">Пользователь 2</a></li>
+                                                <li><a onclick="go(this); return false;" id="3">Пользователь 3</a></li>
                                                 <li><a href="#">Пользователь 4</a></li>
                                                 <li><a href="#">Пользователь 5</a></li>
+
+
                                             </ul>
                                         </div>
                                         <div class="form3-student form-edit" data-tab-profile='3'>
@@ -160,16 +162,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="block" data-tab='4' id="training-system-id">
+                            <div class="block branches-system" data-tab='4' id="training-system-id">
                                 <h2>Настройка филиалов</h2>
                                 <div class="student-functions">
                                     <ul>
-                                        <li data-tab-profile='1' class="active">Добавить филиал</li>
-                                        <li data-tab-profile='2'>Изменить филиал</li>
-                                        <li data-tab-profile='3'>Удалить филиал</li>
+                                        <li data-tab-branches='1' class="active">Добавить филиал</li>
+                                        <li data-tab-branches='2'>Изменить филиал</li>
+                                        <li data-tab-branches='3'>Удалить филиал</li>
                                     </ul>
                                     <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                        <div class="form1-student form-edit active" data-tab-branches='1'>
                                             <form action="" method="POST">
                                                 <input type="text" placeholder="Название филиала">
                                                 <div>
@@ -177,7 +179,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                        <div class="form2-student form-edit" data-tab-branches='2'>
                                             <ul>
                                                 <li><a href="#">Филиал 1</a></li>
                                                 <li><a href="#">Филиал 2</a></li>
@@ -186,7 +188,7 @@
                                                 <li><a href="#">Филиал 5</a></li>
                                             </ul>
                                         </div>
-                                        <div class="form3-student form-edit" data-tab-profile='3'>
+                                        <div class="form3-student form-edit" data-tab-branches='3'>
                                             <ul>
                                                 <li><a href="#">Филиал 1</a></li>
                                                 <li><a href="#">Филиал 2</a></li>
@@ -198,16 +200,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="block" data-tab='5' id="training-system-id">
+                            <div class="block category-system" data-tab='5' id="training-system-id">
                                 <h2>Настройка категорий обучения</h2>
                                 <div class="student-functions">
                                     <ul>
-                                        <li data-tab-profile='1' class="active">Добавить категорию</li>
-                                        <li data-tab-profile='2'>Изменить категорию</li>
-                                        <li data-tab-profile='3'>Удалить категорию</li>
+                                        <li data-tab-category='1' class="active">Добавить категорию</li>
+                                        <li data-tab-category='2'>Изменить категорию</li>
+                                        <li data-tab-category='3'>Удалить категорию</li>
                                     </ul>
                                     <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                        <div class="form1-student form-edit active" data-tab-category='1'>
                                             <form action="" method="POST">
                                                 <input type="text" placeholder="Название категории">
                                                 <div>
@@ -215,7 +217,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                        <div class="form2-student form-edit" data-tab-category='2'>
                                             <ul>
                                                 <li><a href="#">Категория 1</a></li>
                                                 <li><a href="#">Категория 2</a></li>
@@ -224,7 +226,7 @@
                                                 <li><a href="#">Категория 5</a></li>
                                             </ul>
                                         </div>
-                                        <div class="form3-student form-edit" data-tab-profile='3'>
+                                        <div class="form3-student form-edit" data-tab-category='3'>
                                             <ul>
                                                 <li><a href="#">Категория 1</a></li>
                                                 <li><a href="#">Категория 2</a></li>
@@ -239,16 +241,16 @@
                             <div class="block" data-tab='6' id="training-system-id">
                                 <h2>Управление документами</h2>
                             </div>
-                            <div class="block services" data-tab='7' id="training-system-id">
+                            <div class="block services services-system" data-tab='7' id="training-system-id">
                                 <h2>Управление услугами</h2>
                                 <div class="student-functions">
                                     <ul>
-                                        <li data-tab-profile='1' class="active">Добавить услугу</li>
-                                        <li data-tab-profile='2'>Изменить услугу</li>
-                                        <li data-tab-profile='3'>Удалить услугу</li>
+                                        <li data-tab-services='1' class="active">Добавить услугу</li>
+                                        <li data-tab-services='2'>Изменить услугу</li>
+                                        <li data-tab-services='3'>Удалить услугу</li>
                                     </ul>
                                     <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-profile='1'>
+                                        <div class="form1-student form-edit active" data-tab-services='1'>
                                             <form action="" method="POST">
                                                 <div class="desc">
                                                     <input type="text" placeholder="Название услуги">
@@ -256,7 +258,7 @@
                                                 </div>
                                                 <div class="desc">
                                                     <input type="text" placeholder="Описание услуги">
-                                                    <span>Рекомендуемое количество: до 3</span>
+                                                    <span>Доступное количество: 3</span>
                                                 </div>
                                                 <div class="desc">
                                                     <input type="text" placeholder="Стоимость услуги">
@@ -271,7 +273,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="form2-student form-edit" data-tab-profile='2'>
+                                        <div class="form2-student form-edit" data-tab-services='2'>
                                             <ul>
                                                 <li><a href="#">Услуга 1</a></li>
                                                 <li><a href="#">Услуга 2</a></li>
@@ -280,7 +282,7 @@
                                                 <li><a href="#">Услуга 5</a></li>
                                             </ul>
                                         </div>
-                                        <div class="form3-student form-edit" data-tab-profile='3'>
+                                        <div class="form3-student form-edit" data-tab-services='3'>
                                             <ul>
                                                 <li><a href="#">Услуга 1</a></li>
                                                 <li><a href="#">Услуга 2</a></li>

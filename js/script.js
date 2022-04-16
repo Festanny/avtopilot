@@ -105,13 +105,75 @@ $('.admin .info-block .panel .function ul li').click(function () {
 });
 
 // Tab-student
-$('.admin .info-block .info #training-system-id .student-functions ul li').click(function () {
+$('.admin .info-block .info #training-system-id .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-profile'),
 		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-profile="' + id + '"]');
 
-	$('.admin .info-block .info #training-system-id .student-functions ul li.active').removeClass('active');
+	$('.admin .info-block .info #training-system-id .student-functions > ul li.active').removeClass('active');
 	$(this).addClass('active');
 
 	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
 	content.addClass('active');
 });
+
+// Tab-branches
+$('.admin .info-block .info .branches-system .student-functions ul li').click(function () {
+	var id = $(this).attr('data-tab-branches'),
+		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-branches="' + id + '"]');
+
+	$('.admin .info-block .info .branches-system .student-functions ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
+
+// Tab-category
+$('.admin .info-block .info .category-system .student-functions ul li').click(function () {
+	var id = $(this).attr('data-tab-category'),
+		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-category="' + id + '"]');
+
+	$('.admin .info-block .info .category-system .student-functions ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
+
+// Tab-services
+$('.admin .info-block .info .services-system .student-functions ul li').click(function () {
+	var id = $(this).attr('data-tab-services'),
+		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-services="' + id + '"]');
+
+	$('.admin .info-block .info .services-system .student-functions ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
+
+function go(el)
+{
+	console.log(el.id);
+	el.insertAdjacentHTML("beforeend", `<form>
+	<input type="text" id="1" value="asda">
+	</form>`);
+	el.style.pointerEvents = 'none';
+	return false;
+	//el.appendChild(aaa);
+}
+
+/*$("[href*='?id=']").click((e)=>{
+
+	// let id = e;
+
+	// $.ajax({
+	// 	url: "sdfhskjfhjksd/1.php",
+	// 	type: "GET",
+    //     dataType: "html",
+    //     data: id,
+
+	// })
+	//console.log(e);
+	return false;
+});*/
