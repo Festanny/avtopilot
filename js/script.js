@@ -178,7 +178,7 @@ function go(el) {
 				for(var i=0; i<spanRadio.length; i++) {
 					spanRadio[i].style.background = 'var(--bg)';
 				}
-				var radioInput = document.querySelectorAll("input[type='radio']");
+				var radioInput = document.querySelectorAll(".textLabel input[type='radio']");
 				for(var i=0; i<radioInput.length; i++) {
 					radioInput[i].disabled = false;
 				}
@@ -191,22 +191,6 @@ function go(el) {
 		document.querySelector(".editForm").remove();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*$("[href*='?id=']").click((e)=>{
 
@@ -222,3 +206,38 @@ function go(el) {
 	//console.log(e);
 	return false;
 });*/
+
+// mask for phone input
+window.addEventListener("DOMContentLoaded", function() {
+    [].forEach.call( document.querySelectorAll('#phone'), function(input) {
+    var keyCode;
+    function mask(event) {
+        event.keyCode && (keyCode = event.keyCode);
+        var pos = this.selectionStart;
+        if (pos < 3) event.preventDefault();
+        var matrix = "+7 (___) ___ ____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, ""),
+            new_value = matrix.replace(/[_\d]/g, function(a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+            });
+        i = new_value.indexOf("_");
+        if (i != -1) {
+            i < 5 && (i = 3);
+            new_value = new_value.slice(0, i)
+        }
+        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+            function(a) {
+                return "\\d{1," + a.length + "}"
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+        if (event.type == "blur" && this.value.length < 5)  this.value = ""
+    }
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, true);
+    input.addEventListener("keydown", mask, false)
+  });
+});

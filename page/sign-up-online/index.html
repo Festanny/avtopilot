@@ -89,7 +89,7 @@
                             <div class="desc">
                                 <span>Контактная информация</span>
                                 <div class="inputAll">
-                                    <input type="phone" placeholder="Номер телефона">
+                                    <input type="phone" placeholder="Номер телефона" id="phone">
                                 </div>
                             </div>
                             <div class="desc">
@@ -111,13 +111,16 @@
                                         <option value="Категория 4">Категория 4</option>
                                         <option value="Категория 5">Категория 5</option>
                                     </select>
-                                    <input type="text" placeholder="Комментарий">
+                                    <input type="text" placeholder="Комментарий" class="comments-enroll">
                                     <div class="inputRadio">
-                                        <label><input type="radio" name="choice" value="Яндекс">Яндекс</label>
-                                        <label><input type="radio" name="choice" value="Яндекс">Google</label>
-                                        <label><input type="radio" name="choice" value="Яндекс">ВКонтакте</label>
-                                        <label><input type="radio" name="choice" value="Яндекс">Знакомые, друзья</label>
-                                        <label><input type="radio" name="choice" value="Яндекс">Другое</label>
+                                        <span>Как вы о нас узнали?</span>
+                                        <div>
+                                            <input type="radio" name="choice" value="Яндекс" id="radio1"><label for="radio1">Яндекс</label>
+                                            <input type="radio" name="choice" value="Яндекс" id="radio2"><label for="radio2">Google</label>
+                                            <input type="radio" name="choice" value="Яндекс" id="radio3"><label for="radio3">ВКонтакте</label>
+                                            <input type="radio" name="choice" value="Яндекс" id="radio4"><label for="radio4">Знакомые, друзья</label>
+                                            <input type="radio" name="choice" value="Яндекс" id="radio5"><label for="radio5">Другое</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

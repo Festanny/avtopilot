@@ -1477,7 +1477,9 @@ section.page {
 }
 
 .admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span,
-.admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a {
+.admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a,
+.enroll .info-block form .desc .inputAll input,
+.enroll .info-block form .desc .inputAll select {
     display: block;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1486,7 +1488,7 @@ section.page {
     margin-bottom: 5px;
     position: relative;
     transition: border .3s;
-    cursor: pointer;
+    outline: none;
 }
 
 
@@ -1514,6 +1516,10 @@ section.page {
     transform: translateY(-50%);
     opacity: .3;
     transition: opacity .3s;
+}
+
+.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span {
+    cursor: pointer;
 }
 
 .admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span:hover::before, 
@@ -1586,4 +1592,102 @@ form.editForm input:not(input[type="button"]) {
 
 form.editForm input:not(input[type="button"]):last-of-type {
     margin-bottom: 15px!important;
+}
+
+.enroll .info-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.enroll .info-block form {
+    margin-top: 36px;
+}
+
+.enroll .info-block form .desc {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--line2);
+    padding: 18px 0;
+}
+
+.enroll .info-block form .desc span {
+    font-size: 24px;
+    margin-right: 60px;
+}
+
+.enroll .info-block form .desc .inputAll {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.enroll .info-block form .desc input,
+.enroll .info-block form .desc:nth-of-type(3) .inputAll select {
+    width: 47%;
+    height: 55px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.enroll .info-block form .desc .inputAll input:last-of-type {
+    margin-right: 0;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputAll {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.enroll .info-block form .desc:nth-of-type(2) .inputAll input {
+    width: 100%;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) input {
+    width: 100%;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio input[type="radio"] {
+    display: none;
+}
+
+.enroll .info-block form .desc .comments-enroll {
+    margin-bottom: 30px!important;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio span {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio div label {
+    width: 25%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid var(--line);
+    display: inline-block;
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--bg);
+    cursor: pointer;
+    text-align: center;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.enroll .info-block form .desc:nth-of-type(3) .inputRadio input[type="radio"]:checked + label {
+    background-color: var(--gray-bl);
 }
