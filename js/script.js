@@ -152,23 +152,24 @@ $('.admin .info-block .info .services-system .student-functions ul li').click(fu
 	content.addClass('active');
 });
 
-function go(el)
-{
+// function go(el)
+// {
 
-	var inputRadio = document.querySelectorAll(".one");
-	console.log(inputRadio);
-	for (var i=0; i<inputRadio.length; i++) {
-		if (inputRadio[i].checked) {
-			el.insertAdjacentHTML("beforeend", `<form class="testForm">
-			<input type="text" id="1" value="asda">
-			</form>`);
-		} else {
-			console.log(inputRadio[i]);
-			document.querySelector(".testForm").remove();
-			
-		}
-		
-	}
+// 	var test1 = el.nextElementSibling;
+// 	console.log(test1.checked);
+
+	// var inputRadio = document.querySelectorAll(".one");
+	// console.log(inputRadio);
+	// for (var i=0; i<inputRadio.length; i++) {
+	// 	if (inputRadio[i].checked) {
+	// 		el.insertAdjacentHTML("beforeend", `<form class="testForm">
+	// 		<input type="text" id="1" value="asda">
+	// 		</form>`);
+	// 	} else {
+	// 		console.log(inputRadio[i]);
+	// 		document.querySelector(".testForm").remove();
+	// 	}
+	// }
 
 	/*if (radioInput.checked)
 	{
@@ -182,11 +183,8 @@ function go(el)
 		radioInput.checked = false;
 	}
 	*/
-	
+// }
 
-
-	
-}
 
 /*$("[href*='?id=']").click((e)=>{
 
@@ -202,3 +200,33 @@ function go(el)
 	//console.log(e);
 	return false;
 });*/
+
+
+
+
+function go(el) {
+	console.log(el);
+	console.log(el.checked);
+	console.log(el.id);
+	
+	if (document.querySelectorAll(".testForm").length != 0) {
+		document.querySelector(".testForm").remove();
+	}
+	if (el.checked) {
+		if (document.querySelector(".testForm") == null) {
+			if (el.disabled == false) {
+				el.insertAdjacentHTML("afterend", `<form class="testForm">
+				<input type="text" id="1" value="asda">
+				</form>`);
+				var radioInput = document.querySelectorAll("input[type='radio']");
+				for(var i=0; i<radioInput.length; i++) {
+					radioInput[i].disabled = false;
+				}
+				el.disabled = true;
+			}
+		}
+	}
+	else {
+		document.querySelector(".testForm").remove();
+	}
+}
