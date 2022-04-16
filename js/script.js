@@ -152,58 +152,7 @@ $('.admin .info-block .info .services-system .student-functions ul li').click(fu
 	content.addClass('active');
 });
 
-// function go(el)
-// {
-
-// 	var test1 = el.nextElementSibling;
-// 	console.log(test1.checked);
-
-	// var inputRadio = document.querySelectorAll(".one");
-	// console.log(inputRadio);
-	// for (var i=0; i<inputRadio.length; i++) {
-	// 	if (inputRadio[i].checked) {
-	// 		el.insertAdjacentHTML("beforeend", `<form class="testForm">
-	// 		<input type="text" id="1" value="asda">
-	// 		</form>`);
-	// 	} else {
-	// 		console.log(inputRadio[i]);
-	// 		document.querySelector(".testForm").remove();
-	// 	}
-	// }
-
-	/*if (radioInput.checked)
-	{
-		el.insertAdjacentHTML("beforeend", `<form class="testForm">
-		<input type="text" id="1" value="asda">
-		</form>`);
-		
-	}
-	else{
-		document.querySelector(".testForm").remove();
-		radioInput.checked = false;
-	}
-	*/
-// }
-
-
-/*$("[href*='?id=']").click((e)=>{
-
-	// let id = e;
-
-	// $.ajax({
-	// 	url: "sdfhskjfhjksd/1.php",
-	// 	type: "GET",
-    //     dataType: "html",
-    //     data: id,
-
-	// })
-	//console.log(e);
-	return false;
-});*/
-
-
-
-
+// open form
 function go(el) {
 	console.log(el);
 	console.log(el.checked);
@@ -230,3 +179,18 @@ function go(el) {
 		document.querySelector(".testForm").remove();
 	}
 }
+
+/*$("[href*='?id=']").click((e)=>{
+
+	// let id = e;
+
+	// $.ajax({
+	// 	url: "sdfhskjfhjksd/1.php",
+	// 	type: "GET",
+    //     dataType: "html",
+    //     data: id,
+
+	// })
+	//console.log(e);
+	return false;
+});*/
