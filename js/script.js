@@ -194,7 +194,7 @@ function go(el) {
 
 /*$("[href*='?id=']").click((e)=>{
 
-	// let id = e;
+	// let id = e.id;
 
 	// $.ajax({
 	// 	url: "sdfhskjfhjksd/1.php",
