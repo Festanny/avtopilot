@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="block" data-tab='1' id="training-system-id">
+                            <div class="block" data-tab='1' id="student-management">
                                 <h2>Управление данными учеников</h2>
                                 <a href="#" class="training-system">Перейти в систему обучения</a>
                                 <div class="student-functions">
@@ -113,11 +113,11 @@
                                         </div>
                                         <div class="form2-student form-edit" data-tab-profile='2'>
                                             <ul>
-                                                <li><label class="textLabel" for="user1"><span>Пользователь 1</span><input type="radio" id="user1" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="user2"><span>Пользователь 2</span><input type="radio" id="user2" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="user3"><span>Пользователь 3</span><input type="radio" id="user3" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="user4"><span>Пользователь 4</span><input type="radio" id="user4" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="user5"><span>Пользователь 5</span><input type="radio" id="user5" name="one" class="one" onclick="go(this);"></label></li>
+                                                <li><label class="textLabel" for="user1"><span>Пользователь 1</span><input type="radio" id="user1" name="student" class="one" onclick="student(this);"></label></li>
+                                                <li><label class="textLabel" for="user2"><span>Пользователь 2</span><input type="radio" id="user2" name="student" class="one" onclick="student(this);"></label></li>
+                                                <li><label class="textLabel" for="user3"><span>Пользователь 3</span><input type="radio" id="user3" name="student" class="one" onclick="student(this);"></label></li>
+                                                <li><label class="textLabel" for="user4"><span>Пользователь 4</span><input type="radio" id="user4" name="student" class="one" onclick="student(this);"></label></li>
+                                                <li><label class="textLabel" for="user5"><span>Пользователь 5</span><input type="radio" id="user5" name="student" class="one" onclick="student(this);"></label></li>
                                             </ul>
                                         </div>
                                         <div class="form3-student form-edit" data-tab-profile='3'>
@@ -132,7 +132,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="block" data-tab='2'>
+                            <div class="block" data-tab='2' id="training-system">
                                 <h2>Управление дистанционным обучением</h2>
                                 <a href="#" class="training-system">Перейти в систему обучения</a>
                             </div>
@@ -160,7 +160,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="block branches-system" data-tab='4' id="training-system-id">
+                            <div class="block branches-system" data-tab='4' id="setting-branches">
                                 <h2>Настройка филиалов</h2>
                                 <div class="student-functions">
                                     <ul>
@@ -179,11 +179,11 @@
                                         </div>
                                         <div class="form2-student form-edit" data-tab-branches='2'>
                                             <ul>
-                                                <li><label class="textLabel" for="branch1"><span>Пользователь 1</span><input type="radio" id="branch1" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="branch2"><span>Пользователь 2</span><input type="radio" id="branch2" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="branch3"><span>Пользователь 3</span><input type="radio" id="branch3" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="branch4"><span>Пользователь 4</span><input type="radio" id="branch4" name="one" class="one" onclick="go(this);"></label></li>
-                                                <li><label class="textLabel" for="branch5"><span>Пользователь 5</span><input type="radio" id="branch5" name="one" class="one" onclick="go(this);"></label></li>
+                                                <li><label class="textLabel" for="branch1"><span>Филиал 1</span><input type="radio" id="branch1" name="branche" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="branch2"><span>Филиал 2</span><input type="radio" id="branch2" name="branche" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="branch3"><span>Филиал 3</span><input type="radio" id="branch3" name="branche" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="branch4"><span>Филиал 4</span><input type="radio" id="branch4" name="branche" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="branch5"><span>Филиал 5</span><input type="radio" id="branch5" name="branche" class="one" onclick="branche(this);"></label></li>
                                             </ul>
                                         </div>
                                         <div class="form3-student form-edit" data-tab-branches='3'>
@@ -198,7 +198,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="block category-system" data-tab='5' id="training-system-id">
+                            <div class="block category-system" data-tab='5' id="setting-categories">
                                 <h2>Настройка категорий обучения</h2>
                                 <div class="student-functions">
                                     <ul>
@@ -211,17 +211,17 @@
                                             <form action="" method="POST">
                                                 <input type="text" placeholder="Название категории">
                                                 <div>
-                                                    <input type="button" class="btn" value="Добавить филиал">
+                                                    <input type="button" class="btn" value="Добавить категорию">
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="form2-student form-edit" data-tab-category='2'>
                                             <ul>
-                                                <li><a href="#">Категория 1</a></li>
-                                                <li><a href="#">Категория 2</a></li>
-                                                <li><a href="#">Категория 3</a></li>
-                                                <li><a href="#">Категория 4</a></li>
-                                                <li><a href="#">Категория 5</a></li>
+                                                <li><label class="textLabel" for="category1"><span>Категория 1</span><input type="radio" id="category1" name="category" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="category2"><span>Категория 2</span><input type="radio" id="category2" name="category" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="category3"><span>Категория 3</span><input type="radio" id="category3" name="category" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="category4"><span>Категория 4</span><input type="radio" id="category4" name="category" class="one" onclick="branche(this);"></label></li>
+                                                <li><label class="textLabel" for="category5"><span>Категория 5</span><input type="radio" id="category5" name="category" class="one" onclick="branche(this);"></label></li>
                                             </ul>
                                         </div>
                                         <div class="form3-student form-edit" data-tab-category='3'>
@@ -236,10 +236,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="block" data-tab='6' id="training-system-id">
+                            <div class="block" data-tab='6' id="document-management">
                                 <h2>Управление документами</h2>
                             </div>
-                            <div class="block services services-system" data-tab='7' id="training-system-id">
+                            <div class="block services services-system" data-tab='7' id="service-management">
                                 <h2>Управление услугами</h2>
                                 <div class="student-functions">
                                     <ul>

@@ -1349,7 +1349,7 @@ section.page {
 }
 
 .auth form input:not(input[type="button"]),
-.admin .info-block .info #training-system-id .student-functions .form-edit form input:not(input[type="button"]),
+.admin .info-block .info .block .student-functions .form-edit form input:not(input[type="button"]),
 .admin .info-block .info form input:not(input[type="button"]) {
     border: 1px solid var(--line);
     border-radius: 5px;
@@ -1362,7 +1362,7 @@ section.page {
 }
 
 .auth form input:not(input[type="button"]):last-of-type,
-.admin .info-block .info #training-system-id .student-functions .form-edit form input:not(input[type="button"]):last-of-type {
+.admin .info-block .info .block .student-functions .form-edit form input:not(input[type="button"]):last-of-type {
     margin-bottom: 36px;
 }
 
@@ -1423,6 +1423,7 @@ section.page {
 .admin .info-block .info .block,
 .admin .info-block .info .student-functions .form-edit {
     display: none;
+    /* overflow: hidden; */
 }
 
 .admin .info-block .info .block.active,
@@ -1439,7 +1440,7 @@ section.page {
     margin-top: 18px;
 }
 
-.admin .info-block .info #training-system-id .student-functions > ul li {
+.admin .info-block .info .block .student-functions > ul li {
     display: inline-block;
     border-bottom: 1px solid transparent;
     font-size: 14px;
@@ -1449,37 +1450,37 @@ section.page {
     padding-top: 10px;
 }
 
-.admin .info-block .info #training-system-id .student-functions ul li.active {
+.admin .info-block .info .block .student-functions ul li.active {
     border-bottom: 1px solid var(--line);
     font-weight: 600;
 }
 
-.admin .info-block .info #training-system-id .student-functions ul {
+.admin .info-block .info .block .student-functions ul {
     display: flex;
     margin-bottom: 33px;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-edit form {
+.admin .info-block .info .block .student-functions .form-edit form {
     display: flex;
     flex-direction: column;
 }
 
-.admin .info-block .info #training-system-id .student-functions {
+.admin .info-block .info .block .student-functions {
     margin-top: 26px;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form2-student ul,
-.admin .info-block .info #training-system-id .student-functions .form3-student ul {
+.admin .info-block .info .block .student-functions .form2-student ul,
+.admin .info-block .info .block .student-functions .form3-student ul {
     display: flex;
     flex-direction: column;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel input[type="radio"] {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel input[type="radio"] {
     display: none;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span,
-.admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a,
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span,
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a,
 .enroll .info-block form .desc .inputAll input,
 .enroll .info-block form .desc .inputAll select {
     display: block;
@@ -1494,18 +1495,18 @@ section.page {
 }
 
 
-.admin .info-block .info #training-system-id .student-functions .form2-student ul li .textLabel > span:hover,
-.admin .info-block .info #training-system-id .student-functions .form3-student ul li > a:hover {
+.admin .info-block .info .block .student-functions .form2-student ul li .textLabel > span:hover,
+.admin .info-block .info .block .student-functions .form3-student ul li > a:hover {
     border: 1px solid var(--line2);
 }
 
-.admin .info-block .info #training-system-id .student-functions .form2-student ul li:last-of-type,
-.admin .info-block .info #training-system-id .student-functions .form3-student ul li:last-of-type {
+.admin .info-block .info .block .student-functions .form2-student ul li:last-of-type,
+.admin .info-block .info .block .student-functions .form3-student ul li:last-of-type {
     margin-bottom: 0;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span::before, 
-.admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a::before {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span::before, 
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -1520,19 +1521,19 @@ section.page {
     transition: opacity .3s;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span {
     cursor: pointer;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span:hover::before, 
-.admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a:hover::before {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span:hover::before, 
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a:hover::before {
     opacity: 1;
 }
 
-.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span::before {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span::before {
     background-image: url('../image/edit.svg');
 }
-.admin .info-block .info #training-system-id .student-functions .form-student .form3-student ul li > a::before {
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a::before {
     background-image: url('../image/close.svg');
 }
 

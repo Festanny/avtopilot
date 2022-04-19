@@ -105,66 +105,100 @@ $('.admin .info-block .panel .function ul li').click(function () {
 });
 
 // Tab-student
-$('.admin .info-block .info #training-system-id .student-functions > ul li').click(function () {
+$('.admin .info-block .info #student-management .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-profile'),
-		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-profile="' + id + '"]');
+		content = $('.admin .info-block .info #student-management .student-functions .form-edit[data-tab-profile="' + id + '"]');
 
-	$('.admin .info-block .info #training-system-id .student-functions > ul li.active').removeClass('active');
+	$('.admin .info-block .info #student-management .student-functions > ul li.active').removeClass('active');
 	$(this).addClass('active');
 
-	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	$('.admin .info-block .info #student-management .student-functions .form-edit.active').removeClass('active');
 	content.addClass('active');
 });
 
-// Tab-branches
-$('.admin .info-block .info .branches-system .student-functions ul li').click(function () {
+// Tab-branche
+$('.admin .info-block .info #setting-branches .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-branches'),
-		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-branches="' + id + '"]');
+		content = $('.admin .info-block .info #setting-branches .student-functions .form-edit[data-tab-branches="' + id + '"]');
 
-	$('.admin .info-block .info .branches-system .student-functions ul li.active').removeClass('active');
+	$('.admin .info-block .info #setting-branches .student-functions > ul li.active').removeClass('active');
 	$(this).addClass('active');
 
-	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	$('.admin .info-block .info #setting-branches .student-functions .form-edit.active').removeClass('active');
 	content.addClass('active');
 });
 
 // Tab-category
-$('.admin .info-block .info .category-system .student-functions ul li').click(function () {
+$('.admin .info-block .info #setting-categories .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-category'),
-		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-category="' + id + '"]');
+		content = $('.admin .info-block .info #setting-categories .student-functions .form-edit[data-tab-category="' + id + '"]');
 
-	$('.admin .info-block .info .category-system .student-functions ul li.active').removeClass('active');
+	$('.admin .info-block .info #setting-categories .student-functions > ul li.active').removeClass('active');
 	$(this).addClass('active');
 
-	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
+	$('.admin .info-block .info #setting-categories .student-functions .form-edit.active').removeClass('active');
 	content.addClass('active');
 });
 
-// Tab-services
-$('.admin .info-block .info .services-system .student-functions ul li').click(function () {
-	var id = $(this).attr('data-tab-services'),
-		content = $('.admin .info-block .info .student-functions .form-edit[data-tab-services="' + id + '"]');
 
-	$('.admin .info-block .info .services-system .student-functions ul li.active').removeClass('active');
-	$(this).addClass('active');
 
-	$('.admin .info-block .info .student-functions .form-edit.active').removeClass('active');
-	content.addClass('active');
-});
+
+
+
 
 // open form
-function go(el) {
+function student(el) {
 	console.log(el);
 	console.log(el.checked);
 	console.log(el.id);
 
-	var spanRadio = document.querySelectorAll('.admin .info-block .info #training-system-id .student-functions .form-student .form2-student ul li .textLabel > span');
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #student-management .student-functions .form-student .form2-student ul li .textLabel > span');
 	
-	if (document.querySelectorAll(".editForm").length != 0) {
-		document.querySelector(".editForm").remove();
+	if (document.querySelectorAll("#student-management .editForm").length != 0) {
+		document.querySelector("#student-management .editForm").remove();
 	}
 	if (el.checked) {
-		if (document.querySelector(".editForm") == null) {
+		if (document.querySelector("#student-management .editForm") == null) {
+			if (el.disabled == false) {
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+					<input type="text" placeholder="Ф.И.О.">
+					<input type="phone" placeholder="Номер телефона">
+					<input type="text" placeholder="Последние 1231236 цифр паспорта">
+					<div>
+						<input type="button" class="btn" value="Обновить">
+					</div>
+				</form>`);
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				for(var i=0; i<spanRadio.length; i++) {
+					spanRadio[i].style.background = 'var(--bg)';
+				}
+				var radioInput = document.querySelectorAll("#student-management .textLabel input[type='radio']");
+				for(var i=0; i<radioInput.length; i++) {
+					radioInput[i].disabled = false;
+				}
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				el.disabled = true;
+			}
+		}
+	}
+	else {
+		document.querySelector("#student-management .editForm").remove();
+	}
+}
+
+// open form-branches
+function branche(el) {
+	console.log(el);
+	console.log(el.checked);
+	console.log(el.id);
+
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #setting-branches .student-functions .form-student .form2-student ul li .textLabel > span');
+	
+	if (document.querySelectorAll("#setting-branches .editForm").length != 0) {
+		document.querySelector("#setting-branches .editForm").remove();
+	}
+	if (el.checked) {
+		if (document.querySelector("#setting-branches .editForm") == null) {
 			if (el.disabled == false) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
 					<input type="text" placeholder="Ф.И.О.">
@@ -178,7 +212,7 @@ function go(el) {
 				for(var i=0; i<spanRadio.length; i++) {
 					spanRadio[i].style.background = 'var(--bg)';
 				}
-				var radioInput = document.querySelectorAll(".textLabel input[type='radio']");
+				var radioInput = document.querySelectorAll("#setting-branches .textLabel input[type='radio']");
 				for(var i=0; i<radioInput.length; i++) {
 					radioInput[i].disabled = false;
 				}
@@ -188,9 +222,50 @@ function go(el) {
 		}
 	}
 	else {
-		document.querySelector(".editForm").remove();
+		document.querySelector("#setting-branches .editForm").remove();
 	}
 }
+
+// open form-categories
+function branche(el) {
+	console.log(el);
+	console.log(el.checked);
+	console.log(el.id);
+
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #setting-categories .student-functions .form-student .form2-student ul li .textLabel > span');
+	
+	if (document.querySelectorAll("#setting-categories .editForm").length != 0) {
+		document.querySelector("#setting-categories .editForm").remove();
+	}
+	if (el.checked) {
+		if (document.querySelector("#setting-categories .editForm") == null) {
+			if (el.disabled == false) {
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+					<input type="text" placeholder="Ф.И.О.">
+					<input type="phone" placeholder="Номер телефона">
+					<input type="text" placeholder="Последние 124124 цифр паспорта">
+					<div>
+						<input type="button" class="btn" value="Обновить">
+					</div>
+				</form>`);
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				for(var i=0; i<spanRadio.length; i++) {
+					spanRadio[i].style.background = 'var(--bg)';
+				}
+				var radioInput = document.querySelectorAll("#setting-categories .textLabel input[type='radio']");
+				for(var i=0; i<radioInput.length; i++) {
+					radioInput[i].disabled = false;
+				}
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				el.disabled = true;
+			}
+		}
+	}
+	else {
+		document.querySelector("#setting-categories .editForm").remove();
+	}
+}
+
 
 /*$("[href*='?id=']").click((e)=>{
 
