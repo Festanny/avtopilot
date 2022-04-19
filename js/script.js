@@ -92,7 +92,7 @@ $(window).on('load', function () {
 	$('#stock').modal('show');
 });
 
-// Tab
+// Tab-main
 $('.admin .info-block .panel .function ul li').click(function () {
 	var id = $(this).attr('data-tab'),
 		content = $('.admin .info-block .info .block[data-tab="' + id + '"]');
@@ -140,13 +140,19 @@ $('.admin .info-block .info #setting-categories .student-functions > ul li').cli
 	content.addClass('active');
 });
 
+// Tab-service
+$('.admin .info-block .info #service-management .student-functions > ul li').click(function () {
+	var id = $(this).attr('data-tab-services'),
+		content = $('.admin .info-block .info #service-management .student-functions .form-edit[data-tab-services="' + id + '"]');
 
+	$('.admin .info-block .info #service-management .student-functions > ul li.active').removeClass('active');
+	$(this).addClass('active');
 
+	$('.admin .info-block .info #service-management .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
 
-
-
-
-// open form
+// open form-student
 function student(el) {
 	console.log(el);
 	console.log(el.checked);
@@ -263,6 +269,46 @@ function category(el) {
 	}
 	else {
 		document.querySelector("#setting-categories .editForm").remove();
+	}
+}
+
+// open form-services
+function service(el) {
+	console.log(el);
+	console.log(el.checked);
+	console.log(el.id);
+
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #service-management .student-functions .form-student .form2-student ul li .textLabel > span');
+	
+	if (document.querySelectorAll("#service-management .editForm").length != 0) {
+		document.querySelector("#service-management .editForm").remove();
+	}
+	if (el.checked) {
+		if (document.querySelector("#service-management .editForm") == null) {
+			if (el.disabled == false) {
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+					<input type="text" placeholder="Ф.И.О.">
+					<input type="phone" placeholder="Номер телефона">
+					<input type="text" placeholder="Последние 5 цифр паспорта">
+					<div>
+						<input type="button" class="btn" value="Обновить">
+					</div>
+				</form>`);
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				for(var i=0; i<spanRadio.length; i++) {
+					spanRadio[i].style.background = 'var(--bg)';
+				}
+				var radioInput = document.querySelectorAll("#service-management .textLabel input[type='radio']");
+				for(var i=0; i<radioInput.length; i++) {
+					radioInput[i].disabled = false;
+				}
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				el.disabled = true;
+			}
+		}
+	}
+	else {
+		document.querySelector("#service-management .editForm").remove();
 	}
 }
 
