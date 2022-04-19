@@ -227,7 +227,7 @@ function branche(el) {
 }
 
 // open form-categories
-function branche(el) {
+function category(el) {
 	console.log(el);
 	console.log(el.checked);
 	console.log(el.id);
