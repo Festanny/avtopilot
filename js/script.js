@@ -169,7 +169,7 @@ function student(el) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
 					<input type="text" placeholder="Ф.И.О.">
 					<input type="phone" placeholder="Номер телефона">
-					<input type="text" placeholder="Последние 1231236 цифр паспорта">
+					<input type="text" placeholder="Последние 6 цифр паспорта">
 					<div>
 						<input type="button" class="btn" value="Обновить">
 					</div>
@@ -207,9 +207,7 @@ function branche(el) {
 		if (document.querySelector("#setting-branches .editForm") == null) {
 			if (el.disabled == false) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
-					<input type="text" placeholder="Ф.И.О.">
-					<input type="phone" placeholder="Номер телефона">
-					<input type="text" placeholder="Последние 6 цифр паспорта">
+					<input type="text" placeholder="Название филиала">
 					<div>
 						<input type="button" class="btn" value="Обновить">
 					</div>
@@ -247,9 +245,7 @@ function category(el) {
 		if (document.querySelector("#setting-categories .editForm") == null) {
 			if (el.disabled == false) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
-					<input type="text" placeholder="Ф.И.О.">
-					<input type="phone" placeholder="Номер телефона">
-					<input type="text" placeholder="Последние 124124 цифр паспорта">
+					<input type="text" placeholder="Название категории">
 					<div>
 						<input type="button" class="btn" value="Обновить">
 					</div>
@@ -287,9 +283,22 @@ function service(el) {
 		if (document.querySelector("#service-management .editForm") == null) {
 			if (el.disabled == false) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
-					<input type="text" placeholder="Ф.И.О.">
-					<input type="phone" placeholder="Номер телефона">
-					<input type="text" placeholder="Последние 5 цифр паспорта">
+					<div class="desc">
+						<input type="text" placeholder="Название услуги">
+						<span>Рекомендуемое количество слов: до 3</span>
+					</div>
+					<div class="desc">
+						<input type="text" placeholder="Описание услуги">
+						<input type="text" placeholder="Описание услуги">
+						<input type="text" placeholder="Описание услуги">
+					</div>
+					<div class="desc">
+						<input type="text" placeholder="Стоимость услуги">
+					</div>
+					<div class="desc">
+						<input type="file" value="sdfsdf">
+						<span>Фоновая фотография услуги</span>
+					</div>
 					<div>
 						<input type="button" class="btn" value="Обновить">
 					</div>

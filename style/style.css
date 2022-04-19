@@ -1567,17 +1567,31 @@ section.page {
     margin-bottom: 0!important;
 }
 
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]):last-of-type {
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]):last-of-type,
+.admin .info-block .info .services .student-functions .form-student form .desc input:not(input[type="button"]):last-of-type {
     margin-bottom: 0!important;
 }
 
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc {
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc,
+.admin .info-block .info .services .student-functions .form-student form .desc {
     margin-bottom: 18px;
 }
 
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc span {
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc span,
+.admin .info-block .info .services .student-functions .form-student form .desc span {
     font-size: 14px;
     padding-left: 8px;
+    display: flex;
+}
+
+.admin .info-block .info .services .student-functions .form-student form .desc span .btn-add-input {
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admin .info-block .info .services .student-functions .form-student form .desc span #av-fields {
+    margin-left: 5px;
 }
 
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc:nth-of-type(4) {
@@ -1708,4 +1722,12 @@ form.editForm input:not(input[type="button"]):last-of-type {
 
 .enroll .info-block form .desc:nth-of-type(3) {
     margin-bottom: 26px;
+}
+
+.ser-m-desc {
+    display: none;
+}
+
+.ser-m-desc.active {
+    display: block;
 }
