@@ -1366,7 +1366,8 @@ section.page {
     margin-bottom: 36px;
 }
 
-.admin .info-block {
+.admin .info-block,
+.training-system-page .info-block {
     display: flex;
     justify-content: space-between;
 }
@@ -1376,12 +1377,14 @@ section.page {
     width: 50%;
 }
 
-.admin .info-block .panel {
+.admin .info-block .panel,
+.training-system-page .info-block .panel {
     padding-right: 50px;
     border-right: 1px solid var(--line);
 }
 
-.admin .info-block .info {
+.admin .info-block .info,
+.training-system-page .info {
     padding-left: 50px;
 }
 
@@ -1788,4 +1791,11 @@ form.editForm input:not(input[type="button"]):last-of-type {
 #service-management .ser-m-desc-block .btn-remove-input:hover,
 #service-management .ser-m-desc-block #btn-add-input:hover {
     border: 1px solid var(--line2);
+}
+
+.training-system-page .info-block .panel {
+    width: 40%;
+}
+.training-system-page .info-block .info {
+    width: 60%;
 }
