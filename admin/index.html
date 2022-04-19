@@ -255,10 +255,25 @@
                                                     <span>Рекомендуемое количество слов: до 3</span>
                                                 </div>
                                                 <div class="desc">
-                                                    <input type="text" placeholder="Описание услуги" class="ser-m-desc active">
-                                                    <input type="text" placeholder="Описание услуги" class="ser-m-desc">
-                                                    <input type="text" placeholder="Описание услуги" class="ser-m-desc">
-                                                    <span>Доступное количество: <div id="av-fields">3</div>. <div class="btn-add-input">Добавить поле</div></span>
+                                                    <div class="ser-m-desc-block active">
+                                                        <input type="text" placeholder="Описание услуги" class="ser-m-desc">
+                                                        <div id="btn-add-input" onclick="serMBlock(this)">
+                                                            <img src="../image/close.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ser-m-desc-block" id="serMId1">
+                                                        <input type="text" placeholder="Описание услуги" class="ser-m-desc">
+                                                        <div class="btn-remove-input" onclick="serMBlock(this)" id="serMId1">
+                                                            <img src="../image/close.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ser-m-desc-block" id="serMId2">
+                                                        <input type="text" placeholder="Описание услуги" class="ser-m-desc">
+                                                        <div class="btn-remove-input" onclick="serMBlock(this)" id="serMId2">
+                                                            <img src="../image/close.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <span>Ещё можно добавить полей: <div id="av-fields">2</div></span>
                                                 </div>
                                                 <div class="desc">
                                                     <input type="text" placeholder="Стоимость услуги">

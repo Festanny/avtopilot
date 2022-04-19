@@ -385,3 +385,32 @@ inputAll.click( ()=> {
 		otherTextInput.removeClass('openInput');
 	}
 });
+
+// click on a new input
+$('#btn-add-input').click(()=> {
+	if ($('#service-management .ser-m-desc-block.active').length == '1') {
+		$('#service-management .ser-m-desc-block')[1].classList.add('active');
+		$('#service-management #av-fields').text('1');
+	}
+	else if ($('#service-management .ser-m-desc-block.active').length == '2') {
+		$('#service-management .ser-m-desc-block')[2].classList.add('active');
+		$('#service-management #av-fields').text('0');
+		$('#btn-add-input').addClass('remove');
+	}
+});
+
+function serMBlock(el) {
+	let id_serM = el.id;
+	console.log(id_serM);
+	$('.ser-m-desc-block.active' + '#' + id_serM).removeClass('active');
+	$('#btn-add-input').removeClass('remove');
+	if ($('#service-management .ser-m-desc-block.active').length == '3') {
+		$('#service-management #av-fields').text('0');
+	}
+	else if ($('#service-management .ser-m-desc-block.active').length == '2') {
+		$('#service-management #av-fields').text('1');
+	}
+	else {
+		$('#service-management #av-fields').text('2');
+	}
+}

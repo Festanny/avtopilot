@@ -1563,13 +1563,19 @@ section.page {
     padding-right: 10px;
 }
 
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]) {
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]),
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc .ser-m-desc-block:last-of-type {
     margin-bottom: 0!important;
+}
+
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc .ser-m-desc-block {
+    margin-bottom: 5px!important;
 }
 
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]):last-of-type,
 .admin .info-block .info .services .student-functions .form-student form .desc input:not(input[type="button"]):last-of-type {
     margin-bottom: 0!important;
+    flex: 1;
 }
 
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc,
@@ -1584,10 +1590,25 @@ section.page {
     display: flex;
 }
 
-.admin .info-block .info .services .student-functions .form-student form .desc span .btn-add-input {
+.admin .info-block .info .services .student-functions .form-student form .desc  #btn-add-input {
     margin-left: 5px;
     font-weight: bold;
     cursor: pointer;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background-color: var(--bg);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.admin .info-block .info .services .student-functions .form-student form .desc #btn-add-input.remove {
+    display: none;
 }
 
 .admin .info-block .info .services .student-functions .form-student form .desc span #av-fields {
@@ -1724,10 +1745,47 @@ form.editForm input:not(input[type="button"]):last-of-type {
     margin-bottom: 26px;
 }
 
-.ser-m-desc {
+.ser-m-desc-block {
     display: none;
 }
 
-.ser-m-desc.active {
-    display: block;
+.ser-m-desc-block.active {
+    display: flex;
+}
+
+#service-management .ser-m-desc-block .btn-remove-input {
+    width: 51px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background-color: var(--bg);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#service-management .ser-m-desc-block .btn-remove-input img,
+#service-management .ser-m-desc-block #btn-add-input img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    opacity: .3;
+    transition: all .3s;
+}
+
+#service-management .ser-m-desc-block #btn-add-input img {
+    transform: rotate(45deg);
+}
+
+#service-management .ser-m-desc-block .btn-remove-input:hover img,
+#service-management .ser-m-desc-block #btn-add-input:hover img {
+    opacity: 1;
+}
+
+#service-management .ser-m-desc-block .btn-remove-input:hover,
+#service-management .ser-m-desc-block #btn-add-input:hover {
+    border: 1px solid var(--line2);
 }
