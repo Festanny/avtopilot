@@ -288,9 +288,9 @@ function service(el) {
 						<span>Рекомендуемое количество слов: до 3</span>
 					</div>
 					<div class="desc">
-						<input type="text" placeholder="Описание услуги">
-						<input type="text" placeholder="Описание услуги">
-						<input type="text" placeholder="Описание услуги">
+						<input type="text" maxlength="72" placeholder="Описание услуги (макс. 72 символа)">
+						<input type="text" maxlength="72" placeholder="Описание услуги (макс. 72 символа)">
+						<input type="text" maxlength="72" placeholder="Описание услуги (макс. 72 символа)">
 					</div>
 					<div class="desc">
 						<input type="text" placeholder="Стоимость услуги">
