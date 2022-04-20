@@ -1187,26 +1187,46 @@ footer .footer .info .additionally .img img {
     justify-content: space-between;
 }
 
-.documents .info-block .block {
+.documents .info-block .block,
+.avtopilot-system .info-block .panel .function .block {
     width: 45%;
     margin-top: 30px;
     padding: 18px;
     border-radius: 10px;
     background-color: var(--gray-bl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.avtopilot-system .info-block .panel .function .block {
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.avtopilot-system .info-block .panel .function .block:first-of-type {
+    margin-top: 0;
 }
 
 .documents .info-block .block:nth-of-type(2n-1) {
     margin-right: 30px;
 }
 
-.documents .info-block .block h3 {
+.documents .info-block .block h3,
+.avtopilot-system .info-block .panel .function .block h3 {
     padding-bottom: 36px;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 10px;
 }
 
-.documents .info-block .block .btn {
+.documents .info-block .block .btn,
+.avtopilot-system .info-block .panel .function .block .btn {
     color: var(--text-w);
+}
+
+.documents .info-block .block .btn-block-click,
+.avtopilot-system .info-block .panel .function .block .btn-block-click {
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
 }
 
 section.page {
@@ -1372,13 +1392,16 @@ section.page {
     justify-content: space-between;
 }
 
+.avtopilot-system .info-block {
+    margin-bottom: 90px;
+}
+
 .admin .info-block .panel,
 .admin .info-block .info {
     width: 50%;
 }
 
-.admin .info-block .panel,
-.avtopilot-system .info-block .panel {
+.admin .info-block .panel {
     padding-right: 50px;
     border-right: 1px solid var(--line);
 }
@@ -1796,7 +1819,31 @@ form.editForm input:not(input[type="button"]):last-of-type {
 
 .avtopilot-system .info-block .panel {
     width: 40%;
+    height: 100vh;
+    padding: 72px 50px 72px 0;
+    border-right: 1px solid var(--line);
+    overflow: auto;
 }
 .avtopilot-system .info-block .info {
     width: 60%;
+}
+
+.avtopilot-system .info-block .panel .function .block .btn-block-click {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avtopilot-system .info-block .panel .function .block .btn-block-click .views-block {
+    color: var(--footer-text);
+    margin-left: 10px;
+    display: none;
+}
+
+.avtopilot-system .info-block .panel .function .block .btn-block-click .views-block.active {
+    display: block;
+}
+
+section.page-avtopilot-system {
+    padding: 0;
 }
