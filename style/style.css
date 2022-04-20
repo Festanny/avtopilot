@@ -28,6 +28,30 @@ body {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    height: 7px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    /* background: #7a7a7a; */
+    background: var(--line);
+    border: 0px none #ffffff;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+/*    background: transparent;*/
+	background: rgb(255, 255, 255, 0.25);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
 a {
     text-decoration: none;
     color: var(--text);
@@ -651,7 +675,7 @@ section .documents h1 {
 
 #stock .modal-header {
     border: 0;
-    background: var(--gold2);
+    background: var(--gold);
     padding: 30px 40px;
     font-size: 64px;
     color: var(--bg);
@@ -1178,7 +1202,8 @@ footer .footer .info .additionally .img img {
     position: relative;
 }
 
-.modal .modal-dialog .modal-content .modal-header button {
+.modal .modal-dialog .modal-content .modal-header button,
+.modal .modal-dialog .modal-content .modal-body button {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -1887,31 +1912,6 @@ form.editForm input:not(input[type="button"]):last-of-type {
     height: 80%;
     overflow: auto;
     padding-right: 10px;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-    height: 7px;
-}
-
-::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-}
-::-webkit-scrollbar-corner {
-    background: transparent;
-}
-::-webkit-scrollbar-thumb {
-    /* background: #7a7a7a; */
-    background: var(--line);
-    border: 0px none #ffffff;
-    border-radius: 5px;
-}
-::-webkit-scrollbar-track {
-/*    background: transparent;*/
-	background: rgb(255, 255, 255, 0.25);
-    border: 0px none #ffffff;
-    border-radius: 50px;
 }
 
 .avtopilot-system .info-block .info {
