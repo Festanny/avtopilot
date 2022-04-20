@@ -5067,7 +5067,7 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 
-.modal-header {
+/* .modal-header {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -5076,22 +5076,22 @@ textarea.form-control-lg {
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
-}
+} */
 .modal-header .btn-close {
   padding: 0.5rem 0.5rem;
   margin: -0.5rem -0.5rem -0.5rem auto;
 }
 
-.modal-title {
+/* .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
-}
+} */
 
-.modal-body {
+/* .modal-body {
   position: relative;
   flex: 1 1 auto;
   padding: 95px 40px;
-}
+} */
 
 .modal-footer {
   display: flex;
