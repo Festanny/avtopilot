@@ -153,11 +153,11 @@ $('.admin .info-block .info #service-management .student-functions > ul li').cli
 });
 
 // Tab-avtopilot-system
-$('.avtopilot-system .info-block .panel .function ul li').click(function () {
-	var id = $(this).attr('data-tab'),
-		content = $('.avtopilot-system .info-block .info .block[data-tab="' + id + '"]');
+$('.avtopilot-system .info-block .panel .function .block div.btn').click(function () {
+	var id = $(this).attr('data-remotely'),
+		content = $('.avtopilot-system .info-block .info .block[data-remotely="' + id + '"]');
 
-	$('.avtopilot-system .info-block .panel .function ul li.active').removeClass('active');
+	$('.avtopilot-system .info-block .panel .function .block div.btn').removeClass('active');
 	$(this).addClass('active');
 
 	$('.avtopilot-system .info-block .info .block.active').removeClass('active');
