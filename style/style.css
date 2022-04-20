@@ -1440,6 +1440,11 @@ section.page {
     min-height: 100vh;
 }
 
+.page-auth .auth {
+    position: relative;
+    z-index: 1;
+}
+
 .page-auth .auto {
     position: absolute;
     bottom: 0;
