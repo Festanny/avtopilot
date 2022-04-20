@@ -168,7 +168,7 @@ function student(el) {
 			if (el.disabled == false) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
 					<input type="text" placeholder="Ф.И.О.">
-					<input type="phone" placeholder="Номер телефона">
+					<input type="phone" placeholder="Номер телефона" id="phone">
 					<input type="text" placeholder="Последние 6 цифр паспорта">
 					<div>
 						<input type="button" class="btn" value="Обновить">
@@ -184,6 +184,10 @@ function student(el) {
 				}
 				el.previousElementSibling.style.background = 'var(--gray-bl)';
 				el.disabled = true;
+
+				f_1();
+
+				
 			}
 		}
 	}
@@ -191,6 +195,55 @@ function student(el) {
 		document.querySelector("#student-management .editForm").remove();
 	}
 }
+
+
+
+
+
+function f_1() {
+	[].forEach.call( document.querySelectorAll('#phone'), function(input) {
+		var keyCode;
+		function mask(event) {
+			event.keyCode && (keyCode = event.keyCode);
+			var pos = this.selectionStart;
+			if (pos < 3) event.preventDefault();
+			var matrix = "+7 (___) ___ ____",
+				i = 0,
+				def = matrix.replace(/\D/g, ""),
+				val = this.value.replace(/\D/g, ""),
+				new_value = matrix.replace(/[_\d]/g, function(a) {
+					return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+				});
+			i = new_value.indexOf("_");
+			if (i != -1) {
+				i < 5 && (i = 3);
+				new_value = new_value.slice(0, i)
+			}
+			var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+				function(a) {
+					return "\\d{1," + a.length + "}"
+				}).replace(/[+()]/g, "\\$&");
+			reg = new RegExp("^" + reg + "$");
+			if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+			if (event.type == "blur" && this.value.length < 5)  this.value = ""
+		}
+		input.addEventListener("input", mask, false);
+		input.addEventListener("focus", mask, false);
+		input.addEventListener("blur", mask, true);
+		input.addEventListener("keydown", mask, false)
+	  });
+}
+
+
+// mask for phone input
+window.addEventListener("DOMContentLoaded", function() {
+    f_1();
+});
+
+
+
+
+
 
 // open form-branches
 function branche(el) {
@@ -337,40 +390,8 @@ function service(el) {
 	return false;
 });*/
 
-// mask for phone input
-window.addEventListener("DOMContentLoaded", function() {
-    [].forEach.call( document.querySelectorAll('#phone'), function(input) {
-    var keyCode;
-    function mask(event) {
-        event.keyCode && (keyCode = event.keyCode);
-        var pos = this.selectionStart;
-        if (pos < 3) event.preventDefault();
-        var matrix = "+7 (___) ___ ____",
-            i = 0,
-            def = matrix.replace(/\D/g, ""),
-            val = this.value.replace(/\D/g, ""),
-            new_value = matrix.replace(/[_\d]/g, function(a) {
-                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-            });
-        i = new_value.indexOf("_");
-        if (i != -1) {
-            i < 5 && (i = 3);
-            new_value = new_value.slice(0, i)
-        }
-        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-            function(a) {
-                return "\\d{1," + a.length + "}"
-            }).replace(/[+()]/g, "\\$&");
-        reg = new RegExp("^" + reg + "$");
-        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-        if (event.type == "blur" && this.value.length < 5)  this.value = ""
-    }
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, true);
-    input.addEventListener("keydown", mask, false)
-  });
-});
+
+
 
 
 // Other choice (input radio)
