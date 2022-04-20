@@ -996,7 +996,7 @@ footer .footer .info .additionally .img img {
 
 .scroll-none {
     overflow: hidden;
-    padding-right: 17px;
+    padding-right: 8px;
 }
 
 .menu-fixed .menu {
@@ -1214,7 +1214,7 @@ footer .footer .info .additionally .img img {
 }
 
 .documents .info-block .block h3,
-.avtopilot-system .info-block .panel .function .block h3 {
+.avtopilot-system .info-block .panel .function .block span {
     padding-bottom: 36px;
 }
 
@@ -1406,8 +1406,7 @@ section.page {
     border-right: 1px solid var(--line);
 }
 
-.admin .info-block .info,
-.avtopilot-system .info {
+.admin .info-block .info {
     padding-left: 50px;
 }
 
@@ -1822,10 +1821,48 @@ form.editForm input:not(input[type="button"]):last-of-type {
     height: 100vh;
     padding: 72px 50px 72px 0;
     border-right: 1px solid var(--line);
-    overflow: auto;
 }
+
+.avtopilot-system .info-block .panel .function {
+    height: 80%;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    /* background: #7a7a7a; */
+    background: var(--line);
+    border: 0px none #ffffff;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+/*    background: transparent;*/
+	background: rgb(255, 255, 255, 0.25);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
 .avtopilot-system .info-block .info {
     width: 60%;
+    padding: 72px 0 72px 50px;
+    overflow: auto;
+}
+
+.avtopilot-system .info-block .info .view-video-block {
+    height: calc(100vh - 144px);
+    overflow: auto;
 }
 
 .avtopilot-system .info-block .panel .function .block .btn-block-click {
@@ -1846,4 +1883,11 @@ form.editForm input:not(input[type="button"]):last-of-type {
 
 section.page-avtopilot-system {
     padding: 0;
+}
+
+.avtopilot-system .info .block .video-block {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
 }

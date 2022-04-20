@@ -162,6 +162,8 @@ $('.avtopilot-system .info-block .panel .function .block .btn-block-click .btn')
 
 	$('.avtopilot-system .info-block .info .block.active').removeClass('active');
 	content.addClass('active');
+
+	$('.block-start-training').remove();
 });
 
 // open form-student
