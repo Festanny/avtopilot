@@ -152,6 +152,18 @@ $('.admin .info-block .info #service-management .student-functions > ul li').cli
 	content.addClass('active');
 });
 
+// Tab-avtopilot-system
+$('.avtopilot-system .info-block .panel .function ul li').click(function () {
+	var id = $(this).attr('data-tab'),
+		content = $('.avtopilot-system .info-block .info .block[data-tab="' + id + '"]');
+
+	$('.avtopilot-system .info-block .panel .function ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.avtopilot-system .info-block .info .block.active').removeClass('active');
+	content.addClass('active');
+});
+
 // open form-student
 function student(el) {
 	console.log(el);
@@ -184,10 +196,7 @@ function student(el) {
 				}
 				el.previousElementSibling.style.background = 'var(--gray-bl)';
 				el.disabled = true;
-
 				f_1();
-
-				
 			}
 		}
 	}
@@ -195,10 +204,6 @@ function student(el) {
 		document.querySelector("#student-management .editForm").remove();
 	}
 }
-
-
-
-
 
 function f_1() {
 	[].forEach.call( document.querySelectorAll('#phone'), function(input) {
@@ -239,11 +244,6 @@ function f_1() {
 window.addEventListener("DOMContentLoaded", function() {
     f_1();
 });
-
-
-
-
-
 
 // open form-branches
 function branche(el) {
@@ -374,7 +374,6 @@ function service(el) {
 	}
 }
 
-
 /*$("[href*='?id=']").click((e)=>{
 
 	// let id = e.id;
@@ -389,10 +388,6 @@ function service(el) {
 	//console.log(e);
 	return false;
 });*/
-
-
-
-
 
 // Other choice (input radio)
 var otherTextInput = $('.enroll .info-block form .desc:nth-of-type(3) .inputRadio .otherTextInput');

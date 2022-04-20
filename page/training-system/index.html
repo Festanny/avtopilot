@@ -74,13 +74,13 @@
     <main>
         <div class="dop-page">
             <section class="page">
-                <div class="training-system-page container">
+                <div class="avtopilot-system container">
                     <div class="info-block">
                         <div class="panel">
                             <h1>Дистанционное обучение</h1>
                             <div class="function">
                                 <ul>
-                                    <li data-tab='1'>Управление данными учеников</li>
+                                    <li data-av='1'>Управление данными учеников</li>
                                     <li data-tab='2'>Управление дистанционным обучением</li>
                                     <li data-tab='3'>Управление акциями</li>
                                     <li data-tab='4'>Настройка филиалов</li>
@@ -91,223 +91,13 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="block" data-tab='1' id="student-management">
-                                <h2>Управление данными учеников</h2>
-                                <a href="#" class="training-system">Перейти в систему обучения</a>
-                                <div class="student-functions">
-                                    <ul>
-                                        <li data-tab-profile='1' class="active">Зарегистрировать пользователя</li>
-                                        <li data-tab-profile='2'>Изменить данные</li>
-                                        <li data-tab-profile='3'>Удалить пользователя</li>
-                                    </ul>
-                                    <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-profile='1'>
-                                            <form action="" method="POST">
-                                                <input type="text" placeholder="Ф.И.О.">
-                                                <input type="phone" placeholder="Номер телефона" id="phone">
-                                                <input type="text" placeholder="Последние 6 цифр паспорта">
-                                                <div>
-                                                    <input type="button" class="btn" value="Добавить в систему обучения">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="form2-student form-edit" data-tab-profile='2'>
-                                            <ul>
-                                                <li><label class="textLabel" for="user1"><span>Пользователь 1</span><input type="radio" id="user1" name="student" class="one" onclick="student(this);"></label></li>
-                                                <li><label class="textLabel" for="user2"><span>Пользователь 2</span><input type="radio" id="user2" name="student" class="one" onclick="student(this);"></label></li>
-                                                <li><label class="textLabel" for="user3"><span>Пользователь 3</span><input type="radio" id="user3" name="student" class="one" onclick="student(this);"></label></li>
-                                                <li><label class="textLabel" for="user4"><span>Пользователь 4</span><input type="radio" id="user4" name="student" class="one" onclick="student(this);"></label></li>
-                                                <li><label class="textLabel" for="user5"><span>Пользователь 5</span><input type="radio" id="user5" name="student" class="one" onclick="student(this);"></label></li>
-                                            </ul>
-                                        </div>
-                                        <div class="form3-student form-edit" data-tab-profile='3'>
-                                            <ul>
-                                                <li><a href="#">Пользователь 1</a></li>
-                                                <li><a href="#">Пользователь 2</a></li>
-                                                <li><a href="#">Пользователь 3</a></li>
-                                                <li><a href="#">Пользователь 4</a></li>
-                                                <li><a href="#">Пользователь 5</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block" data-tab='2' id="training-system">
-                                <h2>Управление дистанционным обучением</h2>
-                                <a href="#" class="training-system">Перейти в систему обучения</a>
-                            </div>
-                            <div class="block" data-tab='3' id="stocks-block-admin">
-                                <h2>Управление акциями</h2>
-                                <div class="info-functions">
-                                    <div class="form-student">
-                                        <div class="stocks-admin">
-                                            <form action="" method="POST">
-                                                <input type="text" placeholder="Название акции">
-                                                <div>
-                                                    <input type="button" class="btn" value="Обновить акцию">
-                                                </div>
-                                            </form>
-                                            <form action="" method="POST" class="onOffStocksBlock">
-                                                <div class="info-text">
-                                                    <label for="on-off-stocks">Включить акцию?</label>
-                                                    <input type="checkbox" id="on-off-stocks" checked>
-                                                </div>
-                                                <div>
-                                                    <input type="button" class="btn" value="Обновить">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block branches-system" data-tab='4' id="setting-branches">
-                                <h2>Настройка филиалов</h2>
-                                <div class="student-functions">
-                                    <ul>
-                                        <li data-tab-branches='1' class="active">Добавить филиал</li>
-                                        <li data-tab-branches='2'>Изменить филиал</li>
-                                        <li data-tab-branches='3'>Удалить филиал</li>
-                                    </ul>
-                                    <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-branches='1'>
-                                            <form action="" method="POST">
-                                                <input type="text" placeholder="Название филиала">
-                                                <div>
-                                                    <input type="button" class="btn" value="Добавить филиал">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="form2-student form-edit" data-tab-branches='2'>
-                                            <ul>
-                                                <li><label class="textLabel" for="branch1"><span>Филиал 1</span><input type="radio" id="branch1" name="branche" class="one" onclick="branche(this);"></label></li>
-                                                <li><label class="textLabel" for="branch2"><span>Филиал 2</span><input type="radio" id="branch2" name="branche" class="one" onclick="branche(this);"></label></li>
-                                                <li><label class="textLabel" for="branch3"><span>Филиал 3</span><input type="radio" id="branch3" name="branche" class="one" onclick="branche(this);"></label></li>
-                                                <li><label class="textLabel" for="branch4"><span>Филиал 4</span><input type="radio" id="branch4" name="branche" class="one" onclick="branche(this);"></label></li>
-                                                <li><label class="textLabel" for="branch5"><span>Филиал 5</span><input type="radio" id="branch5" name="branche" class="one" onclick="branche(this);"></label></li>
-                                            </ul>
-                                        </div>
-                                        <div class="form3-student form-edit" data-tab-branches='3'>
-                                            <ul>
-                                                <li><a href="#">Филиал 1</a></li>
-                                                <li><a href="#">Филиал 2</a></li>
-                                                <li><a href="#">Филиал 3</a></li>
-                                                <li><a href="#">Филиал 4</a></li>
-                                                <li><a href="#">Филиал 5</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block category-system" data-tab='5' id="setting-categories">
-                                <h2>Настройка категорий обучения</h2>
-                                <div class="student-functions">
-                                    <ul>
-                                        <li data-tab-category='1' class="active">Добавить категорию</li>
-                                        <li data-tab-category='2'>Изменить категорию</li>
-                                        <li data-tab-category='3'>Удалить категорию</li>
-                                    </ul>
-                                    <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-category='1'>
-                                            <form action="" method="POST">
-                                                <input type="text" placeholder="Название категории">
-                                                <div>
-                                                    <input type="button" class="btn" value="Добавить категорию">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="form2-student form-edit" data-tab-category='2'>
-                                            <ul>
-                                                <li><label class="textLabel" for="category1"><span>Категория 1</span><input type="radio" id="category1" name="category" class="one" onclick="category(this);"></label></li>
-                                                <li><label class="textLabel" for="category2"><span>Категория 2</span><input type="radio" id="category2" name="category" class="one" onclick="category(this);"></label></li>
-                                                <li><label class="textLabel" for="category3"><span>Категория 3</span><input type="radio" id="category3" name="category" class="one" onclick="category(this);"></label></li>
-                                                <li><label class="textLabel" for="category4"><span>Категория 4</span><input type="radio" id="category4" name="category" class="one" onclick="category(this);"></label></li>
-                                                <li><label class="textLabel" for="category5"><span>Категория 5</span><input type="radio" id="category5" name="category" class="one" onclick="category(this);"></label></li>
-                                            </ul>
-                                        </div>
-                                        <div class="form3-student form-edit" data-tab-category='3'>
-                                            <ul>
-                                                <li><a href="#">Категория 1</a></li>
-                                                <li><a href="#">Категория 2</a></li>
-                                                <li><a href="#">Категория 3</a></li>
-                                                <li><a href="#">Категория 4</a></li>
-                                                <li><a href="#">Категория 5</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block" data-tab='6' id="document-management">
-                                <h2>Управление документами</h2>
-                            </div>
-                            <div class="block services services-system" data-tab='7' id="service-management">
-                                <h2>Управление услугами</h2>
-                                <div class="student-functions">
-                                    <ul>
-                                        <li data-tab-services='1' class="active">Добавить услугу</li>
-                                        <li data-tab-services='2'>Изменить услугу</li>
-                                        <li data-tab-services='3'>Удалить услугу</li>
-                                    </ul>
-                                    <div class="form-student">
-                                        <div class="form1-student form-edit active" data-tab-services='1'>
-                                            <form action="" method="POST">
-                                                <div class="desc">
-                                                    <input type="text" placeholder="Название услуги">
-                                                    <span>Рекомендуемое количество слов: до 3</span>
-                                                </div>
-                                                <div class="desc">
-                                                    <div class="ser-m-desc-block active">
-                                                        <input type="text" maxlength="72" placeholder="Описание услуги (макс. 72 символа)" class="ser-m-desc">
-                                                        <div id="btn-add-input">
-                                                            <img src="../../image/close.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="ser-m-desc-block" id="serMId1">
-                                                        <input type="text" maxlength="72" placeholder="Описание услуги (макс. 72 символа)" class="ser-m-desc">
-                                                        <div class="btn-remove-input" onclick="serMBlock(this)" id="serMId1">
-                                                            <img src="../../image/close.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="ser-m-desc-block" id="serMId2">
-                                                        <input type="text" maxlength="72" placeholder="Описание услуги (макс. 72 символа)" class="ser-m-desc">
-                                                        <div class="btn-remove-input" onclick="serMBlock(this)" id="serMId2">
-                                                            <img src="../../image/close.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <span>Ещё можно добавить полей: <div id="av-fields">2</div></span>
-                                                </div>
-                                                <div class="desc">
-                                                    <input type="text" placeholder="Стоимость услуги">
-                                                </div>
-                                                <div class="desc">
-                                                    <input type="file" value="sdfsdf">
-                                                    <span>Фоновая фотография услуги</span>
-                                                </div>
-                                                <div>
-                                                    <input type="button" class="btn" value="Добавить услугу">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="form2-student form-edit" data-tab-services='2'>
-                                            <ul>
-                                                <li><label class="textLabel" for="service1"><span>Услуга 1</span><input type="radio" id="service1" name="service" class="one" onclick="service(this);"></label></li>
-                                                <li><label class="textLabel" for="service2"><span>Услуга 2</span><input type="radio" id="service2" name="service" class="one" onclick="service(this);"></label></li>
-                                                <li><label class="textLabel" for="service3"><span>Услуга 3</span><input type="radio" id="service3" name="service" class="one" onclick="service(this);"></label></li>
-                                                <li><label class="textLabel" for="service4"><span>Услуга 4</span><input type="radio" id="service4" name="service" class="one" onclick="service(this);"></label></li>
-                                                <li><label class="textLabel" for="service5"><span>Услуга 5</span><input type="radio" id="service5" name="service" class="one" onclick="service(this);"></label></li>
-                                            </ul>
-                                        </div>
-                                        <div class="form3-student form-edit" data-tab-services='3'>
-                                            <ul>
-                                                <li><a href="#">Услуга 1</a></li>
-                                                <li><a href="#">Услуга 2</a></li>
-                                                <li><a href="#">Услуга 3</a></li>
-                                                <li><a href="#">Услуга 4</a></li>
-                                                <li><a href="#">Услуга 5</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="block" data-tab='1'>1</div>
+                            <div class="block" data-tab='2'>2</div>
+                            <div class="block" data-tab='3'>3</div>
+                            <div class="block" data-tab='4'>4</div>
+                            <div class="block" data-tab='5'>5</div>
+                            <div class="block" data-tab='6'>6</div>
+                            <div class="block" data-tab='7'>7</div>
                         </div>
                     </div>
                 </div>

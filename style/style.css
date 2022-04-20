@@ -1367,7 +1367,7 @@ section.page {
 }
 
 .admin .info-block,
-.training-system-page .info-block {
+.avtopilot-system .info-block {
     display: flex;
     justify-content: space-between;
 }
@@ -1378,13 +1378,13 @@ section.page {
 }
 
 .admin .info-block .panel,
-.training-system-page .info-block .panel {
+.avtopilot-system .info-block .panel {
     padding-right: 50px;
     border-right: 1px solid var(--line);
 }
 
 .admin .info-block .info,
-.training-system-page .info {
+.avtopilot-system .info {
     padding-left: 50px;
 }
 
@@ -1424,13 +1424,14 @@ section.page {
 }
 
 .admin .info-block .info .block,
-.admin .info-block .info .student-functions .form-edit {
+.admin .info-block .info .student-functions .form-edit,
+.avtopilot-system .info .block {
     display: none;
-    /* overflow: hidden; */
 }
 
 .admin .info-block .info .block.active,
-.admin .info-block .info .student-functions .form-edit.active {
+.admin .info-block .info .student-functions .form-edit.active,
+.avtopilot-system .info .block.active {
     display: block;
 }
 
@@ -1793,9 +1794,9 @@ form.editForm input:not(input[type="button"]):last-of-type {
     border: 1px solid var(--line2);
 }
 
-.training-system-page .info-block .panel {
+.avtopilot-system .info-block .panel {
     width: 40%;
 }
-.training-system-page .info-block .info {
+.avtopilot-system .info-block .info {
     width: 60%;
 }
