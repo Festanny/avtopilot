@@ -164,6 +164,18 @@ $('.admin .info-block .info #document-management .student-functions > ul li').cl
 	content.addClass('active');
 });
 
+// Tab-document-additionally
+$('.admin .info-block .info #document-management .student-functions .form4-student > ul li').click(function () {
+	var id = $(this).attr('data-tab-document-c'),
+		content = $('.admin .info-block .info #document-management .student-functions .form-edit[data-tab-document-c="' + id + '"]');
+
+	$('.admin .info-block .info #document-management .student-functions .form4-student > ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info #document-management .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
+
 // Tab-service
 $('.admin .info-block .info #service-management .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-services'),

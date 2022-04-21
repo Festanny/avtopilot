@@ -301,15 +301,15 @@
                                         <li data-tab-document='1' class="active">Добавить документ</li>
                                         <li data-tab-document='2'>Изменить документ</li>
                                         <li data-tab-document='3'>Удалить документ</li>
+                                        <li data-tab-document='4'>Работа с категориями</li>
                                     </ul>
                                     <div class="form-student">
                                         <div class="form1-student form-edit active" data-tab-document='1'>
                                             <form action="" method="POST">
-                                                <input type="text" placeholder="Ф.И.О.">
-                                                <input type="phone" placeholder="Номер телефона" id="phone">
-                                                <input type="text" placeholder="Последние 6 цифр паспорта">
+                                                <input type="text" placeholder="Название документа">
+                                                <input type="file">
                                                 <div>
-                                                    <input type="button" class="btn" value="Добавить в систему обучения">
+                                                    <input type="button" class="btn" value="Добавить документ">
                                                 </div>
                                             </form>
                                         </div>
@@ -331,6 +331,18 @@
                                                 <li><a href="#">Документ 4</a></li>
                                                 <li><a href="#">Документ 5</a></li>
                                             </ul>
+                                        </div>
+                                        <div class="form4-student form-edit" data-tab-document='4'>
+                                            <ul>
+                                                <li data-tab-document-c='1' class="active">Добавить категорию</li>
+                                                <li data-tab-document-c='2'>Изменить категорию</li>
+                                                <li data-tab-document-c='3'>Удалить категорию</li>
+                                            </ul>
+                                            <div class="additionally-block">
+                                                <div class="block-dop" data-tab-document-c='1'>1</div>
+                                                <div class="block-dop" data-tab-document-c='2'>2</div>
+                                                <div class="block-dop" data-tab-document-c='3'>3</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

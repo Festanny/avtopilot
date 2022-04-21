@@ -1573,7 +1573,11 @@ section.page {
 
 .admin .info-block .info .block .student-functions ul {
     display: flex;
-    margin-bottom: 33px;
+    margin-bottom: 25px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
 }
 
 .admin .info-block .info .block .student-functions .form-edit form {
