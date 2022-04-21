@@ -154,8 +154,8 @@ $('.admin .info-block .info #setting-categories .student-functions > ul li').cli
 
 // Tab-document
 $('.admin .info-block .info #document-management .student-functions > ul li').click(function () {
-	var id = $(this).attr('data-tab-category'),
-		content = $('.admin .info-block .info #document-management .student-functions .form-edit[data-tab-category="' + id + '"]');
+	var id = $(this).attr('data-tab-document'),
+		content = $('.admin .info-block .info #document-management .student-functions .form-edit[data-tab-document="' + id + '"]');
 
 	$('.admin .info-block .info #document-management .student-functions > ul li.active').removeClass('active');
 	$(this).addClass('active');
@@ -344,6 +344,44 @@ function category(el) {
 	}
 	else {
 		document.querySelector("#setting-categories .editForm").remove();
+	}
+}
+
+// open form-document
+function document_n(el) {
+	console.log(el);
+	console.log(el.checked);
+	console.log(el.id);
+
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #document-management .student-functions .form-student .form2-student ul li .textLabel > span');
+	
+	if (document.querySelectorAll("#document-management .editForm").length != 0) {
+		document.querySelector("#document-management .editForm").remove();
+	}
+	if (el.checked) {
+		if (document.querySelector("#document-management .editForm") == null) {
+			if (el.disabled == false) {
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+					<input type="file">
+					<div>
+						<input type="button" class="btn" value="Обновить">
+					</div>
+				</form>`);
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				for(var i=0; i<spanRadio.length; i++) {
+					spanRadio[i].style.background = 'var(--bg)';
+				}
+				var radioInput = document.querySelectorAll("#document-management .textLabel input[type='radio']");
+				for(var i=0; i<radioInput.length; i++) {
+					radioInput[i].disabled = false;
+				}
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				el.disabled = true;
+			}
+		}
+	}
+	else {
+		document.querySelector("#document-management .editForm").remove();
 	}
 }
 
