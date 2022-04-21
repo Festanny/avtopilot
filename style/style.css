@@ -1556,7 +1556,8 @@ section.page {
     margin-top: 18px;
 }
 
-.admin .info-block .info .block .student-functions > ul li {
+.admin .info-block .info .block .student-functions > ul li,
+.admin .info-block .info .block .student-functions .additionally-block > ul li {
     display: inline-block;
     border-bottom: 1px solid transparent;
     font-size: 14px;
