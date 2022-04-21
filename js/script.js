@@ -152,6 +152,18 @@ $('.admin .info-block .info #setting-categories .student-functions > ul li').cli
 	content.addClass('active');
 });
 
+// Tab-document
+$('.admin .info-block .info #document-management .student-functions > ul li').click(function () {
+	var id = $(this).attr('data-tab-category'),
+		content = $('.admin .info-block .info #document-management .student-functions .form-edit[data-tab-category="' + id + '"]');
+
+	$('.admin .info-block .info #document-management .student-functions > ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info #document-management .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
+
 // Tab-service
 $('.admin .info-block .info #service-management .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-services'),

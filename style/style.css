@@ -1598,7 +1598,8 @@ section.page {
 .admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span,
 .admin .info-block .info .block .student-functions .form-student .form3-student ul li > a,
 .enroll .info-block form .desc .inputAll input,
-.enroll .info-block form .desc .inputAll select {
+.enroll .info-block form .desc .inputAll select,
+.admin .info-block form select {
     display: block;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1781,11 +1782,16 @@ form.editForm input:not(input[type="button"]):last-of-type {
 }
 
 .enroll .info-block form .desc input,
-.enroll .info-block form .desc:nth-of-type(3) .inputAll select {
+.enroll .info-block form .desc:nth-of-type(3) .inputAll select,
+.admin .info-block form select {
     width: 47%;
     height: 55px;
     font-size: 18px;
     margin-bottom: 30px;
+}
+
+.admin .info-block form select {
+    width: 100%;
 }
 
 .enroll .info-block form .desc .inputAll input:last-of-type {
