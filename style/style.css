@@ -1680,33 +1680,37 @@ section.page {
 }
 
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]),
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc .ser-m-desc-block:last-of-type {
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc .ser-m-desc-block:last-of-type,
+.admin .info-block .info #training-system .student-functions .form-student form .desc .ser-m-desc-block:last-of-type {
     margin-bottom: 0!important;
 }
 
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc .ser-m-desc-block {
+.admin .info-block .info .services .student-functions .form-student .form1-student form .desc .ser-m-desc-block,
+.admin .info-block .info #training-system .student-functions .form-student form .desc .ser-m-desc-block {
     margin-bottom: 5px!important;
 }
 
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc input:not(input[type="button"]):last-of-type,
-.admin .info-block .info .services .student-functions .form-student form .desc input:not(input[type="button"]):last-of-type {
+.admin .info-block .info .student-functions .form-student form .desc input:not(input[type="button"]):last-of-type {
     margin-bottom: 0!important;
     flex: 1;
 }
 
 .admin .info-block .info .services .student-functions .form-student .form1-student form .desc,
-.admin .info-block .info .services .student-functions .form-student form .desc {
+.admin .info-block .info .services .student-functions .form-student form .desc,
+.admin .info-block .info .student-functions .form-student form .desc {
     margin-bottom: 18px;
 }
 
-.admin .info-block .info .services .student-functions .form-student .form1-student form .desc span,
-.admin .info-block .info .services .student-functions .form-student form .desc span {
+.admin .info-block .info .student-functions .form-student .form1-student form .desc span,
+.admin .info-block .info .student-functions .form-student form .desc span {
     font-size: 14px;
     padding-left: 8px;
     display: flex;
 }
 
-.admin .info-block .info .services .student-functions .form-student form .desc  #btn-add-input {
+.admin .info-block .info .student-functions .form-student form .desc #btn-add-input,
+.admin .info-block .info .student-functions .form-student form .desc #btn-add-input-training {
     margin-left: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -1723,7 +1727,7 @@ section.page {
     transition: all .3s;
 }
 
-.admin .info-block .info .services .student-functions .form-student form .desc #btn-add-input.remove {
+.admin .info-block .info .student-functions .form-student form .desc #btn-add-input.remove {
     display: none;
 }
 
@@ -1861,15 +1865,19 @@ form.editForm input:not(input[type="button"]):last-of-type {
     margin-bottom: 26px;
 }
 
-.ser-m-desc-block {
+#service-management .ser-m-desc-block {
     display: none;
 }
 
-.ser-m-desc-block.active {
+#service-management .ser-m-desc-block.active {
     display: flex;
 }
 
-#service-management .ser-m-desc-block .btn-remove-input {
+#training-system .ser-m-desc-block {
+    display: flex;
+}
+
+.ser-m-desc-block .btn-remove-input {
     width: 51px;
     height: 51px;
     display: flex;
@@ -1883,8 +1891,10 @@ form.editForm input:not(input[type="button"]):last-of-type {
     transition: all .3s;
 }
 
-#service-management .ser-m-desc-block .btn-remove-input img,
-#service-management .ser-m-desc-block #btn-add-input img {
+.ser-m-desc-block .btn-remove-input img,
+#training-system .ser-m-desc-block .btn-remove-input img,
+#service-management .ser-m-desc-block #btn-add-input img,
+#training-system .ser-m-desc-block #btn-add-input-training img {
     width: 15px;
     height: 15px;
     object-fit: contain;
@@ -1892,17 +1902,21 @@ form.editForm input:not(input[type="button"]):last-of-type {
     transition: all .3s;
 }
 
-#service-management .ser-m-desc-block #btn-add-input img {
+#service-management .ser-m-desc-block #btn-add-input img,
+#training-system .ser-m-desc-block #btn-add-input-training img {
     transform: rotate(45deg);
 }
 
 #service-management .ser-m-desc-block .btn-remove-input:hover img,
-#service-management .ser-m-desc-block #btn-add-input:hover img {
+#training-system .ser-m-desc-block .btn-remove-input:hover img,
+#service-management .ser-m-desc-block #btn-add-input:hover img,
+#training-system .ser-m-desc-block #btn-add-input-training:hover img {
     opacity: 1;
 }
 
-#service-management .ser-m-desc-block .btn-remove-input:hover,
-#service-management .ser-m-desc-block #btn-add-input:hover {
+.ser-m-desc-block .btn-remove-input:hover,
+#service-management .ser-m-desc-block #btn-add-input:hover,
+#training-system .ser-m-desc-block #btn-add-input-training:hover {
     border: 1px solid var(--line2);
 }
 

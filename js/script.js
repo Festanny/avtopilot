@@ -116,6 +116,18 @@ $('.admin .info-block .info #student-management .student-functions > ul li').cli
 	content.addClass('active');
 });
 
+// Tab-training-system
+$('.admin .info-block .info #training-system .student-functions > ul li').click(function () {
+	var id = $(this).attr('data-tab-training'),
+		content = $('.admin .info-block .info #training-system .student-functions .form-edit[data-tab-training="' + id + '"]');
+
+	$('.admin .info-block .info #training-system .student-functions > ul li.active').removeClass('active');
+	$(this).addClass('active');
+
+	$('.admin .info-block .info #training-system .student-functions .form-edit.active').removeClass('active');
+	content.addClass('active');
+});
+
 // Tab-branche
 $('.admin .info-block .info #setting-branches .student-functions > ul li').click(function () {
 	var id = $(this).attr('data-tab-branches'),
@@ -428,6 +440,7 @@ $('#btn-add-input').click(()=> {
 	}
 });
 
+// remove input
 function serMBlock(el) {
 	let id_serM = el.id;
 	console.log(id_serM);
@@ -444,4 +457,44 @@ function serMBlock(el) {
 	else {
 		$('#service-management #av-fields').text('2');
 	}
+}
+
+// click on a new input
+var i = 2;
+function addInputTraining() {
+	$('#training-system .ser-m-desc-block:last-of-type')[0].insertAdjacentHTML("afterend", `<div class="ser-m-desc-block" id="video-bl${i}">
+		<input type="text" name="video${i}" placeholder="Ссылка на видео" class="ser-m-desc">
+		<div id="btn-add-input-training" onclick="addInputTraining()">
+			<img src="../image/close.svg" alt="">
+		</div>
+	</div>`);
+	$('#training-system .ser-m-desc-block:nth-last-of-type(2) #btn-add-input-training')[0].remove();
+	$('#training-system .ser-m-desc-block:nth-last-of-type(2)')[0].insertAdjacentHTML("beforeend", `<div class="btn-remove-input" onclick="removeInputTraining(this)" id="video-bl${i-1}">
+		<img src="../image/close.svg" alt="">
+	</div>`);
+	i++;
+};
+
+// click on a edit input
+var j = 2;
+function editInputTraining() {
+	$('#training-system .form2-student .ser-m-desc-block:last-of-type')[0].insertAdjacentHTML("afterend", `<div class="ser-m-desc-block" id="video-bl-edit${j}">
+		<input type="text" name="videoEdit${j}" placeholder="Ссылка на видео" class="ser-m-desc">
+		<div id="btn-add-input-training" onclick="editInputTraining()">
+			<img src="../image/close.svg" alt="">
+		</div>
+	</div>`);
+	$('#training-system .form2-student .ser-m-desc-block:nth-last-of-type(2) #btn-add-input-training')[0].remove();
+	$('#training-system .form2-student .ser-m-desc-block:nth-last-of-type(2)')[0].insertAdjacentHTML("beforeend", `<div class="btn-remove-input" onclick="removeInputTraining(this)" id="video-bl-edit${j-1}">
+		<img src="../image/close.svg" alt="">
+	</div>`);
+	j++;
+};
+
+// remove input training
+function removeInputTraining(el) {
+	let id_tr = el.id;
+	console.log(id_tr);
+
+	$('#training-system .ser-m-desc-block#' + id_tr).remove();
 }

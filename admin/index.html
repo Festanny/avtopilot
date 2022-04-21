@@ -136,6 +136,62 @@
                             <div class="block" data-tab='2' id="training-system">
                                 <h2>Управление дистанционным обучением</h2>
                                 <a href="#" class="training-system">Перейти в систему обучения</a>
+
+                                <div class="student-functions">
+                                    <ul>
+                                        <li data-tab-training='1' class="active">Добавить урок</li>
+                                        <li data-tab-training='2'>Изменить урок</li>
+                                        <li data-tab-training='3'>Удалить урок</li>
+                                    </ul>
+                                    <div class="form-student">
+                                        <div class="form1-student form-edit active" data-tab-training='1'>
+                                            <form action="" method="POST">
+                                                <div class="desc">
+                                                    <input type="text" placeholder="Название урока">
+                                                </div>
+                                                <div class="desc">
+                                                    <div class="ser-m-desc-block" id="video-bl1">
+                                                        <input type="text" name="video1" placeholder="Ссылка на видео" class="ser-m-desc">
+                                                        <div id="btn-add-input-training" onclick="addInputTraining()">
+                                                            <img src="../image/close.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <input type="button" class="btn" value="Добавить урок">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form2-student form-edit" data-tab-training='2'>
+                                            <form action="" method="POST">
+                                                <div class="desc">
+                                                    <input type="text" placeholder="Название урока">
+                                                </div>
+                                                <div class="desc">
+                                                    <div class="ser-m-desc-block" id="video-bl-edit1">
+                                                        <input type="text" name="videoEdit1" placeholder="Ссылка на видео" class="ser-m-desc">
+                                                        <div id="btn-add-input-training" onclick="editInputTraining()">
+                                                            <img src="../image/close.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <input type="button" class="btn" value="Добавить урок">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form3-student form-edit" data-tab-training='3'>
+                                            <ul>
+                                                <li><a href="#">Услуга 1</a></li>
+                                                <li><a href="#">Услуга 2</a></li>
+                                                <li><a href="#">Услуга 3</a></li>
+                                                <li><a href="#">Услуга 4</a></li>
+                                                <li><a href="#">Услуга 5</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="block" data-tab='3' id="stocks-block-admin">
                                 <h2>Управление акциями</h2>
