@@ -222,6 +222,10 @@
     .modal .modal-dialog .modal-content .modal-body .stock .stock-animation {
         top: -80px;
     }
+    .enroll .info-block form .desc span {
+        margin-right: 40px;
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -257,6 +261,26 @@
     }
     header .info-block h1 {
         width: 100%;
+    }
+    .enroll .info-block form .desc .inputAll {
+        flex-direction: column;
+    }
+    .enroll .info-block form .desc input, .enroll .info-block form .desc:nth-of-type(3) .inputAll select, .admin .info-block form select {
+        width: 100%;
+    }
+    .enroll .info-block form .desc input, .enroll .info-block form .desc:nth-of-type(3) .inputAll select {
+        margin-bottom: 5px;
+    }
+    .enroll .info-block form .desc:nth-of-type(3) .inputRadio {
+        flex-direction: row;
+    }
+    .enroll .info-block form .desc:nth-of-type(3) .inputRadio div label {
+        padding: 8px 10px;
+        width: 30%;
+    }
+    .admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span, .admin .info-block .info .block .student-functions .form-student .form3-student ul li > a, .enroll .info-block form .desc .inputAll input, .enroll .info-block form .desc .inputAll select, .admin .info-block form select, .admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span, #block-remove ul li a,
+    .enroll .info-block form .desc input, .enroll .info-block form .desc:nth-of-type(3) .inputAll select {
+        font-size: 16px;
     }
 }
 
@@ -338,6 +362,9 @@
     section .WhyWe h1,
     section .documents h1 {
         margin-bottom: 54px;
+    }
+    .enroll .info-block form .desc span {
+        margin-right: 30px;
     }
 }
 
@@ -513,6 +540,20 @@
     }
     #stock .modal-header {
         font-size: 60px;
+    }
+    .enroll .info-block form .desc span {
+        font-size: 18px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .enroll .info-block form .desc {
+        flex-direction: column;
+    }
+    .enroll .info-block form .desc .inputAll {
+        width: 100%;
+    }
+    .enroll .info-block form .desc:nth-of-type(3) .inputRadio div label {
+        flex: 1;
     }
 }
 

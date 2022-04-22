@@ -1824,6 +1824,7 @@ form.editForm input:not(input[type="button"]):last-of-type {
 .enroll .info-block form .desc span {
     font-size: 24px;
     margin-right: 60px;
+    flex: 1;
 }
 
 .enroll .info-block form .desc .inputAll {
