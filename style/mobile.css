@@ -514,6 +514,9 @@
     section.page {
         padding: 60px 0 90px!important;
     }
+    #stock .modal-header {
+        font-size: 60px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -564,6 +567,15 @@
     }
 }
 
+@media screen and (max-width: 650px) {
+    #stock .modal-header {
+        font-size: 50px;
+    }
+    #stock .modal-header span::before {
+        width: 75%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .btn {
         font-size: 15px;
@@ -594,6 +606,19 @@
     }
     .modal .modal-dialog .modal-content .modal-body .stock .stock-animation {
         right: -40px;
+    }
+    #stock .modal-header span {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #stock .modal-header {
+        font-size: 45px;
+    }
+    #stock .modal-header span::before {
+        height: 5px;
+        bottom: -8px;
     }
 }
 
@@ -863,6 +888,24 @@
     .menu-fixed .menu .menu-open marquee {
         display: none;
     }
+    #stock .modal-header .img {
+        display: none;
+    }
+    #stock .modal-header span {
+        flex: none;
+        transform: translateY(-10px);
+        margin-right: 0;
+    }
+    .modal-header {
+        justify-content: center;
+    }
+    #stock .modal-header {
+        font-size: 50px;
+    }
+    #stock .modal-header span::before {
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
 
 @media screen and (max-width: 443px) {
@@ -906,6 +949,13 @@
     .modal-body {
         padding: 65px 30px;
     }
+    #stock .modal-header {
+        font-size: 40px;
+        padding: 20px 40px;
+    }
+    #stock .modal-header span::before {
+        bottom: -6px;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -923,6 +973,21 @@
     }
     .modal-body {
         padding: 60px 20px;
+    }
+    #stock .modal-header {
+        font-size: 35px;
+    }
+    #stock .modal-header span::before {
+        display: none;
+    }
+    #stock .modal-header span {
+        transform: none;
+    }
+    #stock .modal-body {
+        padding: 40px 30px;
+    }
+    #stock .modal-header {
+        padding: 20px 30px;
     }
 }
 
@@ -966,5 +1031,12 @@
     }
     footer .footer .info .additionally .img {
         height: 30px;
+    }
+    #stock .modal-header {
+        font-size: 30px;
+        padding: 15px 30px;
+    }
+    #stock .modal-body {
+        padding: 30px;
     }
 }
