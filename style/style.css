@@ -107,6 +107,8 @@ h3 {
     padding: 10px 20px;
     cursor: pointer;
     transition: .3s;
+    outline: none;
+    border: 0;
 }
 
 .btn:hover {
@@ -1559,7 +1561,8 @@ section.page {
 
 .admin .info-block .info .block .student-functions > ul li,
 .admin .info-block .info .block .student-functions .form-student .form-edit > ul li,
-.admin .info-block .info .block .student-functions .additionally-block > ul li {
+.admin .info-block .info .block .student-functions .additionally-block > ul li,
+#block-remove ul li {
     display: inline-block;
     border-bottom: 1px solid transparent;
     font-size: 14px;
@@ -1569,8 +1572,14 @@ section.page {
     padding-top: 10px;
 }
 
+#block-remove ul li {
+    padding: 0;
+    margin-right: 0;
+}
+
 .admin .info-block .info .block .student-functions .form-edit > ul li {
     padding: 0!important;
+    margin-right: 0!important;
 }
 
 .admin .info-block .info .block .student-functions ul li.active,
@@ -1588,22 +1597,39 @@ section.page {
     padding-bottom: 10px;
 }
 
-.admin .info-block .info .block .student-functions .form-edit form {
-    display: flex;
-    flex-direction: column;
-}
-
 .admin .info-block .info .block .student-functions {
     margin-top: 26px;
 }
 
-.admin .info-block .info .block .student-functions .form2-student ul,
-.admin .info-block .info .block .student-functions .form3-student ul {
+.admin .info-block .info .block .student-functions .form-edit ul,
+.admin .info-block .info .block .student-functions .form3-student ul,
+.admin .info-block .info .block .student-functions .form-edit form,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop ul {
     display: flex;
     flex-direction: column;
 }
 
-.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel input[type="radio"] {
+.admin .info-block .info .block .student-functions .form4-student ul {
+    display: flex;
+    margin-bottom: 25px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    flex-direction: row;
+}
+
+.admin .info-block .info .block .student-functions .form4-student > ul li {
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+    padding-bottom: 6px!important;
+    cursor: pointer;
+    margin-right: 18px!important;
+    padding-top: 10px!important;
+}
+
+.admin .info-block .info .block .student-functions .form-student input[type="radio"] {
     display: none;
 }
 
@@ -1611,7 +1637,9 @@ section.page {
 .admin .info-block .info .block .student-functions .form-student .form3-student ul li > a,
 .enroll .info-block form .desc .inputAll input,
 .enroll .info-block form .desc .inputAll select,
-.admin .info-block form select {
+.admin .info-block form select,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span,
+#block-remove ul li a {
     display: block;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1623,9 +1651,14 @@ section.page {
     outline: none;
 }
 
+.block .student-functions .form-student .form-edit .additionally-block .block-dop span {
+    font-size: 14px;
+}
 
 .admin .info-block .info .block .student-functions .form2-student ul li .textLabel > span:hover,
-.admin .info-block .info .block .student-functions .form3-student ul li > a:hover {
+.admin .info-block .info .block .student-functions .form3-student ul li > a:hover,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span:hover,
+#block-remove ul li a:hover {
     border: 1px solid var(--line2);
 }
 
@@ -1635,7 +1668,9 @@ section.page {
 }
 
 .admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span::before, 
-.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a::before {
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a::before,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span::before,
+#block-remove ul li a::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -1650,19 +1685,24 @@ section.page {
     transition: opacity .3s;
 }
 
-.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span {
     cursor: pointer;
 }
 
 .admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span:hover::before, 
-.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a:hover::before {
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a:hover::before,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span:hover::before,
+#block-remove ul li a:hover::before {
     opacity: 1;
 }
 
-.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span::before {
+.admin .info-block .info .block .student-functions .form-student .form2-student ul li .textLabel > span::before,
+.admin .info-block .info .block .student-functions .form-student .form-edit .additionally-block .block-dop span::before {
     background-image: url('../image/edit.svg');
 }
-.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a::before {
+.admin .info-block .info .block .student-functions .form-student .form3-student ul li > a::before,
+#block-remove ul li a::before {
     background-image: url('../image/close.svg');
 }
 
