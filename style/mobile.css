@@ -65,9 +65,6 @@
     .price .info-block .block .text h2 {
         min-height: 110px;
     }
-    .menu-fixed .menu .menu-a {
-        max-height: 300px;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -918,6 +915,21 @@
     .page-auth .auto {
         width: 85%;
     }
+    .menu-fixed .menu .info {
+        display: none;
+    }
+    .menu-fixed .menu .menu-open {
+        width: 85%;
+    }
+    .menu-fixed .menu .menu-open .container {
+        width: 100%;
+    }
+    .menu-fixed .menu .menu-a ul li {
+        font-size: 22px;
+    }
+    .menu-fixed .menu .menu-a ul li {
+        text-transform: none;
+    }
 }
 
 @media screen and (max-width: 443px) {
@@ -1001,6 +1013,9 @@
     #stock .modal-header {
         padding: 20px 30px;
     }
+    .menu-fixed .menu .menu-a ul li {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 328px) {
@@ -1050,5 +1065,8 @@
     }
     #stock .modal-body {
         padding: 30px;
+    }
+    .menu-fixed .menu .menu-a ul li {
+        font-size: 18px;
     }
 }
