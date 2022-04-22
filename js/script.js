@@ -397,19 +397,19 @@ function document_n(el) {
 	}
 }
 
-// open form-document
-function document_n(el) {
+// open form-document-sub
+function document_c(el) {
 	console.log(el);
 	console.log(el.checked);
 	console.log(el.id);
 
-	var spanRadio = document.querySelectorAll('.admin .info-block .info #document-management .student-functions .form-student .form2-student ul li .textLabel > span');
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #document-management #block-edit ul li .textLabel > span');
 	
-	if (document.querySelectorAll("#document-management .editForm").length != 0) {
-		document.querySelector("#document-management .editForm").remove();
+	if (document.querySelectorAll("#document-management #block-edit .editForm").length != 0) {
+		document.querySelector("#document-management #block-edit .editForm").remove();
 	}
 	if (el.checked) {
-		if (document.querySelector("#document-management .editForm") == null) {
+		if (document.querySelector("#document-management #block-edit .editForm") == null) {
 			if (el.disabled == false) {
 				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
 					<input type="file">
@@ -421,7 +421,7 @@ function document_n(el) {
 				for(var i=0; i<spanRadio.length; i++) {
 					spanRadio[i].style.background = 'var(--bg)';
 				}
-				var radioInput = document.querySelectorAll("#document-management .textLabel input[type='radio']");
+				var radioInput = document.querySelectorAll("#document-management #block-edit .textLabel input[type='radio']");
 				for(var i=0; i<radioInput.length; i++) {
 					radioInput[i].disabled = false;
 				}
@@ -431,7 +431,7 @@ function document_n(el) {
 		}
 	}
 	else {
-		document.querySelector("#document-management .editForm").remove();
+		document.querySelector("#document-management #block-edit .editForm").remove();
 	}
 }
 
