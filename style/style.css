@@ -47,9 +47,8 @@ body {
 }
 ::-webkit-scrollbar-track {
 /*    background: transparent;*/
-	background: rgb(255, 255, 255, 0.25);
+	background: rgba(0, 0, 0, 0.2);
     border: 0px none #ffffff;
-    border-radius: 50px;
 }
 
 a {
@@ -1537,13 +1536,15 @@ section.page {
 
 .admin .info-block .info .block,
 .admin .info-block .info .student-functions .form-edit,
-.avtopilot-system .info .block {
+.avtopilot-system .info .block,
+.admin .info-block .info .student-functions .form-edit .additionally-block .block-dop {
     display: none;
 }
 
 .admin .info-block .info .block.active,
 .admin .info-block .info .student-functions .form-edit.active,
-.avtopilot-system .info .block.active {
+.avtopilot-system .info .block.active,
+.admin .info-block .info .student-functions .form-edit .additionally-block .block-dop.active {
     display: block;
 }
 
@@ -1557,6 +1558,7 @@ section.page {
 }
 
 .admin .info-block .info .block .student-functions > ul li,
+.admin .info-block .info .block .student-functions .form-student .form-edit > ul li,
 .admin .info-block .info .block .student-functions .additionally-block > ul li {
     display: inline-block;
     border-bottom: 1px solid transparent;
@@ -1567,7 +1569,12 @@ section.page {
     padding-top: 10px;
 }
 
-.admin .info-block .info .block .student-functions ul li.active {
+.admin .info-block .info .block .student-functions .form-edit > ul li {
+    padding: 0!important;
+}
+
+.admin .info-block .info .block .student-functions ul li.active,
+.admin .info-block .info .block .student-functions .form-student .form-edit > ul li.active {
     border-bottom: 1px solid var(--line);
     font-weight: 600;
 }

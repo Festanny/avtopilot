@@ -397,6 +397,44 @@ function document_n(el) {
 	}
 }
 
+// open form-document
+function document_n(el) {
+	console.log(el);
+	console.log(el.checked);
+	console.log(el.id);
+
+	var spanRadio = document.querySelectorAll('.admin .info-block .info #document-management .student-functions .form-student .form2-student ul li .textLabel > span');
+	
+	if (document.querySelectorAll("#document-management .editForm").length != 0) {
+		document.querySelector("#document-management .editForm").remove();
+	}
+	if (el.checked) {
+		if (document.querySelector("#document-management .editForm") == null) {
+			if (el.disabled == false) {
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+					<input type="file">
+					<div>
+						<input type="button" class="btn" value="Обновить">
+					</div>
+				</form>`);
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				for(var i=0; i<spanRadio.length; i++) {
+					spanRadio[i].style.background = 'var(--bg)';
+				}
+				var radioInput = document.querySelectorAll("#document-management .textLabel input[type='radio']");
+				for(var i=0; i<radioInput.length; i++) {
+					radioInput[i].disabled = false;
+				}
+				el.previousElementSibling.style.background = 'var(--gray-bl)';
+				el.disabled = true;
+			}
+		}
+	}
+	else {
+		document.querySelector("#document-management .editForm").remove();
+	}
+}
+
 // open form-services
 function service(el) {
 	console.log(el);

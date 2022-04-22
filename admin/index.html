@@ -339,9 +339,33 @@
                                                 <li data-tab-document-c='3'>Удалить категорию</li>
                                             </ul>
                                             <div class="additionally-block">
-                                                <div class="block-dop" data-tab-document-c='1'>1</div>
-                                                <div class="block-dop" data-tab-document-c='2'>2</div>
-                                                <div class="block-dop" data-tab-document-c='3'>3</div>
+                                                <div class="block-dop active" data-tab-document-c='1'>
+                                                    <form action="" method="POST">
+                                                        <input type="text" placeholder="Название категории">
+                                                        <input type="file">
+                                                        <div>
+                                                            <input type="button" class="btn" value="Добавить документ">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="block-dop" data-tab-document-c='2'>
+                                                    <ul>
+                                                        <li><label class="textLabel" for="document-c1"><span>Документ 1</span><input type="radio" id="document-c1" name="document-c" class="one" onclick="document_c(this);"></label></li>
+                                                        <li><label class="textLabel" for="document-c2"><span>Документ 2</span><input type="radio" id="document-c2" name="document-c" class="one" onclick="document_c(this);"></label></li>
+                                                        <li><label class="textLabel" for="document-c3"><span>Документ 3</span><input type="radio" id="document-c3" name="document-c" class="one" onclick="document_c(this);"></label></li>
+                                                        <li><label class="textLabel" for="document-c4"><span>Документ 4</span><input type="radio" id="document-c4" name="document-c" class="one" onclick="document_c(this);"></label></li>
+                                                        <li><label class="textLabel" for="document-c5"><span>Документ 5</span><input type="radio" id="document-c5" name="document-c" class="one" onclick="document_c(this);"></label></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="block-dop" data-tab-document-c='3'>
+                                                    <ul>
+                                                        <li><a href="#">Документ 1</a></li>
+                                                        <li><a href="#">Документ 2</a></li>
+                                                        <li><a href="#">Документ 3</a></li>
+                                                        <li><a href="#">Документ 4</a></li>
+                                                        <li><a href="#">Документ 5</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
