@@ -906,6 +906,18 @@
         right: 50%;
         transform: translateX(50%);
     }
+    .page-auth .dop-page {
+        padding-top: 55px;
+    }
+    .auth form {
+        width: 100%;
+    }
+    .auth .btn {
+        font-size: 18px;
+    }
+    .page-auth .auto {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 443px) {
