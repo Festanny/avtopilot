@@ -523,7 +523,8 @@
         transform: translate3d(30px, 0, 0);
     }
     .application .block .agreement,
-    .modal .modal-body .agreement {
+    .modal .modal-body .agreement,
+    .enroll .info-block form .agreement {
         width: 100%;
     }
     .address .info-block .address-info {
@@ -970,6 +971,12 @@
     }
     .menu-fixed .menu .menu-a ul li {
         text-transform: none;
+    }
+    .enroll .info-block form .desc span {
+        font-size: 16px;
+    }
+    .enroll .info-block form .desc input, .enroll .info-block form .desc:nth-of-type(3) .inputAll select {
+        height: auto;
     }
 }
 

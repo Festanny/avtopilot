@@ -88,9 +88,12 @@ $('.menu-fixed .burger').click(function () {
 	document.body.classList.toggle('scroll-none');
 });
 
-$(window).on('load', function () {
-	$('#stock').modal('show');
-});
+if ($("#stock").length) {
+	$(window).on('load', function () {
+		$('#stock').modal('show');
+	});
+}
+
 
 // Tab-main
 $('.admin .info-block .panel .function ul li').click(function () {
