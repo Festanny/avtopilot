@@ -601,3 +601,18 @@ function removeInputTraining(el) {
 
 	$('#training-system .ser-m-desc-block#' + id_tr).remove();
 }
+
+// video yt
+function videoYT() {
+	var videoYT = $('.avtopilot-system .info-block .info .view-video-block').width();
+	videoYT = videoYT / 16 * 9;
+	$('.avtopilot-system .info .block .video-block iframe').height(videoYT);
+
+	var blockTraining = $('.avtopilot-system .info-block .panel').height();
+	blockTraining -= $('.avtopilot-system .info-block .panel .title-page').height() + 126;
+	$('.avtopilot-system .info-block .panel .function').height(blockTraining);
+}
+window.addEventListener('resize', videoYT);
+window.onload = function () {
+	videoYT();
+}

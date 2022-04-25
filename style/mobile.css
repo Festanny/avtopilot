@@ -67,6 +67,12 @@
     }
 }
 
+@media screen and (max-width: 1220px) {
+    .avtopilot-system .info .block .video-block iframe {
+        /* width: 300px; */
+    }
+}
+
 @media screen and (max-width: 1200px) {
     body {
         font-size: 16px;
