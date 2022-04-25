@@ -992,6 +992,9 @@
         width: 20px;
         height: 20px;
     }
+    .requisites .info-block ul li {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 443px) {
