@@ -556,6 +556,13 @@
     .enroll .info-block form .desc:nth-of-type(3) .inputRadio div label {
         flex: 1;
     }
+    .information .info-block ul li {
+        padding: 0 0 0 45px;
+    }
+    .information .info-block ul li:before {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -977,6 +984,13 @@
     }
     .enroll .info-block form .desc input, .enroll .info-block form .desc:nth-of-type(3) .inputAll select {
         height: auto;
+    }
+    .information .info-block ul li {
+        padding: 0 0 0 38px;
+    }
+    .information .info-block ul li:before {
+        width: 20px;
+        height: 20px;
     }
 }
 
