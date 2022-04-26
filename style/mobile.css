@@ -1185,6 +1185,7 @@
     .avtopilot-system .info-block .panel .function .block .btn {
         width: 100%;
         font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 328px) {
