@@ -346,6 +346,10 @@ section h1 {
     margin-bottom: 54px;
 }
 
+section.page-avtopilot-system .title-page {
+    margin-bottom: 30px;
+}
+
 section .WhyWe h1,
 section .documents h1 {
     margin-bottom: 24px;
@@ -903,6 +907,7 @@ input::-webkit-input-placeholder {
 .requisites .info-block ul li::before,
 .information .info-block ul li:before,
 .admin .info-block .panel .function ul li::before,
+.avtopilot-system .exit::before,
 .admin .exit::before {
     content: '';
     position: absolute;
@@ -1526,13 +1531,19 @@ section.page {
     cursor: pointer;
 }
 
-.admin .exit {
+.admin .exit,
+.avtopilot-system .exit {
     position: relative;
     padding-left: 38px;
     margin-top: 30px;
 }
 
-.admin .exit::before {
+.avtopilot-system .title-page-block {
+    margin-bottom: 20px;
+}
+
+.admin .exit::before,
+.avtopilot-system .exit::before {
     background-image: url('../image/admin/exit.svg');
 }
 

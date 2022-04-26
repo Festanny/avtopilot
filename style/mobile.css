@@ -1122,7 +1122,8 @@
         width: 100%;
     }
     .admin .info-block .panel .function ul,
-    .admin .info-block .info .block .training-system {
+    .admin .info-block .info .block .training-system,
+    .admin .exit {
         font-size: 14px;
     }
 }
