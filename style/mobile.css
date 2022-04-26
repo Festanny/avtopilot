@@ -25,7 +25,8 @@
     .avtopilot-system .info-block .info {
         padding: 72px 0 72px 35px;
     }
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 45px;
     }
     .avtopilot-system .btn {
@@ -339,7 +340,8 @@
     .avtopilot-system .info-block .info {
         width: 60%;
     }
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 30px;
     }
     .avtopilot-system .info-block {
@@ -357,7 +359,8 @@
     .avtopilot-system .info-block .info {
         padding: 0 0 72px 0;
     }
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 40px;
     }
     .avtopilot-system .info-block .panel .function {
@@ -413,7 +416,8 @@
         margin-top: 32px;
     }
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 40px;
     }
     h2 {
@@ -487,7 +491,8 @@
         font-size: 15px;
     }
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 37px;
     }
     h2 {
@@ -653,7 +658,8 @@
 
 @media screen and (max-width: 700px) {
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 36px;
     }
     .price .info-block .block {
@@ -757,7 +763,8 @@
 
 @media screen and (max-width: 500px) {
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 33px;
     }
     .btn {
@@ -991,7 +998,8 @@
         padding-top: 80px!important;
     }
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 30px;
     }
     h2 {
@@ -1120,7 +1128,8 @@
         height: 50px;
     }
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 28px;
     }
     h2 {
@@ -1152,7 +1161,8 @@
         font-size: 23px;
     }
     h1,
-    .avtopilot-system h1 {
+    .avtopilot-system h1,
+    .admin h1 {
         font-size: 27px;
     }
     header .header .info .logo .img {
