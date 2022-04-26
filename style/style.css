@@ -2057,6 +2057,7 @@ section.page-avtopilot-system {
     width: 100%;
 }
 
-.avtopilot-system.container {
+.avtopilot-system.container,
+.admin.container {
     width: 85%;
 }

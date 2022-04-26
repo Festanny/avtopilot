@@ -202,11 +202,9 @@
     }
     .admin .info-block .panel {
         padding-right: 30px;
-        width: 40%;
     }
     .admin .info-block .info {
         padding-left: 30px;
-        width: 60%;
     }
 }
 
@@ -391,10 +389,12 @@
     }
     .admin .info-block .panel {
         border: 0;
-        padding: 0 0 40px 0;
+        padding: 0 0 20px 0;
     }
     .admin .info-block .info {
         padding-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 20px;
     }
 }
 
@@ -866,7 +866,8 @@
     }
     .container,
     .address .info-block .address-info,
-    .avtopilot-system.container {
+    .avtopilot-system.container,
+    .admin.container {
         transform: none;
         width: 95%;
     }
@@ -1119,6 +1120,10 @@
     }
     .avtopilot-system .info-block .panel .function .block {
         width: 100%;
+    }
+    .admin .info-block .panel .function ul,
+    .admin .info-block .info .block .training-system {
+        font-size: 14px;
     }
 }
 
