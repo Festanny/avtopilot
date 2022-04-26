@@ -200,6 +200,14 @@
     .modal .modal-body form input[type='submit'] {
         margin-top: 10px;
     }
+    .admin .info-block .panel {
+        padding-right: 30px;
+        width: 40%;
+    }
+    .admin .info-block .info {
+        padding-left: 30px;
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -344,11 +352,14 @@
     .admin h1 {
         font-size: 30px;
     }
-    .avtopilot-system .info-block {
+    .avtopilot-system .info-block,
+    .admin .info-block {
         flex-wrap: wrap;
     }
     .avtopilot-system .info-block .panel,
-    .avtopilot-system .info-block .info {
+    .avtopilot-system .info-block .info,
+    .admin .info-block .panel,
+    .admin .info-block .info {
         width: 100%;
     }
     .avtopilot-system .info-block .panel {
@@ -377,6 +388,13 @@
     .avtopilot-system .info-block .info .view-video-block {
         height: auto;
         max-height: 500px;
+    }
+    .admin .info-block .panel {
+        border: 0;
+        padding: 0 0 40px 0;
+    }
+    .admin .info-block .info {
+        padding-left: 0;
     }
 }
 

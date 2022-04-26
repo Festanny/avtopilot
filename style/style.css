@@ -902,7 +902,8 @@ input::-webkit-input-placeholder {
 .address .info-block .address-info ul li::before,
 .requisites .info-block ul li::before,
 .information .info-block ul li:before,
-.admin .info-block .panel .function ul li::before {
+.admin .info-block .panel .function ul li::before,
+.admin .exit::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -1503,6 +1504,9 @@ section.page {
 .admin .info-block .panel {
     padding-right: 50px;
     border-right: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .admin .info-block .info {
@@ -1520,6 +1524,15 @@ section.page {
     position: relative;
     padding: 0 0 0 38px;
     cursor: pointer;
+}
+
+.admin .exit {
+    position: relative;
+    padding-left: 38px;
+}
+
+.admin .exit::before {
+    background-image: url('../image/admin/img1.svg');
 }
 
 .admin .info-block .panel .function ul li:nth-of-type(1):before {
