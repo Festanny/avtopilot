@@ -19,6 +19,18 @@
         width: 48%;
         margin-right: 0!important;
     }
+    .avtopilot-system .info-block .panel {
+        padding: 72px 35px 0 0;
+    }
+    .avtopilot-system .info-block .info {
+        padding: 72px 0 72px 35px;
+    }
+    .avtopilot-system h1 {
+        font-size: 45px;
+    }
+    .avtopilot-system .btn {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1366px) {
@@ -67,12 +79,6 @@
     }
 }
 
-@media screen and (max-width: 1220px) {
-    .avtopilot-system .info .block .video-block iframe {
-        /* width: 300px; */
-    }
-}
-
 @media screen and (max-width: 1200px) {
     body {
         font-size: 16px;
@@ -114,6 +120,13 @@
     }
     .WhyWe .info-block .block .block-min {
         padding: 32px;
+    }
+    .avtopilot-system .btn {
+        padding: 8px 15px;
+    }
+    .avtopilot-system .info-block .panel,
+    .avtopilot-system .info-block .info {
+        width: 50%;
     }
 }
 
@@ -288,6 +301,15 @@
     .enroll .info-block form .desc input, .enroll .info-block form .desc:nth-of-type(3) .inputAll select {
         font-size: 16px;
     }
+    .avtopilot-system .info-block .panel .function .block {
+        padding: 15px;
+    }
+    .avtopilot-system .btn {
+        padding: 8px 10px;
+    }
+    .avtopilot-system .d-t {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -300,7 +322,7 @@
     .reviews .info-block .block h3 {
         margin-bottom: 10px;
     }
-    footer .footer .info .additionally .img {
+    footer .footer .info .additionally .img-block-studio {
         height: 33px;
     }
     footer .footer .logo span,
@@ -310,6 +332,48 @@
     footer .footer .logo .img {
         width: 115px;
         height: 100px;
+    }
+    .avtopilot-system .info-block .panel {
+        width: 40%;
+    }
+    .avtopilot-system .info-block .info {
+        width: 60%;
+    }
+    .avtopilot-system h1 {
+        font-size: 30px;
+    }
+    .avtopilot-system .info-block {
+        flex-wrap: wrap;
+    }
+    .avtopilot-system .info-block .panel,
+    .avtopilot-system .info-block .info {
+        width: 100%;
+    }
+    .avtopilot-system .info-block .panel {
+        border: 0;
+        padding: 40px 0;
+        height: auto;
+    }
+    .avtopilot-system .info-block .info {
+        padding: 0 0 72px 0;
+    }
+    .avtopilot-system h1 {
+        font-size: 40px;
+    }
+    .avtopilot-system .info-block .panel .function {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 300px!important;
+    }
+    .avtopilot-system .info-block .panel .function .block {
+        width: 48%;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .avtopilot-system .info-block .info .view-video-block {
+        height: auto;
+        max-height: 500px;
     }
 }
 
@@ -348,7 +412,8 @@
     .process .info-block .block .info .text {
         margin-top: 32px;
     }
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 40px;
     }
     h2 {
@@ -393,6 +458,14 @@
     .application .block {
         padding: 18px 36px;
     }
+    .avtopilot-system .info-block .panel .function .block .btn-block-click {
+        flex-wrap: wrap;
+    }
+    .avtopilot-system .info-block .panel .function .block .btn-block-click .views-block {
+        width: 100%;
+        margin-left: 3px;
+        margin-top: 5px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -413,7 +486,8 @@
     .price .info-block .block .text .info .desc {
         font-size: 15px;
     }
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 37px;
     }
     h2 {
@@ -512,7 +586,7 @@
         width: 100%;
         height: auto;
     }
-    footer .footer .info .additionally .img {
+    footer .footer .info .additionally .img-block-studio {
         height: 32px;
     }
     .process .info-block .block .info .text {
@@ -569,10 +643,17 @@
         width: 25px;
         height: 25px;
     }
+    .page-avtopilot-system {
+        padding: 0!important;
+    }
+    .avtopilot-system .info-block .panel .function .block span {
+        padding-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 700px) {
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 36px;
     }
     .price .info-block .block {
@@ -675,7 +756,8 @@
 }
 
 @media screen and (max-width: 500px) {
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 33px;
     }
     .btn {
@@ -702,10 +784,10 @@
         flex-wrap: wrap;
     }
     footer .footer .info .additionally a,
-    footer .footer .info .additionally .img {
+    footer .footer .info .additionally .img-block-studio {
         width: 100%;
     }
-    footer .footer .info .additionally .img {
+    footer .footer .info .additionally .img-block-studio {
         margin-top: 15px;
     }
     footer .footer .info ul li {
@@ -758,7 +840,8 @@
         margin-top: 0;
     }
     .container,
-    .address .info-block .address-info {
+    .address .info-block .address-info,
+    .avtopilot-system.container {
         transform: none;
         width: 95%;
     }
@@ -907,7 +990,8 @@
     section.page {
         padding-top: 80px!important;
     }
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 30px;
     }
     h2 {
@@ -1001,6 +1085,15 @@
     .requisites .info-block ul li {
         font-size: 14px;
     }
+    footer .footer .info .additionally .img-block-studio {
+        height: 28px;
+    }
+    .page-avtopilot-system {
+        padding-top: 30px!important;
+    }
+    .avtopilot-system .info-block .panel .function .block {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 443px) {
@@ -1026,7 +1119,8 @@
         width: 50px;
         height: 50px;
     }
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 28px;
     }
     h2 {
@@ -1057,7 +1151,8 @@
     header .header .info .logo .logo-text {
         font-size: 23px;
     }
-    h1 {
+    h1,
+    .avtopilot-system h1 {
         font-size: 27px;
     }
     header .header .info .logo .img {
@@ -1087,6 +1182,9 @@
     .menu-fixed .menu .menu-a ul li {
         font-size: 20px;
     }
+    .avtopilot-system .info-block .panel .function .block .btn {
+        width: 100%;
+        font-size: 14px;
 }
 
 @media screen and (max-width: 328px) {
@@ -1127,8 +1225,8 @@
     .modal .modal-body form input:nth-of-type(2) {
         font-size: 15px;
     }
-    footer .footer .info .additionally .img {
-        height: 30px;
+    footer .footer .info .additionally .img-block-studio {
+        height: 25px;
     }
     #stock .modal-header {
         font-size: 30px;

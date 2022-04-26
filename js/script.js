@@ -597,8 +597,6 @@ function editInputTraining() {
 // remove input training
 function removeInputTraining(el) {
 	let id_tr = el.id;
-	console.log(id_tr);
-
 	$('#training-system .ser-m-desc-block#' + id_tr).remove();
 }
 
@@ -608,9 +606,11 @@ function videoYT() {
 	videoYT = videoYT / 16 * 9;
 	$('.avtopilot-system .info .block .video-block iframe').height(videoYT);
 
-	var blockTraining = $('.avtopilot-system .info-block .panel').height();
-	blockTraining -= $('.avtopilot-system .info-block .panel .title-page').height() + 126;
-	$('.avtopilot-system .info-block .panel .function').height(blockTraining);
+	if ($(window).width() > '950') {
+		var blockTraining = $('.avtopilot-system .info-block .panel').height();
+		blockTraining -= $('.avtopilot-system .info-block .panel .title-page').height() + 126;
+		$('.avtopilot-system .info-block .panel .function').height(blockTraining);
+	}
 }
 window.addEventListener('resize', videoYT);
 window.onload = function () {

@@ -1019,9 +1019,13 @@ footer .footer .info .additionally {
     margin-top: 18px;
 }
 
-footer .footer .info .additionally .img {
+footer .footer .info .additionally .img-block-studio {
     height: 36px;
     width: auto;
+}
+
+footer .footer .info .additionally .img-block-studio .img {
+    height: 100%;
 }
 
 footer .footer .info .additionally .img img {
