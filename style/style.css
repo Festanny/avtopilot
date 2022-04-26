@@ -1529,10 +1529,11 @@ section.page {
 .admin .exit {
     position: relative;
     padding-left: 38px;
+    margin-top: 30px;
 }
 
 .admin .exit::before {
-    background-image: url('../image/admin/img1.svg');
+    background-image: url('../image/admin/exit.svg');
 }
 
 .admin .info-block .panel .function ul li:nth-of-type(1):before {
