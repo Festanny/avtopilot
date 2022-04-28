@@ -408,13 +408,13 @@ function document_c(el) {
 
 	var spanRadio = document.querySelectorAll('.admin .info-block .info #document-management #block-edit ul li .textLabel > span');
 	
-	if (document.querySelectorAll("#document-management #block-edit .editForm").length != 0) {
-		document.querySelector("#document-management #block-edit .editForm").remove();
+	if (document.querySelectorAll("#document-management #block-edit .editForm2").length != 0) {
+		document.querySelector("#document-management #block-edit .editForm2").remove();
 	}
 	if (el.checked) {
-		if (document.querySelector("#document-management #block-edit .editForm") == null) {
+		if (document.querySelector("#document-management #block-edit .editForm2") == null) {
 			if (el.disabled == false) {
-				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm">
+				el.insertAdjacentHTML("afterend", `<form action="" method="POST" class="editForm2">
 					<input type="file">
 					<div>
 						<input type="button" class="btn" value="Обновить">
@@ -434,7 +434,7 @@ function document_c(el) {
 		}
 	}
 	else {
-		document.querySelector("#document-management #block-edit .editForm").remove();
+		document.querySelector("#document-management #block-edit .editForm2").remove();
 	}
 }
 

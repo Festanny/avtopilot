@@ -1825,16 +1825,19 @@ section.page {
     margin-bottom: 36px;
 }
 
-form.editForm {
+form.editForm,
+form.editForm2 {
     padding: 0 10px;
     margin-bottom: 36px;
 }
 
-form.editForm input:not(input[type="button"]) {
+form.editForm input:not(input[type="button"]),
+form.editForm2 input:not(input[type="button"]) {
     margin-bottom: 5px!important;
 }
 
-form.editForm input:not(input[type="button"]):last-of-type {
+form.editForm input:not(input[type="button"]):last-of-type,
+form.editForm2 input:not(input[type="button"]):last-of-type {
     margin-bottom: 15px!important;
 }
 
